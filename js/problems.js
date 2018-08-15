@@ -2,8 +2,8 @@
 // so we can solve them later
 
 var problems = {
- shape: [square, triangular, oblong, pointy, sharp, long, knobby, high, low],
- position: ["far apart", "close together"],
+ shape: [square, triangular, oblong, pointy, sharp, long, knobby],
+ position: ["far apart", "close together", high, low],
  big: [visibile, prominent, fat, hefty, bulky, big, strong],
  small: [shrimpy, puny, small, thin, weak, timid, shy, tiny, meek, bashful],
  age: [old, "worn down", grungy, "not bright anymore", ashy, dull, dingy, sad, tired],
