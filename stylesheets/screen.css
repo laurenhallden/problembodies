@@ -66,3 +66,16 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
+
+/* line 8, ../sass/screen.scss */
+h1 {
+  font-size: 2rem;
+}
+
+/* line 12, ../sass/screen.scss */
+.wrapper {
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: center;
+  opacity: 0.3;
+}

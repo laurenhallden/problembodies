@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
-  // <script async src="https://www.googletagmanager.com/REPLACETHIS"></script>
+  <!-- <script async src="https://www.googletagmanager.com/REPLACETHIS"></script> -->
   <script>
     // window.dataLayer = window.dataLayer || [];
     // function gtag(){dataLayer.push(arguments)};
@@ -17,16 +17,18 @@
   <meta name="description" content="SITE DESCRIPTION REPLACETHIS">
   <meta name="author" content="Lauren Hallden">
 
+  <!--
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="manifest" href="manifest.json">
   <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
   <meta name="theme-color" content="#ffffff">
+  -->
 
   <meta name="viewport" content="width=device-width" initial-scale=1>
 
-  <!-- Metatags -->
+  <!-- Metatags
   <meta property="og:title" content="SITE TITLE REPLACETHIS" />
   <meta property="og:url" content="http://laurenhallden.com/REPLACETHIS" />
   <meta property="og:type" content="website" />
@@ -39,6 +41,7 @@
   <meta name="twitter:description" content="SITE DESCRIPTION REPLACETHIS" />
   <meta name="twitter:url" content="http://laurenhallden.com/REPLACETHIS" />
   <meta name="twitter:image" content="http://laurenhallden.com/REPLACETHIS.jpg" />
+  -->
 
 
   <!-- CSS -->
@@ -55,6 +58,13 @@
 		<section>
 			<h1>Hello world</h1>
 			<p>Lauren's working on another website</p>
+      <p class="the-problem-statement">
+        <span id="the-verb">Is / Are</span> 
+        <span id="the-possessive">your</span>
+        <span id="the-problem-part"></span>
+        too
+        <span id="the-problem">grumpy</span>?
+      </p>
 		</section>
 	</div> <!-- end wrapper -->
 
@@ -65,9 +75,62 @@
 	<script src="js/vendor/jquery.js"></script>
 	<script src="js/scripts.js"></script>
   <script src="js/bodyparts.js"></script>
+  <script src="js/problems.js"></script>
 
   <script>
-    console.log(bodyparts.toenail[0].plural);
+    // placeholder object for the part we're about to choose
+    var chosenPart = {};
+    var chosenProblem = {};
+
+    // pick a random body part
+    var randomPart = bodyparts[Math.floor(Math.random() * bodyparts.length)];
+
+    // pick whether we want it to be plural
+    var plural = Math.round(Math.random());
+
+    // if we do want it to be (or if it HAS to be)
+    if ((plural > 0) || (randomPart.count > 10)) {
+      // check to make sure it's possible
+      if ('plural' in randomPart) {
+        chosenPart.part = (randomPart.plural);
+        chosenPart.plural = true;
+      }
+      else  {
+        chosenPart.part = (randomPart.singular);
+        chosenPart.plural = false;
+      }
+    }
+    // if not, it's singular
+    else  {
+      chosenPart.part = (randomPart.singular);
+      chosenPart.plural = false;
+    }
+
+    // pick a class of problems
+    function randomProblem(problems) {
+      var keys = Object.keys(problems)
+      var theProblemClass = problems[keys[ keys.length * Math.random() << 0]];
+      console.log(theProblemClass);
+      
+      // pick a problem from the class
+      var randomProblem = theProblemClass[Math.floor(Math.random() * theProblemClass.length)];
+      chosenProblem.problem = randomProblem;
+    };
+
+    randomProblem(problems);
+
+    // Set the part span
+    $('#the-problem-part').html(chosenPart.part);
+
+    // Set the verb span
+    if (chosenPart.plural == true ) {
+      $('#the-verb').html("Are");
+    } else {
+      $('#the-verb').html("Is");
+    }
+
+    // Set the problem
+    $('#the-problem').html(chosenProblem.problem);
   </script>
 </body>
 </html>
