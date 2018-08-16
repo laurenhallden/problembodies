@@ -11,3 +11,52 @@ var problems = {
  attitude: ["angry", "unruly", "rowdy", "unmanageable", "out of control", "grumpy", "noisy"],
  smell: ["stinky", "smelly", "pungent"]
 };
+
+
+var solutions = {
+ shape: [
+	{adjective: "shaping", noun: "shaper", plural: "shapers"},
+	{noun: "harness"},
+	{adjective: "aligning", noun: "aligner", plural: "aligners"},
+	{adjective: "guiding", noun: "guide", plural: "guides"},
+	{adjective: "molding", noun: "mold", plural: "molds"},
+	{adjective: "forming", noun: "form", plural: "forms"},
+	{adjective: "sculpting"}
+ ],
+ big: [
+	{adjective: "minimizing", noun: "minimizer", plural: "minimizers"},
+	{adjective: "concealing", noun: "concealer", plural: "concealers"},
+	{adjective: "disguising", noun: "disguiser", plural: "disguisers"},
+	{noun: "camoflauge"}
+ ],
+ small: [
+  	{adjective: "volumizing", noun: "volumizer", plural: "volumizers"},
+ 	{adjective: "plumping", noun: "plumper", plural: "plumpers"},
+ 	{adjective: "defining"}
+ ],
+ age: [
+   	{adjective: "brightening"},
+ 	{adjective: "rejuventating", noun: "rejuvenator", plural: "rejuvenators"},
+ 	{adjective: "defying", noun: "defier"},
+ 	{adjective: "reviving", noun: "reviver", plural: "revivers"},
+ 	{adjective: "revitalizing", noun: "revitalizer", plural: "retivalizers"},
+ 	{adjective: "regenerating", noun: "regenerator", plural: "regenerators"},
+ 	{adjective: "re-energizing", noun: "re-energizer", plural: "re-energizers"},
+ 	{adjective: "reanimating", noun: "reanimator", plural: "reanimators"},
+ 	{adjective: "resusitating", noun: "resucitator", plural: "resucitators"},
+ 	{adjective: "refreshing", noun: "refresher", plural: "refreshers"},
+ 	{adjective: "polishing", noun: "polisher", plural: "polishers"}
+ ],
+ texture: [
+    {adjective: "smoothing", noun: "smoother", plural: "smoothers"}
+    {adjective: "lubricating", noun: "lubricator", plural: "lubricators"},
+    {adjective: "polishing", noun: "polish"}
+ ],
+ attitude: [
+    {adjective: "calming", noun: "calmer"},
+ 	{adjective: "soothing", noun: "soother"}
+ ],
+ smell: [
+ 	{adjective: "refreshing", noun: "refresher"}
+ ]
+};
