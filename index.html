@@ -61,7 +61,8 @@
       <p class="problem-statement-type-a">
         <span class="the-verb"></span> 
         <span class="the-possessive">your</span>
-        <span class="the-adjective"></span>
+        <span class="the-adjective-one"></span>
+        <span class="the-adjective-direction"></span>
         <span class="the-problem-part"></span>
         <span class="the-emphasis">too</span>
         <span class="the-problem">grumpy</span>?
@@ -70,15 +71,18 @@
       <p class="problem-statement-type-b">
         <span class="the-suggestion">Tired of</span> 
         <span class="the-possessive">your</span>
-        <span class="the-adjective"></span>
+        <span class="the-adjective-one"></span>
         <span class="the-problem">grumpy</span>
+        <span class="the-adjective-direction"></span>
         <span class="the-problem-part"></span>?
         <span class="the-emotions"></span>
       </p>
       <p class="problem-statement-type-c">
         <span class="the-verb"></span> 
         <span class="the-possessive">your</span>
+        <span class="the-adjective-one"></span>
         <span class="the-problem">grumpy</span>
+        <span class="the-adjective-direction"></span>
         <span class="the-problem-part"></span>
          holding you back?
         <span class="the-emotions"></span>
@@ -89,7 +93,7 @@
         <br/>
         Then you need our magical
         <span class="the-solution-adjective"></span>
-        <span class="the-problem-part"></span>
+        <span class="the-problem-part-singular"></span>
         <span class="the-solution-noun"></span>!
       </p>
 		</section>
@@ -138,6 +142,7 @@
       chosenPart.part = (randomPart.singular);
       chosenPart.plural = false;
     }
+    chosenPart.singular = (randomPart.singular)
 
     // pick a class of problems
     function randomProblem(problems) {
@@ -169,13 +174,11 @@
       //unless there's only ever one of this thing
       if (randomPart.count != 1) {
         if (randomPartSelection == 0) {
-          $('.the-adjective').html("one");
+          $('.the-adjective-one').html("one");
         } else if (randomPartSelection == 1) {
-          $('.the-adjective').html("left");
+          $('.the-adjective-direction').html("left");
         } else if (randomPartSelection == 2) {
-          $('.the-adjective').html("right");
-        } else if (randomPartSelection == 3) {
-          $('.the-adjective').html("freakishly");
+          $('.the-adjective-direction').html("right");
         }
       }
     };
@@ -242,6 +245,7 @@
 
     // Set the solution span
     $('.the-solution-noun').html(theSolution);
+    $('.the-problem-part-singular').html(chosenPart.singular);
     $('.the-solution-adjective').html(theSolutionAdjective);
 
 
