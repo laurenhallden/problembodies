@@ -11,6 +11,7 @@ var bodyparts = [
  {singular: "boob", plural: "boobs", count: 2},
  {singular: "bottom", count: 1},
  {singular: "breast", plural: "breasts", count: 2},
+ {singular: "butt cheek", plural: "butt cheeks", count: 2},
  {singular: "butt", count: 1},
  {singular: "calf", plural: "calves", count: 2},
  {singular: "cheek", plural: "cheeks", count: 2},
