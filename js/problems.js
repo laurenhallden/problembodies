@@ -4,10 +4,9 @@
 var problems = {
  shape: ["square", "triangular", "oblong", "pointy", "sharp", "long", "knobby"],
  position: ["high", "low"],
- positionSet: ["far apart", "close together"],
- big: ["visibile", "prominent", "fat", "hefty", "bulky", "big", "strong"],
+ big: ["visibile", "prominent", "fat", "hefty", "bulky", "big"],
  small: ["shrimpy", "puny", "small", "thin", "weak", "timid", "shy", "tiny", "meek", "bashful"],
- age: ["old", "worn down", "grungy", "not bright anymore", "ashy", "dull", "dingy", "sad", "tired"],
+ age: ["old", "worn down", "grungy", "ashy", "dull", "dingy", "sad", "tired"],
  texture: ["wrinkled", "dented", "ashy", "rough", "scaly", "dry", "hairy", "fuzzy", "fluffy"],
  attitude: ["angry", "unruly", "rowdy", "unmanageable", "out of control", "grumpy", "noisy"],
  smell: ["stinky", "smelly", "pungent"]
@@ -19,10 +18,15 @@ var solutions = {
 	{adjective: "shaping", noun: "shaper", plural: "shapers"},
 	{noun: "harness"},
 	{adjective: "aligning", noun: "aligner", plural: "aligners"},
-	{adjective: "guiding", noun: "guide", plural: "guides"},
 	{adjective: "molding", noun: "mold", plural: "molds"},
 	{adjective: "forming", noun: "form", plural: "forms"},
-	{adjective: "sculpting"}
+	{adjective: "sculpting", noun: "sculptor", plural: "sculptors"},
+	{adjective: "morphing", noun: "morpher", plural: "morphers"}
+ ],
+ position: [
+ 	{adjective: "guiding", noun: "guide", plural: "guides"},
+ 	{adjective: "aligning", noun: "aligner", plural: "aligners"},
+ 	{noun: "harness"}
  ],
  big: [
 	{adjective: "minimizing", noun: "minimizer", plural: "minimizers"},
@@ -33,10 +37,10 @@ var solutions = {
  small: [
   	{adjective: "volumizing", noun: "volumizer", plural: "volumizers"},
  	{adjective: "plumping", noun: "plumper", plural: "plumpers"},
- 	{adjective: "defining"}
+ 	{adjective: "defining", noun: "definer"}
  ],
  age: [
-   	{adjective: "brightening"},
+   	{adjective: "brightening", noun: "brightener", plural: "brighteners"},
  	{adjective: "rejuventating", noun: "rejuvenator", plural: "rejuvenators"},
  	{adjective: "defying", noun: "defier"},
  	{adjective: "reviving", noun: "reviver", plural: "revivers"},
@@ -49,7 +53,7 @@ var solutions = {
  	{adjective: "polishing", noun: "polisher", plural: "polishers"}
  ],
  texture: [
-    {adjective: "smoothing", noun: "smoother", plural: "smoothers"}
+    {adjective: "smoothing", noun: "smoother", plural: "smoothers"},
     {adjective: "lubricating", noun: "lubricator", plural: "lubricators"},
     {adjective: "polishing", noun: "polish"}
  ],
@@ -58,6 +62,8 @@ var solutions = {
  	{adjective: "soothing", noun: "soother"}
  ],
  smell: [
- 	{adjective: "refreshing", noun: "refresher"}
+ 	{adjective: "refreshing", noun: "refresher", plural: "refreshers"},
+ 	{adjective: "freshening", noun: "freshener", plural: "fresheners"},
+ 	{adjective: "deoderizing", noun: "deoderant", plural: "deoderant"}
  ]
 };
