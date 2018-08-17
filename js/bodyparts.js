@@ -42,6 +42,7 @@ var bodyparts = [
  {singular: "nipple", plural: "nipples", count: 2},
  {singular: "pore", plural: "pores", count: 20},
  {singular: "rib", plural: "ribs", count: 2},
+ {singular: "shin", plural: "shins", count: 2},
  {singular: "shoulder", plural: "shoulders", count: 2},
  {singular: "spine", count: 1},
  {singular: "split end", plural: "split ends", count: 20},
