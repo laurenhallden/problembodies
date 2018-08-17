@@ -59,11 +59,13 @@
 			<h1>Hello world</h1>
 			<p>Lauren's working on another website</p>
       <p class="the-problem-statement">
-        <span id="the-verb">Is / Are</span> 
+        <span id="the-verb"></span> 
         <span id="the-possessive">your</span>
+        <span id="the-adjective"></span>
         <span id="the-problem-part"></span>
         too
         <span id="the-problem">grumpy</span>?
+        <span id="the-emotions"></span>
       </p>
 		</section>
 	</div> <!-- end wrapper -->
@@ -76,6 +78,7 @@
 	<script src="js/scripts.js"></script>
   <script src="js/bodyparts.js"></script>
   <script src="js/problems.js"></script>
+  <script src="js/emotions.js"></script>
 
   <script>
     // placeholder object for the part we're about to choose
@@ -109,6 +112,7 @@
     // pick a class of problems
     function randomProblem(problems) {
       var keys = Object.keys(problems)
+      var allowedProblem = problems[keys[ keys.length * Math.random() << 0]];
       var theProblemClass = problems[keys[ keys.length * Math.random() << 0]];
       console.log(theProblemClass);
       
@@ -119,6 +123,7 @@
 
     randomProblem(problems);
 
+
     // Set the part span
     $('#the-problem-part').html(chosenPart.part);
 
@@ -127,10 +132,42 @@
       $('#the-verb').html("Are");
     } else {
       $('#the-verb').html("Is");
+      // and decide if we're picking a one of them (left/right)
+      var randomPartSelection = [Math.floor(Math.random() * 4)];
+      console.log("random selection is" + randomPartSelection);
+      //unless there's only ever one of this thing
+      if (randomPart.count != 1) {
+        if (randomPartSelection == 0) {
+          $('#the-adjective').html("one");
+        } else if (randomPartSelection == 1) {
+          $('#the-adjective').html("left");
+        } else if (randomPartSelection == 2) {
+          $('#the-adjective').html("right");
+        }
+      }
+    };
+
+    console.log(emotions[0])
+
+    // Show the verb or not
+    var verbVisiblity = Math.round(Math.random());
+    if (verbVisiblity != 0) {
+      $('#the-verb').hide();
+      $('#the-possessive').hide();
+      var randomEmotion = emotions[Math.floor(Math.random() * emotions.length)];
+      $('#the-emotions').html(randomEmotion);
     }
+    else {
+      $('#the-verb').show();
+      $('#the-possessive').show();
+    }
+
 
     // Set the problem
     $('#the-problem').html(chosenProblem.problem);
+
+    // Capaitalize the first letter in whatever we made
+    $('#the-adjective').css("textTransform","capitalize");
   </script>
 </body>
 </html>
