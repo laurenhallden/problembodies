@@ -49,6 +49,7 @@ var bodyparts = [
  {singular: "split end", plural: "split ends", count: 20},
  {singular: "stomach", count: 1},
  {singular: "tear duct", plural: "tear ducts", count: 2},
+ {singular: "testicle", plural: "testes", count: 2},
  {singular: "thigh", plural: "thighs", count: 2},
  {singular: "tooth", plural: "teeth", count: 20},
  {singular: "toenail", plural: "toenails", count: 10},
