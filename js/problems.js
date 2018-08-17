@@ -6,7 +6,7 @@ var problems = {
  position: ["high", "low", "droopy"],
  big: ["visibile", "prominent", "fat", "hefty", "bulky", "big"],
  small: ["shrimpy", "puny", "small", "thin", "weak", "timid", "shy", "tiny", "meek", "bashful"],
- age: ["old", "worn down", "grungy", "ashy", "dull", "dingy", "sad", "tired"],
+ age: ["old", "worn down", "grungy", "ashy", "dull", "dingy", "sad", "tired", "gnarled"],
  texture: ["wrinkled", "dented", "ashy", "rough", "scaly", "dry", "hairy", "fuzzy", "fluffy"],
  attitude: ["angry", "unruly", "rowdy", "unmanageable", "out of control", "grumpy", "noisy"],
  smell: ["stinky", "smelly", "pungent"]
@@ -59,7 +59,8 @@ var solutions = {
  ],
  attitude: [
     {adjective: "calming", noun: "calmer"},
- 	{adjective: "soothing", noun: "soother"}
+ 	{adjective: "soothing", noun: "soother"},
+ 	{adjective: "straightening", noun: "straightener", plural: "straighteners"}
  ],
  smell: [
  	{adjective: "refreshing", noun: "refresher", plural: "refreshers"},
