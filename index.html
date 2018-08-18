@@ -59,8 +59,8 @@
 			<h1>Hello world</h1>
 			<p>Lauren's working on another website</p>
       <p class="problem-statement-type-a">
-        <span class="the-verb"></span> 
-        <span class="the-possessive">your</span>
+        <span class="the-verb the-verb-optional"></span> 
+        <span class="the-possessive-optional">your</span>
         <span class="the-adjective-one"></span>
         <span class="the-adjective-direction"></span>
         <span class="the-problem-part"></span>
@@ -70,7 +70,7 @@
       </p>
       <p class="problem-statement-type-b">
         <span class="the-suggestion">Tired of</span> 
-        <span class="the-possessive">your</span>
+        <span class="the-possessive-optional">your</span>
         <span class="the-adjective-one"></span>
         <span class="the-problem">grumpy</span>
         <span class="the-adjective-direction"></span>
@@ -78,13 +78,24 @@
         <span class="the-emotions"></span>
       </p>
       <p class="problem-statement-type-c">
+        <span class="the-verb the-verb-optional"></span> 
+        <span class="the-possessive-optional">your</span>
+        <span class="the-adjective-one"></span>
+        <span class="the-problem">grumpy</span>
+        <span class="the-adjective-direction"></span>
+        <span class="the-problem-part"></span>
+        <span class="the-result">holding you back</span>?
+        <span class="the-emotions"></span>
+      </p>
+      <p class="problem-statement-type-c">
+        Look in the mirror—be honest.<br/ >
         <span class="the-verb"></span> 
         <span class="the-possessive">your</span>
         <span class="the-adjective-one"></span>
         <span class="the-problem">grumpy</span>
         <span class="the-adjective-direction"></span>
         <span class="the-problem-part"></span>
-        <span class="the-result">holding you back?</span>
+        <span class="the-result">holding you back</span>?
         <span class="the-emotions"></span>
       </p>
 
@@ -130,6 +141,12 @@
       return randomNumber;
     }
 
+    function pickFromArray(array) {
+      var randomValue = array[Math.floor(Math.random() * array.length)];
+      return randomValue;
+    }
+
+
     // var number = pickANumber(4);
     // console.log(number);
 
@@ -142,10 +159,10 @@
     var chosenProblem = {};
 
     // pick a random body part
-    var randomPart = bodyparts[Math.floor(Math.random() * bodyparts.length)];
+    var randomPart = pickFromArray(bodyparts);
 
     // pick whether we want it to be plural
-    var plural = pickANumber(1);
+    var plural = pickANumber(2);
 
     // if we do want it to be (or if it HAS to be)
     if ((plural > 0) || (randomPart.count > 10)) {
@@ -164,15 +181,15 @@
       chosenPart.part = (randomPart.singular);
       chosenPart.plural = false;
     }
-    chosenPart.singular = (randomPart.singular)
+    chosenPart.singular = (randomPart.singular);
 
     // pick a class of problems
     function randomProblem(problems) {
       var keys = Object.keys(problems);
-      var theProblemClass = keys[Math.floor(Math.random() * keys.length)];
+      var theProblemClass = pickFromArray(keys);
    
       // pick a problem from the class
-      var theProblem = problems[theProblemClass][Math.floor(Math.random() * problems[theProblemClass].length)];
+      var theProblem = pickFromArray(problems[theProblemClass]);
 
       // put the problem and its class in our object
       chosenProblem.problem = theProblem;
@@ -191,8 +208,8 @@
     } else {
       $('.the-verb').html("Is");
       // and decide if we're picking a one of them (left/right)
-      var randomPartSelection = pickANumber(4);
-      //console.log("random selection is" + randomPartSelection);
+      var randomPartSelection = pickANumber(3);
+
       //unless there's only ever one of this thing
       if (randomPart.count != 1) {
         if (randomPartSelection == 0) {
@@ -206,18 +223,17 @@
     };
 
     // Show the verb or not
-    var verbVisiblity = pickANumber(1);
+    var verbVisiblity = pickANumber(2);
     if (verbVisiblity != 0) {
-      $('.the-verb').hide();
+      $('.the-verb-optional').hide();
       $('.the-suggestion').hide();
-      $('.the-possessive').hide();
-      var randomEmotion = emotions[Math.floor(Math.random() * emotions.length)];
-      $('.the-emotions').html(randomEmotion);
+      $('.the-possessive-optional').hide();
+      $('.the-emotions').html(pickFromArray(emotions));
     }
     else {
-      $('.the-verb').show();
+      $('.the-verb-optional').show();
       $('.the-suggestion').show();
-      $('.the-possessive').show();
+      $('.the-possessive-optional').show();
     }
 
     // Pump it up with some emphasis or not
@@ -233,6 +249,10 @@
     } else {
       $('.the-emphasis').hide();
     }
+
+    // Is there a result we're in danger of?
+    $('.the-result').html(pickFromArray(results));
+
 
 
     // Set the problem span
@@ -252,9 +272,7 @@
       return filter.noun !== null &
             filter.noun !== undefined
     });
-    var theSolution = solutionNouns[Math.floor(Math.random() * solutionNouns.length)].noun;
-
-    console.log(theSolution);
+    var theSolution = pickFromArray(solutionNouns).noun;
 
     // Let's grab a related adjective
     var problemAdjectives = solutionClass.filter(function (filter) {
@@ -262,18 +280,13 @@
             filter.adjective !== null &
             filter.adjective !== undefined
     });
-    console.log(solutionClass);
 
-    console.log(problemAdjectives);
-
-    var theSolutionAdjective = problemAdjectives[Math.floor(Math.random() * problemAdjectives.length)].adjective;
-    console.log(theSolutionAdjective);
+    var theSolutionAdjective = pickFromArray(problemAdjectives).adjective;
 
     // pump it up with another adjective?
-    var hypeIt = pickANumber(1);
+    var hypeIt = pickANumber(2);
     if (hypeIt != 0) {
-      var theHype = exciting_adjectives[Math.floor(Math.random() * exciting_adjectives.length)];
-      $('.the-solution-adjective-one').html(theHype);
+      $('.the-solution-adjective-one').html(pickFromArray(exciting_adjectives));
     };
 
     // Set the solution span
@@ -282,8 +295,7 @@
     $('.the-solution-adjective-two').html(theSolutionAdjective);
 
     // Pick a followup statement
-    var theFollowup = followup[Math.floor(Math.random() * followup.length)];
-    $('.the-follow-up').html(theFollowup);
+    $('.the-follow-up').html(pickFromArray(followup));
   </script>
 </body>
 </html>

@@ -25,7 +25,8 @@ var solutions = {
  small: [
   	{adjective: "volumizing", noun: "volumizer", plural: "volumizers"},
  	{adjective: "plumping", noun: "plumper", plural: "plumpers"},
- 	{adjective: "defining", noun: "definer"}
+ 	{adjective: "defining", noun: "definer"},
+ 	{noun: "pad", plural: "pads"}
  ],
  age: [
    	{adjective: "brightening", noun: "brightener", plural: "brighteners"},
@@ -56,7 +57,9 @@ var solutions = {
  smell: [
  	{adjective: "refreshing", noun: "refresher", plural: "refreshers"},
  	{adjective: "freshening", noun: "freshener", plural: "fresheners"},
- 	{adjective: "deoderizing", noun: "deoderant", plural: "deoderant"}
+ 	{adjective: "deoderizing", noun: "deoderant", plural: "deoderant"},
+ 	{adjective: "sterilizing"},
+ 	{noun: "wipe", plural: "wipes"}
  ]
 };
 
@@ -76,7 +79,7 @@ var products = {
  downthere: ["underwear", "underpants", "thong", "panties"],
  legs: ["pants"],
  feet: ["socks", "shoes"],
- all: ["cream", "night cream", "day cream"]
+ all: ["cream", "night cream", "day cream", "serum"]
 };
 
 var exciting_adjectives = [
