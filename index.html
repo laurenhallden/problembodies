@@ -56,19 +56,18 @@
 
 	<div class="wrapper">
 		<section>
-			<h1>Hello world</h1>
-			<p>Lauren's working on another website</p>
-      <p class="problem-statement-type-a">
+      <p class="problem-statement type-a">
         <span class="the-verb the-verb-optional"></span> 
         <span class="the-possessive-optional">your</span>
         <span class="the-adjective-one"></span>
         <span class="the-adjective-direction"></span>
         <span class="the-problem-part"></span>
+        <span class="the-emphasis-a">just</span>
         <span class="the-emphasis">too</span>
         <span class="the-problem">grumpy</span>?
         <span class="the-emotions"></span>
       </p>
-      <p class="problem-statement-type-b">
+      <p class="problem-statement type-b">
         <span class="the-suggestion">Tired of</span> 
         <span class="the-possessive-optional">your</span>
         <span class="the-adjective-one"></span>
@@ -77,7 +76,7 @@
         <span class="the-problem-part"></span>?
         <span class="the-emotions"></span>
       </p>
-      <p class="problem-statement-type-c">
+      <p class="problem-statement type-c">
         <span class="the-verb the-verb-optional"></span> 
         <span class="the-possessive-optional">your</span>
         <span class="the-adjective-one"></span>
@@ -87,18 +86,31 @@
         <span class="the-result">holding you back</span>?
         <span class="the-emotions"></span>
       </p>
-      <p class="problem-statement-type-c">
-        Look in the mirror—be honest.<br/ >
+      <p class="problem-statement type-d">
+        <span class="intro"></span><br />
+        <span class="could"></span>
         <span class="the-verb"></span> 
         <span class="the-possessive">your</span>
         <span class="the-adjective-one"></span>
         <span class="the-problem">grumpy</span>
         <span class="the-adjective-direction"></span>
         <span class="the-problem-part"></span>
+        <span class="be"></span>
         <span class="the-result">holding you back</span>?
         <span class="the-emotions"></span>
       </p>
-
+      <p class="problem-statement type-e">
+        <span class="intro"></span><br />
+        <span class="the-verb the-verb"></span> 
+        <span class="the-possessive">your</span>
+        <span class="the-adjective-one"></span>
+        <span class="the-adjective-direction"></span>
+        <span class="the-problem-part"></span>
+        <span class="the-emphasis-a">just</span>
+        <span class="the-emphasis">too</span>
+        <span class="the-problem">grumpy</span>?
+        <span class="the-emotions"></span>
+      </p>
 
       <p class="problem-statement-type-c">
         <br/>
@@ -229,6 +241,7 @@
       $('.the-suggestion').hide();
       $('.the-possessive-optional').hide();
       $('.the-emotions').html(pickFromArray(emotions));
+      // Capaitalize the first letter in what's left
     }
     else {
       $('.the-verb-optional').show();
@@ -237,30 +250,89 @@
     }
 
     // Pump it up with some emphasis or not
-    var emphasisVisiblity = pickANumber(3);
+    var emphasisVisiblity = pickANumber(4);
+    console.log("emphasis visibility is:" + emphasisVisiblity)
     if (emphasisVisiblity != 0) {
       $('.the-emphasis').show();
-      if (randomPartSelection == 1) {
+      if (emphasisVisiblity == 1) {
         $('.the-emphasis').html("really");
+        just();
       }
-      else if (randomPartSelection == 2) {
+      else if (emphasisVisiblity == 2) {
         $('.the-emphasis').html("too");
+        just();
+      }
+      else if (emphasisVisiblity == 3) {
+        $('.the-emphasis').html("kinda");
       }
     } else {
       $('.the-emphasis').hide();
+      $('.the-emphasis-a').hide();
+    }
+
+    // Pump it up some more with "just"
+    function just() {
+      var justVisibility = pickANumber(2);
+      console.log('just visibility was called' + justVisibility);
+      if (justVisibility != 0) {
+        $('.the-emphasis-a').show();
+      } else {
+        $('.the-emphasis-a').hide();
+      }
     }
 
     // Is there a result we're in danger of?
     $('.the-result').html(pickFromArray(results));
 
+    // What's the lead-in?
+    $('.the-intro').html(pickFromArray(intro));
 
+    // Is this a "could" statement instead of an "is" statement?
+    if (pickANumber(2) != 0) {
+      $('.could').html("Could");
+      $('.be').html("be");
+      $('.type-d .the-verb').hide();
+    }
 
     // Set the problem span
     $('.the-problem').html(chosenProblem.problem);
 
-    // Capaitalize the first letter in whatever we made
-    // $('#the-adjective').css("textTransform","capitalize");
+    // Decide which problem statement to show
+    var whichStatement = pickANumber(5);
+    console.log(whichStatement);
+    $('.problem-statement').hide();
+    if (whichStatement == 0) {
+      $('.type-a').show();
+    }
+    else if (whichStatement == 1) {
+      $('.type-b').show();
+    } else if (whichStatement == 2) {
+      $('.type-c').show();
+    } else if (whichStatement == 3) {
+      $('.type-d').show();
+    } else if (whichStatement == 4) {
+      $('.type-e').show();
+    }
 
+    // Capitalize the first letter of whatever's left:
+    var statementArr = [];
+    $(".problem-statement:visible span:visible").each(function(){
+        statementArr.push($(this).text());
+    });
+    // we logged all the spans, now remove the empty ones
+    statementArr = statementArr.filter(function(n){ return n != "" }); 
+    var firstSpan = statementArr[0];
+    var capLetter = firstSpan.charAt(0).toUpperCase();
+    var rest = firstSpan.substring(1);
+    console.log(capLetter + rest);
+    var span;
+      $('.problem-statement:visible span:visible').each(function(){
+        if($(this).html() == firstSpan){
+          span = $(this);
+        }
+      });
+    $(span).html(capLetter + rest);
+    
 
     // *****************************
     //         SOLUTIONS
@@ -283,7 +355,7 @@
 
     var theSolutionAdjective = pickFromArray(problemAdjectives).adjective;
 
-    // pump it up with another adjective?
+    // Pump it up with another adjective?
     var hypeIt = pickANumber(2);
     if (hypeIt != 0) {
       $('.the-solution-adjective-one').html(pickFromArray(exciting_adjectives));

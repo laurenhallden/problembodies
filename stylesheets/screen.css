@@ -79,11 +79,6 @@ h1 {
 }
 
 /* line 17, ../sass/screen.scss */
-p {
-  margin-bottom: 0.5rem;
-}
-
-/* line 23, ../sass/screen.scss */
 .wrapper {
   max-width: 900px;
   margin: 50px auto;
