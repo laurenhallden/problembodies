@@ -71,17 +71,58 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 html, body {
   font-size: 15px;
   line-height: 1.4;
+  color: white;
 }
 
-/* line 13, ../sass/screen.scss */
-h1 {
-  font-size: 2rem;
+/* line 14, ../sass/screen.scss */
+body {
+  background: #fd746c;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff9068, #fd746c);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff9068, #fd746c);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-/* line 17, ../sass/screen.scss */
+/* line 20, ../sass/screen.scss */
 .wrapper {
   max-width: 900px;
   margin: 50px auto;
   text-align: center;
-  opacity: 0.3;
+  margin-top: 100px;
+}
+
+/* line 27, ../sass/screen.scss */
+h1, .h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* line 37, ../sass/screen.scss */
+.problem-statement {
+  margin-top: 50px;
+}
+/* line 39, ../sass/screen.scss */
+.problem-statement .the-emotions {
+  display: block;
+  margin-top: 20px;
+}
+
+/* line 45, ../sass/screen.scss */
+.intro,
+.solution-intro {
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: -35px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* line 54, ../sass/screen.scss */
+.the-follow-up {
+  font-size: 18px;
+  font-style: italic;
+  display: block;
+  margin-top: 100px;
 }

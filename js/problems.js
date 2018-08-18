@@ -9,7 +9,7 @@ var problems = {
  age: ["old", "worn down", "grungy", "ashy", "dull", "dingy", "sad", "tired"],
  texture: ["wrinkled", "dented", "ashy", "rough", "scaly", "dry", "hairy", "fuzzy", "frizzy", "gnarled"],
  attitude: ["angry", "unruly", "rowdy", "unmanageable", "out of control", "grumpy", "noisy"],
- smell: ["stinky", "smelly", "pungent"]
+ smell: ["stinky", "smelly", "pungent", "disgusting"]
 };
 
 var intro = [

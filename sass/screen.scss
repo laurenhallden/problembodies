@@ -8,15 +8,52 @@
 html, body {
 	font-size: 15px;
 	line-height: 1.4;
+	color: white;
 }
 
-h1 {
-	font-size: 2rem;
+body {
+	background: #fd746c;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #ff9068, #fd746c);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .wrapper {
 	max-width: 900px;
 	margin: 50px auto;
 	text-align: center;
-	opacity: 0.3;
+	margin-top: 100px;
+}
+
+h1, .h1 {
+	font-size: 48px;
+	line-height: 1.2;
+	font-weight: 700;
+}
+
+.problem-statement-holder,
+.solution-statement-holder {
+}
+
+.problem-statement {
+	margin-top: 50px;
+	.the-emotions {
+		display: block;
+		margin-top: 20px;
+	}
+}
+
+.intro,
+.solution-intro {
+	font-size: 22px;
+	font-weight: 400;
+	margin-top: -35px;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.the-follow-up {
+	font-size: 18px;
+	font-style: italic;
+	display: block;
+	margin-top: 100px;
 }

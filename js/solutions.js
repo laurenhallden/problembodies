@@ -46,7 +46,8 @@ var solutions = {
     {adjective: "lubricating", noun: "lubricator", plural: "lubricators"},
     {adjective: "polishing", noun: "polish"},
     {adjective: "silky"},
-    {adjective: "conditioning", noun: "conditioner"}
+    {adjective: "conditioning", noun: "conditioner"},
+    {adjective: "Himalayan"},
  ],
  attitude: [
     {adjective: "calming", noun: "calmer"},
@@ -59,7 +60,9 @@ var solutions = {
  	{adjective: "freshening", noun: "freshener", plural: "fresheners"},
  	{adjective: "deoderizing", noun: "deoderant", plural: "deoderant"},
  	{adjective: "sterilizing"},
- 	{noun: "wipe", plural: "wipes"}
+ 	{noun: "wipes", plural: "wipes"},
+ 	{noun: "towels", plural: "towels"},
+ 	{noun: "towelettes", plural: "towelettes"}
  ]
 };
 
@@ -93,29 +96,31 @@ var exciting_adjectives = [
 	"mega",
 	"fantastic",
 	"fabulous",
-	"special"
+	"special",
+	"natural",
+	"organic",
+	"fair-trade"
 ];
 
 var followup = [
-"Don't forget to check out our <span class='social-service'></span>.",
+"Don't forget to<span class='social-service'></span>.",
 "Use the hashtag/coupon code x to save <span class='to-thirty'></span>%.",
 "Your unfortunate <span class='part-again'></span> will thank you.",
 "Last time these sold out in <span class='to-thirty'></span> days, so don't wait!",
-"Our customers love 'em!",
 "Refer <span class='to-thirty'></span> friends and we'll give you an extra one free!",
 "Bye bye, problem <span class='part-again'></span>!",
 "It'll change your life, trust us.",
-"We make 'em from recycled milk containers, so it's environmentally friendly."
+"Made from recycled milk containers, because we care about the environment."
 
 ]
 
 var social = [
-"Kickstarter",
-"Instagram",
-"lastest Instagram story",
-"Facebook",
-"Facebook community",
-"Twitter",
-"season of Shark Tank",
-"New York Times article"
+"check out our Kickstarter",
+"check out our Instagram",
+"check out our lastest Instagram story",
+"friend us on Facebook",
+"check out our new Facebook community",
+"give us a follow on Twitter",
+"check us out on the latest season of Shark Tank",
+"check out our New York Times article"
 ]
