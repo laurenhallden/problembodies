@@ -1,19 +1,4 @@
-// Make an object containing all the categories of ways things can be problems,
-// so we can solve them later
-
-var problems = {
- shape: ["square", "triangular", "oblong", "pointy", "sharp", "long", "knobby"],
- position: ["high", "low", "droopy"],
- big: ["visibile", "prominent", "fat", "hefty", "bulky", "big"],
- small: ["shrimpy", "puny", "small", "thin", "weak", "timid", "shy", "tiny", "meek", "bashful"],
- age: ["old", "worn down", "grungy", "ashy", "dull", "dingy", "sad", "tired", "gnarled"],
- texture: ["wrinkled", "dented", "ashy", "rough", "scaly", "dry", "hairy", "fuzzy", "fluffy"],
- attitude: ["angry", "unruly", "rowdy", "unmanageable", "out of control", "grumpy", "noisy"],
- smell: ["stinky", "smelly", "pungent"]
-};
-
-
-// Here are our soulutions
+// Here are our soulutions...
 
 var solutions = {
  shape: [
@@ -58,7 +43,9 @@ var solutions = {
  texture: [
     {adjective: "smoothing", noun: "smoother", plural: "smoothers"},
     {adjective: "lubricating", noun: "lubricator", plural: "lubricators"},
-    {adjective: "polishing", noun: "polish"}
+    {adjective: "polishing", noun: "polish"},
+    {adjective: "silky"},
+    {adjective: "conditioning", noun: "conditioner"}
  ],
  attitude: [
     {adjective: "calming", noun: "calmer"},
@@ -72,3 +59,37 @@ var solutions = {
  	{adjective: "deoderizing", noun: "deoderant", plural: "deoderant"}
  ]
 };
+
+
+// ...and here are a bunch of products that can also be solutions,
+// depending on the problem part we selected
+
+
+var products = {
+ head: ["helmet", "wrap"],
+ face: ["mask", "serum"],
+ neck: ["collar", "brace"],
+ arms: ["sleeves", "shirt"],
+ hands: ["gloves"],
+ torso: ["shirt", "undershirt"],
+ breasts: ["bra", "bralette"],
+ downthere: ["underwear", "underpants", "thong", "panties"],
+ legs: ["pants"],
+ feet: ["socks", "shoes"],
+ all: ["cream", "night cream", "day cream"]
+};
+
+var exciting_adjectives = [
+"magical", "incredible", "best-selling", "revolutionary", "one-of-a-kind"
+];
+
+var followup = [
+"find us on kickstarter/instagram/twitter.",
+"use the hashtag/coupon code x to save y percent.",
+"your unfortunate x will thank you.",
+"last time these sold out in x days, so don't wait!",
+"a customer favorite!",
+"refer x friends and we'll give you an extra one free!"
+"bye bye, problem x!"
+
+]

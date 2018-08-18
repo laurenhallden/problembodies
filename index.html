@@ -84,17 +84,23 @@
         <span class="the-problem">grumpy</span>
         <span class="the-adjective-direction"></span>
         <span class="the-problem-part"></span>
-         holding you back?
+        <span class="the-result">holding you back?</span>
         <span class="the-emotions"></span>
       </p>
 
 
       <p class="problem-statement-type-c">
         <br/>
-        Then you need our magical
-        <span class="the-solution-adjective"></span>
+        Then you need our
+        <span class="the-solution-adjective-one"></span>
+        <span class="the-solution-adjective-two"></span>
         <span class="the-problem-part-singular"></span>
         <span class="the-solution-noun"></span>!
+      </p>
+
+      <p class="follow-up">
+        <br/>
+        <span class="the-follow-up">
       </p>
 		</section>
 	</div> <!-- end wrapper -->
@@ -107,6 +113,7 @@
 	<script src="js/scripts.js"></script>
   <script src="js/bodyparts.js"></script>
   <script src="js/problems.js"></script>
+  <script src="js/solutions.js"></script>
   <script src="js/emotions.js"></script>
 
   <script>
@@ -226,7 +233,11 @@
 
     // pick a random solution that matches our problem class
     var solutionClass = solutions[chosenProblem.class];
-    var theSolution = solutionClass[Math.floor(Math.random() * solutionClass.length)].noun;
+    var solutionNouns = solutionClass.filter(function (filter) {
+      return filter.noun !== null &
+            filter.noun !== undefined
+    });
+    var theSolution = solutionNouns[Math.floor(Math.random() * solutionNouns.length)].noun;
 
     console.log(theSolution);
 
@@ -243,10 +254,17 @@
     var theSolutionAdjective = problemAdjectives[Math.floor(Math.random() * problemAdjectives.length)].adjective;
     console.log(theSolutionAdjective);
 
+    // pump it up with another adjective?
+    var hypeIt = Math.round(Math.random());
+    if (hypeIt != 0) {
+      var theHype = exciting_adjectives[Math.floor(Math.random() * exciting_adjectives.length)];
+      $('.the-solution-adjective-one').html(theHype);
+    };
+
     // Set the solution span
     $('.the-solution-noun').html(theSolution);
     $('.the-problem-part-singular').html(chosenPart.singular);
-    $('.the-solution-adjective').html(theSolutionAdjective);
+    $('.the-solution-adjective-two').html(theSolutionAdjective);
 
 
   </script>
