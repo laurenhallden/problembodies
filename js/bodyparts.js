@@ -42,7 +42,7 @@ var bodyparts = [
  {singular: "lip", plural: "lips", count: 2, set: "vertical", products: "face"},
  {singular: "lower back", count: 1, products: "torso"},
  {singular: "nail bed", plural: "nail beds", count: 10, products: "hands"},
- {singular: "nail", plural: "nails", count: 10, products: "hands"},
+ {singular: "fingernail", plural: "fingernails", count: 10, products: "hands"},
  {singular: "neck", count: 1, products: "neck"},
  {singular: "nipple", plural: "nipples", count: 2, products: "breasts"},
  {singular: "palm", plural: "palms", count: 2, products: "hands"},

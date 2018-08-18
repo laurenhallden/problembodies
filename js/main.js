@@ -27,6 +27,9 @@ function pickFromArray(array) {
 
 function whatsMyProblem() {
 
+  // erase an old fields
+  $('.reset').html("");
+
   // pick a random body part
   var randomPart = pickFromArray(bodyparts);
 
@@ -71,7 +74,6 @@ function whatsMyProblem() {
   // Set the part span
   $('.the-problem-part').html(chosenPart.part);
 
-console.log(chosenPart.plural);
   // Set the verb span
   if (chosenPart.plural == true ) {
     $('.the-verb').html("Are");
@@ -94,12 +96,12 @@ console.log(chosenPart.plural);
 
   // Show the verb or not
   var verbVisiblity = pickANumber(2);
+  console.log("verb" + verbVisiblity);
   if (verbVisiblity != 0) {
     $('.the-verb-optional').hide();
     $('.the-suggestion').hide();
     $('.the-possessive-optional').hide();
     $('.the-emotions').html(pickFromArray(emotions));
-    // Capaitalize the first letter in what's left
   }
   else {
     $('.the-verb-optional').show();
@@ -171,6 +173,8 @@ console.log(chosenPart.plural);
     $('.type-e').show();
   }
 
+  console.log(whichStatement);
+
   // Capitalize the first letter of whatever's left:
   var statementArr = [];
   $(".problem-statement:visible span:visible").each(function(){
@@ -179,6 +183,7 @@ console.log(chosenPart.plural);
   // we logged all the spans, now remove the empty ones
   statementArr = statementArr.filter(function(n){ return n != "" });
   var firstSpan = statementArr[0];
+  console.log(firstSpan);
   var capLetter = firstSpan.charAt(0).toUpperCase();
   if (capLetter != '"') {
     var capLetter = capLetter;

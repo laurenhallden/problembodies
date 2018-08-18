@@ -55,71 +55,64 @@
 <body>
 
 	<div class="wrapper">
-		<section>
+		<section class="first-section">
       <div class="problem-statement-holder">
       <p class="problem-statement type-a h1">
-        <span class="the-verb the-verb-optional"></span> 
+        <span class="the-verb the-verb-optional reset"></span> 
         <span class="the-possessive-optional">your</span>
-        <span class="the-adjective-one"></span>
-        <span class="the-adjective-direction"></span>
-        <span class="the-problem-part"></span>
+        <span class="the-adjective-one reset"></span>
+        <span class="the-adjective-direction reset"></span>
+        <span class="the-problem-part reset"></span>
         <span class="the-emphasis-a">just</span>
         <span class="the-emphasis">too</span>
         <span class="the-problem">grumpy</span>?
-        <span class="the-emotions"></span>
+        <span class="the-emotions reset"></span>
       </p>
       <p class="problem-statement type-b h1">
         <span class="the-suggestion">Tired of</span> 
         <span class="the-possessive-optional">your</span>
-        <span class="the-adjective-one"></span>
+        <span class="the-adjective-one reset"></span>
         <span class="the-problem">grumpy</span>
-        <span class="the-adjective-direction"></span>
-        <span class="the-problem-part"></span>?
-        <span class="the-emotions"></span>
+        <span class="the-adjective-direction reset"></span>
+        <span class="the-problem-part reset"></span>?
+        <span class="the-emotions reset"></span>
       </p>
       <p class="problem-statement type-c h1">
-        <span class="the-verb the-verb-optional"></span> 
+        <span class="the-verb the-verb-optional reset"></span> 
         <span class="the-possessive-optional">your</span>
-        <span class="the-adjective-one"></span>
+        <span class="the-adjective-one reset"></span>
         <span class="the-problem">grumpy</span>
-        <span class="the-adjective-direction"></span>
-        <span class="the-problem-part"></span>
+        <span class="the-adjective-direction reset"></span>
+        <span class="the-problem-part reset"></span>
         <span class="the-result">holding you back</span>?
-        <span class="the-emotions"></span>
+        <span class="the-emotions reset"></span>
       </p>
       <p class="problem-statement type-d h1">
-        <span class="intro"></span>
-        <span class="could"></span>
-        <span class="the-verb"></span> 
-        <span class="the-possessive">your</span>
-        <span class="the-adjective-one"></span>
+        <span class="intro reset"></div>
+        <span class="could reset"></span>
+        <span class="the-verb the-verb-optional reset"></span> 
+        <span class="the-possessive-optional">your</span>
+        <span class="the-adjective-one reset"></span>
         <span class="the-problem">grumpy</span>
-        <span class="the-adjective-direction"></span>
-        <span class="the-problem-part"></span>
-        <span class="be"></span>
+        <span class="the-adjective-direction reset"></span>
+        <span class="the-problem-part reset"></span>
+        <span class="be reset"></span>
         <span class="the-result">holding you back</span>?
-        <span class="the-emotions"></span>
+        <span class="the-emotions reset"></span>
       </p>
       <p class="problem-statement type-e h1">
-        <span class="intro"></span>
-        <span class="the-verb the-verb"></span> 
+        <span class="intro reset"></div>
+        <span class="the-verb reset"></span> 
         <span class="the-possessive">your</span>
-        <span class="the-adjective-one"></span>
-        <span class="the-adjective-direction"></span>
-        <span class="the-problem-part"></span>
+        <span class="the-adjective-one reset"></span>
+        <span class="the-adjective-direction reset"></span>
+        <span class="the-problem-part reset"></span>
         <span class="the-emphasis-a">just</span>
         <span class="the-emphasis">too</span>
         <span class="the-problem">grumpy</span>?
-        <span class="the-emotions"></span>
+        <span class="the-emotions reset"></span>
       </p>
     </div>
-  </section>
-
-  <section>
-      <div class="button-set">
-        <button id="no">Nope</button>
-        <button id="yes">Yeah, probably</button>
-      </div>
   </section>
 
   <section>
@@ -138,6 +131,14 @@
         <span class="the-follow-up"></span>
       </p>
 		</section>
+
+    <section class="buttons">
+      <div class="button-set">
+        <button id="no">Nope</button>
+        <button id="yes">Yeah, probably</button>
+      </div>
+    </section>
+
   </div>
 	</div> <!-- end wrapper -->
 
@@ -165,9 +166,9 @@
     });
 
     $('#yes').click(function() {
-      whatsMySolution();
       $('.problem-statement-holder').fadeOut();
       $('.solution-statement-holder').fadeIn();
+      whatsMySolution();
     });
 
     
