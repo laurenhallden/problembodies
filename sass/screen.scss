@@ -5,9 +5,20 @@
 
 @import "compass/reset";
 
+html, body {
+	font-size: 15px;
+	line-height: 1.4;
+}
+
 h1 {
 	font-size: 2rem;
 }
+
+p {
+	margin-bottom: 0.5rem;
+}
+
+
 
 .wrapper {
 	max-width: 900px;

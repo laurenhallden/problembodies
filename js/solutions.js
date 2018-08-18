@@ -89,7 +89,7 @@ var followup = [
 "your unfortunate x will thank you.",
 "last time these sold out in x days, so don't wait!",
 "a customer favorite!",
-"refer x friends and we'll give you an extra one free!"
+"refer x friends and we'll give you an extra one free!",
 "bye bye, problem x!"
 
 ]

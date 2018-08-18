@@ -100,7 +100,7 @@
 
       <p class="follow-up">
         <br/>
-        <span class="the-follow-up">
+        <span class="the-follow-up"></span>
       </p>
 		</section>
 	</div> <!-- end wrapper -->
@@ -119,6 +119,21 @@
   <script>
 
     // *****************************
+    //      COMMON FUNCTIONS
+    // *****************************
+
+    // We're going to generate a lot of random numbers,
+    // so here's a number picker function
+
+    function pickANumber(upperLimit) {
+      var randomNumber = Math.floor(Math.random() * upperLimit);
+      return randomNumber;
+    }
+
+    // var number = pickANumber(4);
+    // console.log(number);
+
+    // *****************************
     //         PROBLEMS
     // *****************************
 
@@ -130,7 +145,7 @@
     var randomPart = bodyparts[Math.floor(Math.random() * bodyparts.length)];
 
     // pick whether we want it to be plural
-    var plural = Math.round(Math.random());
+    var plural = pickANumber(1);
 
     // if we do want it to be (or if it HAS to be)
     if ((plural > 0) || (randomPart.count > 10)) {
@@ -176,7 +191,7 @@
     } else {
       $('.the-verb').html("Is");
       // and decide if we're picking a one of them (left/right)
-      var randomPartSelection = [Math.floor(Math.random() * 4)];
+      var randomPartSelection = pickANumber(4);
       //console.log("random selection is" + randomPartSelection);
       //unless there's only ever one of this thing
       if (randomPart.count != 1) {
@@ -191,7 +206,7 @@
     };
 
     // Show the verb or not
-    var verbVisiblity = Math.round(Math.random());
+    var verbVisiblity = pickANumber(1);
     if (verbVisiblity != 0) {
       $('.the-verb').hide();
       $('.the-suggestion').hide();
@@ -206,7 +221,7 @@
     }
 
     // Pump it up with some emphasis or not
-    var emphasisVisiblity = [Math.floor(Math.random() * 3)];
+    var emphasisVisiblity = pickANumber(3);
     if (emphasisVisiblity != 0) {
       $('.the-emphasis').show();
       if (randomPartSelection == 1) {
@@ -255,7 +270,7 @@
     console.log(theSolutionAdjective);
 
     // pump it up with another adjective?
-    var hypeIt = Math.round(Math.random());
+    var hypeIt = pickANumber(1);
     if (hypeIt != 0) {
       var theHype = exciting_adjectives[Math.floor(Math.random() * exciting_adjectives.length)];
       $('.the-solution-adjective-one').html(theHype);
@@ -266,7 +281,9 @@
     $('.the-problem-part-singular').html(chosenPart.singular);
     $('.the-solution-adjective-two').html(theSolutionAdjective);
 
-
+    // Pick a followup statement
+    var theFollowup = followup[Math.floor(Math.random() * followup.length)];
+    $('.the-follow-up').html(theFollowup);
   </script>
 </body>
 </html>
