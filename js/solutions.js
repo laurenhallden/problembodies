@@ -83,16 +83,39 @@ var products = {
 };
 
 var exciting_adjectives = [
-"magical", "incredible", "best-selling", "revolutionary", "one-of-a-kind"
+	"magical",
+	"incredible",
+	"best-selling",
+	"revolutionary",
+	"one-of-a-kind",
+	"ultra",
+	"super",
+	"mega",
+	"fantastic",
+	"fabulous",
+	"special"
 ];
 
 var followup = [
-"find us on kickstarter/instagram/twitter.",
-"use the hashtag/coupon code x to save y percent.",
-"your unfortunate x will thank you.",
-"last time these sold out in x days, so don't wait!",
-"a customer favorite!",
-"refer x friends and we'll give you an extra one free!",
-"bye bye, problem x!"
+"Don't forget to check out our <span class='social-service'></span>.",
+"Use the hashtag/coupon code x to save <span class='to-thirty'></span>%.",
+"Your unfortunate <span class='part-again'></span> will thank you.",
+"Last time these sold out in <span class='to-thirty'></span> days, so don't wait!",
+"Our customers love 'em!",
+"Refer <span class='to-thirty'></span> friends and we'll give you an extra one free!",
+"Bye bye, problem <span class='part-again'></span>!",
+"It'll change your life, trust us.",
+"We make 'em from recycled milk containers, so it's environmentally friendly."
 
+]
+
+var social = [
+"Kickstarter",
+"Instagram",
+"lastest Instagram story",
+"Facebook",
+"Facebook community",
+"Twitter",
+"season of Shark Tank",
+"New York Times article"
 ]
