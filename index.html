@@ -65,14 +65,14 @@
         <span class="the-problem-part reset"></span>
         <span class="the-emphasis-a">just</span>
         <span class="the-emphasis">too</span>
-        <span class="the-problem">grumpy</span>?
+        <span class="the-problem reset"></span>?
         <span class="the-emotions reset"></span>
       </p>
       <p class="problem-statement type-b h1">
         <span class="the-suggestion">Tired of</span> 
         <span class="the-possessive-optional">your</span>
         <span class="the-adjective-one reset"></span>
-        <span class="the-problem">grumpy</span>
+        <span class="the-problem reset"></span>
         <span class="the-adjective-direction reset"></span>
         <span class="the-problem-part reset"></span>?
         <span class="the-emotions reset"></span>
@@ -81,27 +81,27 @@
         <span class="the-verb the-verb-optional reset"></span> 
         <span class="the-possessive-optional">your</span>
         <span class="the-adjective-one reset"></span>
-        <span class="the-problem">grumpy</span>
+        <span class="the-problem reset"></span>
         <span class="the-adjective-direction reset"></span>
         <span class="the-problem-part reset"></span>
-        <span class="the-result">holding you back</span>?
+        <span class="the-result reset"></span>?
         <span class="the-emotions reset"></span>
       </p>
       <p class="problem-statement type-d h1">
-        <span class="intro reset"></div>
+        <span class="intro reset"></span>
         <span class="could reset"></span>
-        <span class="the-verb the-verb-optional reset"></span> 
-        <span class="the-possessive-optional">your</span>
+        <span class="the-verb reset"></span> 
+        <span class="the-possessive">your</span>
         <span class="the-adjective-one reset"></span>
-        <span class="the-problem">grumpy</span>
+        <span class="the-problem reset"></span>
         <span class="the-adjective-direction reset"></span>
         <span class="the-problem-part reset"></span>
-        <span class="be reset"></span>
-        <span class="the-result">holding you back</span>?
+        <span class="be reset reset"></span>
+        <span class="the-result reset"></span>?
         <span class="the-emotions reset"></span>
       </p>
       <p class="problem-statement type-e h1">
-        <span class="intro reset"></div>
+        <span class="intro reset"></span>
         <span class="the-verb reset"></span> 
         <span class="the-possessive">your</span>
         <span class="the-adjective-one reset"></span>
@@ -109,7 +109,7 @@
         <span class="the-problem-part reset"></span>
         <span class="the-emphasis-a">just</span>
         <span class="the-emphasis">too</span>
-        <span class="the-problem">grumpy</span>?
+        <span class="the-problem reset"></span>?
         <span class="the-emotions reset"></span>
       </p>
     </div>
@@ -117,13 +117,13 @@
 
   <section>
     <div class="solution-statement-holder">
-      <p class="solution-statement h1">
+      <p class="solution-statement h1 selected">
         <br/>
         <span class="solution-intro">Then you need our</span>
-        <span class="the-solution-adjective-one"></span>
-        <span class="the-solution-adjective-two"></span>
-        <span class="the-problem-part-singular"></span>
-        <span class="the-solution-noun"></span>!
+        <span class="the-solution-adjective-one reset"></span>
+        <span class="the-solution-adjective-two reset"></span>
+        <span class="the-problem-part-singular reset"></span>
+        <span class="the-solution-noun reset"></span>!
       </p>
 
       <p class="follow-up">
@@ -158,17 +158,18 @@
 
     $(document).ready(function() {
       whatsMyProblem();
-      $('.problem-statement-holder').fadeIn();
     });
 
     $('#no').click(function() {
+      $('.problem-statement-holder').fadeOut(function() {
         whatsMyProblem();
+      });
     });
 
     $('#yes').click(function() {
-      $('.problem-statement-holder').fadeOut();
-      $('.solution-statement-holder').fadeIn();
-      whatsMySolution();
+      $('.problem-statement-holder').fadeOut(function() {
+        whatsMySolution();
+      });
     });
 
     

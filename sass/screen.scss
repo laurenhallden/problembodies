@@ -26,6 +26,10 @@ body {
 	height: 80vh;
 }
 
+
+.hidden {
+	display: none;
+}
 .first-section {
 	height: 50vh;
 	max-height: 50vh;
@@ -42,6 +46,7 @@ h1, .h1 {
 
 .problem-statement-holder,
 .solution-statement-holder {
+	display: none;
 }
 
 .solution-statement-holder {

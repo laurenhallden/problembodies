@@ -27,8 +27,11 @@ function pickFromArray(array) {
 
 function whatsMyProblem() {
 
-  // erase an old fields
+  // first, erase any old fields
   $('.reset').html("");
+  $('.reset').removeClass('hidden');
+  // and remove the selected class from any old selected problems
+  $('.problem-statement').removeClass('selected');
 
   // pick a random body part
   var randomPart = pickFromArray(bodyparts);
@@ -96,23 +99,16 @@ function whatsMyProblem() {
 
   // Show the verb or not
   var verbVisiblity = pickANumber(2);
-  console.log("verb" + verbVisiblity);
   if (verbVisiblity != 0) {
-    $('.the-verb-optional').hide();
-    $('.the-suggestion').hide();
-    $('.the-possessive-optional').hide();
+    $('.the-verb-optional').addClass('hidden');
+    $('.the-suggestion').addClass('hidden');
+    $('.the-possessive-optional').addClass('hidden');
     $('.the-emotions').html(pickFromArray(emotions));
-  }
-  else {
-    $('.the-verb-optional').show();
-    $('.the-suggestion').show();
-    $('.the-possessive-optional').show();
-  }
+  };
 
   // Pump it up with some emphasis or not
   var emphasisVisiblity = pickANumber(5);
   if (emphasisVisiblity != 0) {
-    $('.the-emphasis').show();
     if (emphasisVisiblity == 1) {
       $('.the-emphasis').html("really");
       just();
@@ -128,17 +124,15 @@ function whatsMyProblem() {
       $('.the-emphasis').html("crazy");
     }
   } else {
-    $('.the-emphasis').hide();
-    $('.the-emphasis-a').hide();
+    $('.the-emphasis').addClass('hidden');
+    $('.the-emphasis-a').addClass('hidden');
   }
 
   // Pump it up some more with "just"
   function just() {
     var justVisibility = pickANumber(2);
     if (justVisibility != 0) {
-      $('.the-emphasis-a').show();
-    } else {
-      $('.the-emphasis-a').hide();
+      $('.the-emphasis-a').addClass('hidden');
     }
   }
 
@@ -152,7 +146,7 @@ function whatsMyProblem() {
   if (pickANumber(2) != 0) {
     $('.could').html("Could");
     $('.be').html("be");
-    $('.type-d .the-verb').hide();
+    $('.type-d .the-verb').addClass('hidden');
   }
 
   // Set the problem span
@@ -160,30 +154,32 @@ function whatsMyProblem() {
 
   // Decide which problem statement to show
   var whichStatement = pickANumber(5);
-  $('.problem-statement').hide();
+  $('.problem-statement').addClass('hidden');
   if (whichStatement == 0) {
-    $('.type-a').show();
+    $('.type-a').removeClass('hidden');
+    $('.type-a').addClass("selected");
   } else if (whichStatement == 1) {
-    $('.type-b').show();
+    $('.type-b').removeClass('hidden');
+    $('.type-b').addClass("selected");
   } else if (whichStatement == 2) {
-    $('.type-c').show();
+    $('.type-c').removeClass('hidden');
+    $('.type-c').addClass("selected");
   } else if (whichStatement == 3) {
-    $('.type-d').show();
+    $('.type-d').removeClass('hidden');
+    $('.type-d').addClass("selected");
   } else if (whichStatement == 4) {
-    $('.type-e').show();
+    $('.type-e').removeClass('hidden');
+    $('.type-e').addClass("selected");
   }
-
-  console.log(whichStatement);
 
   // Capitalize the first letter of whatever's left:
   var statementArr = [];
-  $(".problem-statement:visible span:visible").each(function(){
+  $(".problem-statement.selected span:not(.hidden)").each(function(){
       statementArr.push($(this).text());
   });
   // we logged all the spans, now remove the empty ones
   statementArr = statementArr.filter(function(n){ return n != "" });
   var firstSpan = statementArr[0];
-  console.log(firstSpan);
   var capLetter = firstSpan.charAt(0).toUpperCase();
   if (capLetter != '"') {
     var capLetter = capLetter;
@@ -196,12 +192,14 @@ function whatsMyProblem() {
   }
   var rest = firstSpan.substring(1);
   var span;
-    $('.problem-statement:visible span:visible').each(function(){
+    $('.problem-statment.selected span:not(.hidden)').each(function(){
       if($(this).html() == firstSpan){
         span = $(this);
       }
     });
   $(span).html(quote + capLetter + rest);
+
+  $('.problem-statement-holder').fadeIn();
 }
 
 
@@ -241,21 +239,13 @@ function whatsMySolution() {
 
   // Capitalize the first letter of our solution
   var solutionArr = [];
-  $(".solution-statement:visible span:visible").each(function(){
+  $('.solution-statement.selected span:not(.hidden)').each(function(){
       solutionArr.push($(this).text());
   });
+  console.log(solutionArr);
   // we logged all the spans, now remove the empty ones
-  solutionArr = solutionArr.filter(function(n){ return n != "" }); 
-  var firstSolSpan = solutionArr[1];
-  var capSolLetter = firstSolSpan.charAt(0).toUpperCase();
-  var restSol = firstSolSpan.substring(1);
-  var solSpan;
-    $('.solution-statement:visible span:visible').each(function(){
-      if($(this).html() == firstSolSpan){
-        solSpan = $(this);
-      }
-    });
-  $(solSpan).html(capSolLetter + restSol);
+  
+ 
 
   // Pick a followup statement
   var followUpStatement = pickFromArray(followup);
@@ -271,4 +261,6 @@ function whatsMySolution() {
   else if((followUpStatement).indexOf('to-thirty') != -1)   {
     $('.to-thirty').html(pickANumber(31));
   }
+
+  $('.solution-statement-holder').fadeIn();
 }
