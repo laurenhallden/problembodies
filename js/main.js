@@ -200,6 +200,7 @@ function whatsMyProblem() {
   $(span).html(quote + capLetter + rest);
 
   $('.problem-statement-holder').fadeIn();
+
 }
 
 
@@ -262,5 +263,8 @@ function whatsMySolution() {
     $('.to-thirty').html(pickANumber(31));
   }
 
-  $('.solution-statement-holder').fadeIn();
+  $('.solution-statement-holder').fadeIn(function(){
+    $('.again-buttons').fadeIn();
+  });
+
 }

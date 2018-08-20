@@ -95,6 +95,17 @@ button, .button {
 	}
 }
 
+.problem-buttons,
+.again-buttons {
+	display: none;
+}
+
+.reset-button {
+	display: block;
+	margin-top: 20px;
+	color: white;
+}
+
 .the-follow-up {
 	font-size: 18px;
 	font-style: italic;

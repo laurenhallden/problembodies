@@ -103,7 +103,7 @@ var exciting_adjectives = [
 ];
 
 var followup = [
-"Don't forget to<span class='social-service'></span>.",
+"Don't forget to <span class='social-service'></span>.",
 "Use the hashtag/coupon code x to save <span class='to-thirty'></span>%.",
 "Your unfortunate <span class='part-again'></span> will thank you.",
 "Last time these sold out in <span class='to-thirty'></span> days, so don't wait!",
