@@ -135,24 +135,29 @@ strong {
 }
 
 /* line 64, ../sass/screen.scss */
-p,
-.intro,
-.solution-intro {
+p {
   font-size: 22px;
   font-weight: 400;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* line 71, ../sass/screen.scss */
+.intro,
+.solution-intro {
   margin-top: -45px;
   display: block;
   margin-bottom: 20px;
 }
 
-/* line 74, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 .fine-print {
   font-family: sans-serif;
   font-size: 12px;
   opacity: 0.4;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 .superscript {
   vertical-align: super;
   opacity: 0.4;
@@ -162,7 +167,7 @@ p,
 /* *************************
          CONTAINERS
 ************************* */
-/* line 91, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .wrapper {
   max-width: 900px;
   margin: 50px auto;
@@ -172,7 +177,7 @@ p,
   height: 80vh;
 }
 
-/* line 100, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .main-section {
   height: 50vh;
   max-height: 50vh;
@@ -181,12 +186,12 @@ p,
   border: 1px solid transparent;
 }
 
-/* line 108, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .hidden {
   display: none;
 }
 
-/* line 112, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 .problem-statement-holder,
 .consideration-holder,
 .solution-statement-holder {
@@ -196,7 +201,7 @@ p,
 /* *************************
           BUTTONS
 ************************* */
-/* line 123, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 .buttons {
   position: absolute;
   bottom: 80px;
@@ -205,7 +210,7 @@ p,
   width: 100%;
 }
 
-/* line 131, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 button, .button {
   display: inline-block;
   font-size: 18px;
@@ -217,21 +222,21 @@ button, .button {
   cursor: pointer;
   border-radius: 6px;
 }
-/* line 142, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 button:first-of-type, .button:first-of-type {
   border: 4px solid white;
   background-color: transparent;
   color: white;
 }
 
-/* line 149, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
 .problem-buttons,
 .consideration-buttons,
 .again-buttons {
   display: none;
 }
 
-/* line 155, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .reset-button {
   display: block;
   margin-top: 20px;
@@ -241,11 +246,11 @@ button:first-of-type, .button:first-of-type {
 /* *************************
    PROBLEM-SPECIFIC STUFF
 ************************* */
-/* line 166, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 .problem-statement {
   margin-top: 50px;
 }
-/* line 168, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 .problem-statement .the-emotions {
   display: block;
   margin-top: 20px;
@@ -254,19 +259,19 @@ button:first-of-type, .button:first-of-type {
 /* *************************
 CONSIDERATION-SPECIFIC STUFF
 ************************* */
-/* line 179, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .the-considerations {
   margin-bottom: 20px;
 }
 
-/* line 183, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 .the-evidence {
   font-size: 22px;
   font-weight: 400;
   margin-bottom: 20px;
 }
 
-/* line 189, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 .evidence-card {
   background: white;
   padding: 20px;
@@ -275,11 +280,11 @@ CONSIDERATION-SPECIFIC STUFF
   border-radius: 8px;
   box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.2), 0 2px 8px 4px rgba(60, 64, 67, 0.1);
 }
-/* line 197, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 .evidence-card p {
   color: #444444;
 }
-/* line 201, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 .evidence-card.animate {
   animation: slideIn 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.275) both, fadeIn 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
@@ -287,7 +292,7 @@ CONSIDERATION-SPECIFIC STUFF
 /* *************************
   SOLUTIONS-SPECIFIC STUFF
 ************************* */
-/* line 212, ../sass/screen.scss */
+/* line 215, ../sass/screen.scss */
 .the-follow-up {
   font-size: 18px;
   font-style: italic;

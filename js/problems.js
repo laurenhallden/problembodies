@@ -7,8 +7,8 @@ var problems = {
  big: ["visibile", "prominent", "fat", "hefty", "bulky", "big", "emormous", "pudgy", "puffy"],
  small: ["shrimpy", "puny", "small", "thin", "weak", "timid", "shy", "tiny", "meek", "bashful"],
  age: ["old", "worn down", "grungy", "ashy", "dull", "dingy", "sad", "tired"],
- texture: ["ashy", "rough", "scaly", "dry", "hairy", "frizzy", "gnarled"],
- surface: ["wrinkled", "dented", "pitted", "scarred", "dimpled"],
+ texture: ["ashy", "rough", "scaly", "dry", "hairy", "frizzy", "gnarled", "uneven"],
+ surface: ["wrinkled", "dented", "pitted", "scarred", "dimpled", "uneven"],
  attitude: ["angry", "unruly", "rowdy", "unmanageable", "out of control", "grumpy", "noisy"],
  smell: ["stinky", "smelly", "pungent", "disgusting"]
 };

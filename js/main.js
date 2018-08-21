@@ -209,6 +209,7 @@ function whatsMyProblem() {
 
 function whatsMySolution() {  
 
+  console.log("it's called");
   // pick a random solution that matches our problem class
   var solutionClass = solutions[chosenProblem.class];
   var solutionNouns = solutionClass.filter(function (filter) {

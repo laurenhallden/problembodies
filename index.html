@@ -114,7 +114,6 @@
             <span class="intro reset"></span>
           </p>
           <p class="h1">
-            <span class="intro reset"></span>
             <span class="could reset"></span>
             <span class="the-verb reset"></span> 
             <span class="the-possessive">your</span>
@@ -166,6 +165,7 @@
             of people say that on a first date, the first thing they notice is their partner's
             <span class="the-problem-part reset"></span>.
           </p>
+        </div>
         <p class="fine-print">*not peer reviewed.</p>
 
       </div> <!-- consideration holder -->
@@ -178,12 +178,11 @@
       <!-- Nothing that capitalism can't solve, yo! -->
       <div class="solution-element solution-statement-holder">
 
-        <div class="solution-statement selected">
+        <div class="solution-statement">
           <p>
             <span class="solution-intro">Then you need our</span>
           </p>
           <p class="h1">
-            <span class="solution-intro">Then you need our</span>
             <span class="the-solution-adjective-one reset"></span>
             <span class="the-solution-adjective-two reset"></span>
             <span class="the-problem-part-singular reset"></span>
@@ -212,7 +211,7 @@
         <button class="yes">Yeah, probably</button>
       </div>
 
-      <div class="button-set consideration-elemenet consideration-buttons">
+      <div class="button-set consideration-element consideration-buttons">
         <button class="no">Nope</button>
         <button class="yes">Okay, good point</button>
       </div>
@@ -251,6 +250,7 @@
     $('.no').click(function() {
       // how many times has the user hit nope?
       count++;
+      console.log(count);
 
       if (count == 5) {
         // hit 'em with some guilt
@@ -258,9 +258,18 @@
       } else if (count == 20) {
           console.log('we hit 20');
       } else {
-        $('.problem-statement-holder').fadeOut(function() {
-          whatsMyProblem();
-        });
+        if ($('.problem-buttons').is(':visible')) {
+          $('.problem-statement-holder').fadeOut(function() {
+            console.log("fading");
+            whatsMyProblem();
+          });
+        }
+        else if ($('.consideration-buttons').is(':visible')) {
+          $('.consideration-element').fadeOut(function() {
+            whatsMyProblem();
+           $('.problem-buttons').delay(400).fadeIn();
+          });
+        }
       }
     });
 
@@ -269,7 +278,7 @@
         $('.problem-element').fadeOut(function() {
           whatsMySolution();
         });
-      } else if ($('.considerations-buttons').is(':visible')) {
+      } else if ($('.consideration-buttons').is(':visible')) {
         $('.consideration-element').fadeOut(function() {
           whatsMySolution();
         });

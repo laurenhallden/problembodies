@@ -61,11 +61,15 @@ strong {
 	font-weight: bold;
 }
 
-p,
-.intro,
-.solution-intro {
+p {
 	font-size: 22px;
 	font-weight: 400;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.intro,
+.solution-intro {
 	margin-top: -45px;
 	display: block;
 	margin-bottom: 20px;
@@ -114,7 +118,6 @@ p,
 .solution-statement-holder {
 	display: none;
 }
-
 
 /* *************************
           BUTTONS
