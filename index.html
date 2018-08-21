@@ -251,7 +251,7 @@
     $('.no').click(function() {
       // how many times has the user hit nope?
       count++;
-      
+
       if (count == 5) {
         // hit 'em with some guilt
         considerations();
@@ -265,11 +265,11 @@
     });
 
     $('.yes').click(function() {
-      if ($('.problem-buttons').visible()) {
+      if ($('.problem-buttons').is(':visible')) {
         $('.problem-element').fadeOut(function() {
           whatsMySolution();
         });
-      } else if ($('.considerations-buttons').visible()) {
+      } else if ($('.considerations-buttons').is(':visible')) {
         $('.consideration-element').fadeOut(function() {
           whatsMySolution();
         });

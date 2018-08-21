@@ -242,7 +242,6 @@ function whatsMySolution() {
   $('.solution-statement.selected span:not(.hidden)').each(function(){
       solutionArr.push($(this).text());
   });
-  console.log(solutionArr);
   // we logged all the spans, now remove the empty ones
   
  
