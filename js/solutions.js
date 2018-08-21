@@ -76,6 +76,7 @@ var solutions = {
 // ...and here are a bunch of products that can also be solutions,
 // depending on the problem part we selected
 
+// TO DO - work these in
 
 var products = {
  head: ["helmet", "wrap"],
