@@ -48,6 +48,12 @@ var solutions = {
     {adjective: "silky"},
     {adjective: "conditioning", noun: "conditioner"},
     {adjective: "Himalayan"},
+    {adjective: "retexturizing"},
+ ],
+ surface: [
+    {adjective: "smoothing", noun: "smoother", plural: "smoothers"},
+    {adjective: "filling", noun: "filler"},
+    {adjective: "resurfacing", noun: "resurfacer"}
  ],
  attitude: [
     {adjective: "calming", noun: "calmer"},
