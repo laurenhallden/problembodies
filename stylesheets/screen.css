@@ -1,8 +1,4 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,57 +20,57 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
-/* line 8, ../sass/screen.scss */
+/* line 3, ../sass/screen.scss */
 html, body {
   font-size: 15px;
   line-height: 1.4;
   color: white;
 }
 
-/* line 14, ../sass/screen.scss */
+/* line 9, ../sass/screen.scss */
 body {
   background: #fd746c;
   /* fallback for old browsers */
@@ -84,65 +80,60 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-/* line 20, ../sass/screen.scss */
-.wrapper {
-  max-width: 900px;
-  margin: 50px auto;
-  text-align: center;
-  margin-top: 100px;
-  position: relative;
-  height: 80vh;
+/* *************************
+        ANIMATIONS
+************************* */
+/* Define Animations */
+@keyframes slideIn {
+  from {
+    transform: translateY(400px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
-
-/* line 30, ../sass/screen.scss */
-.hidden {
-  display: none;
+@keyframes slideInShort {
+  from {
+    transform: translateY(80px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
-
-/* line 33, ../sass/screen.scss */
-.main-section {
-  height: 50vh;
-  max-height: 50vh;
-  display: block;
-  margin-top: 15vh;
-  border: 1px solid transparent;
+@keyframes slideDown {
+  from {
+    transform: translateY(-120px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
-
-/* line 41, ../sass/screen.scss */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opaticy: 1;
+  }
+}
+/* Animation Variables */
+/* *************************
+        TYPOGRAPHY
+************************* */
+/* line 50, ../sass/screen.scss */
 h1, .h1 {
   font-size: 48px;
   line-height: 1.2;
   font-weight: 700;
 }
 
-/* line 47, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 51, ../sass/screen.scss */
-.problem-statement-holder,
-.consideration-holder,
-.solution-statement-holder {
-  display: none;
-}
-
-/* line 57, ../sass/screen.scss */
-.solution-statement-holder {
-  display: none;
-}
-
-/* line 61, ../sass/screen.scss */
-.problem-statement {
-  margin-top: 50px;
-}
-/* line 63, ../sass/screen.scss */
-.problem-statement .the-emotions {
-  display: block;
-  margin-top: 20px;
-}
-
-/* line 69, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
+p,
 .intro,
 .solution-intro {
   font-size: 22px;
@@ -152,19 +143,58 @@ strong {
   margin-bottom: 20px;
 }
 
-/* line 78, ../sass/screen.scss */
-.the-considerations {
-  margin-bottom: 20px;
+/* line 70, ../sass/screen.scss */
+.fine-print {
+  font-family: sans-serif;
+  font-size: 12px;
+  opacity: 0.4;
 }
 
-/* line 82, ../sass/screen.scss */
-.the-evidence {
-  font-size: 22px;
-  font-weight: 400;
-  margin-bottom: 20px;
+/* line 76, ../sass/screen.scss */
+.superscript {
+  vertical-align: super;
+  opacity: 0.4;
+  font-size: 14px;
 }
 
-/* line 88, ../sass/screen.scss */
+/* *************************
+         CONTAINERS
+************************* */
+/* line 87, ../sass/screen.scss */
+.wrapper {
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: center;
+  margin-top: 100px;
+  position: relative;
+  height: 80vh;
+}
+
+/* line 96, ../sass/screen.scss */
+.main-section {
+  height: 50vh;
+  max-height: 50vh;
+  display: block;
+  margin-top: 15vh;
+  border: 1px solid transparent;
+}
+
+/* line 104, ../sass/screen.scss */
+.hidden {
+  display: none;
+}
+
+/* line 108, ../sass/screen.scss */
+.problem-statement-holder,
+.consideration-holder,
+.solution-statement-holder {
+  display: none;
+}
+
+/* *************************
+          BUTTONS
+************************* */
+/* line 119, ../sass/screen.scss */
 .buttons {
   position: absolute;
   bottom: 80px;
@@ -173,7 +203,7 @@ strong {
   width: 100%;
 }
 
-/* line 95, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 button, .button {
   display: inline-block;
   font-size: 18px;
@@ -185,23 +215,56 @@ button, .button {
   cursor: pointer;
   border-radius: 6px;
 }
-/* line 106, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 button:first-of-type, .button:first-of-type {
   border: 4px solid white;
   background-color: transparent;
   color: white;
 }
 
-/* Define animation starting points */
-@keyframes bounceDown {
-  from {
-    transform: translateY(10px);
-  }
-  to {
-    transform: translateY(0px);
-  }
+/* line 145, ../sass/screen.scss */
+.problem-buttons,
+.consideration-buttons,
+.again-buttons {
+  display: none;
 }
-/* line 119, ../sass/screen.scss */
+
+/* line 151, ../sass/screen.scss */
+.reset-button {
+  display: block;
+  margin-top: 20px;
+  color: white;
+}
+
+/* *************************
+   PROBLEM-SPECIFIC STUFF
+************************* */
+/* line 162, ../sass/screen.scss */
+.problem-statement {
+  margin-top: 50px;
+}
+/* line 164, ../sass/screen.scss */
+.problem-statement .the-emotions {
+  display: block;
+  margin-top: 20px;
+}
+
+/* *************************
+CONSIDERATION-SPECIFIC STUFF
+************************* */
+/* line 175, ../sass/screen.scss */
+.the-considerations {
+  margin-bottom: 20px;
+}
+
+/* line 179, ../sass/screen.scss */
+.the-evidence {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+/* line 185, ../sass/screen.scss */
 .evidence-card {
   background: white;
   padding: 20px;
@@ -210,44 +273,19 @@ button:first-of-type, .button:first-of-type {
   border-radius: 8px;
   box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.2), 0 2px 8px 4px rgba(60, 64, 67, 0.1);
 }
-/* line 127, ../sass/screen.scss */
+/* line 193, ../sass/screen.scss */
 .evidence-card p {
   color: #444444;
 }
-/* line 131, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 .evidence-card.animate {
-  animation: bounceDown 0.25s 0.35s cubic-bezier(0.75, -1, 0, 1.75) both;
+  animation: slideIn 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.275) both, fadeIn 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
-/* line 136, ../sass/screen.scss */
-.problem-buttons,
-.consideration-buttons,
-.again-buttons {
-  display: none;
-}
-
-/* line 142, ../sass/screen.scss */
-.reset-button {
-  display: block;
-  margin-top: 20px;
-  color: white;
-}
-
-/* line 148, ../sass/screen.scss */
-.fine-print {
-  font-family: sans-serif;
-  font-size: 12px;
-  opacity: 0.4;
-}
-
-/* line 154, ../sass/screen.scss */
-.superscript {
-  vertical-align: super;
-  opacity: 0.4;
-  font-size: 14px;
-}
-
-/* line 160, ../sass/screen.scss */
+/* *************************
+  SOLUTIONS-SPECIFIC STUFF
+************************* */
+/* line 208, ../sass/screen.scss */
 .the-follow-up {
   font-size: 18px;
   font-style: italic;
