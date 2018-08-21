@@ -6,7 +6,7 @@
   <!-- <script async src="https://www.googletagmanager.com/REPLACETHIS"></script> -->
   <script>
     // window.dataLayer = window.dataLayer || [];
-    // function gtag(){dataLayer.push(arguments)};
+    // function gtag(){dataLayer.push(considerations)};
     // gtag('js', new Date());
     // gtag('config', 'REPLACETHIS');
   </script>
@@ -55,7 +55,7 @@
 <body>
 
 	<div class="wrapper">
-		<section class="first-section">
+		<section class="main-section">
       <div class="problem-statement-holder">
         <p class="problem-statement type-a h1">
           <span class="the-verb the-verb-optional reset"></span> 
@@ -115,6 +115,19 @@
       </div>
 
 
+      <div class="consideration-holder">
+        <h1 class="the-considerations">Really?</h1>
+        <div class="evidence-card">
+          <p class="the-evidence">
+          According to one study,<span class="superscript">*</span>
+          <strong><span class="percent">8</span>%</strong>
+          of people say that on a first date, the first thing they notice is their partner's
+          <span class="the-problem-part reset"></span>.
+          </p>
+        <p class="fine-print">*not peer reviewed.</p>
+      </div>
+
+
       <div class="solution-statement-holder">
         <p class="solution-statement h1 selected">
           <br/>
@@ -131,18 +144,26 @@
         </p>
       </div>
 
+
     </section>
 
-    <section class="problem-buttons">
+    <section class="buttons problem-buttons">
       <div class="button-set">
-        <button id="no">Nope</button>
-        <button id="yes">Yeah, probably</button>
+        <button class="no">Nope</button>
+        <button class="yes">Yeah, probably</button>
       </div>
     </section>
 
-    <section class="again-buttons">
+    <section class="buttons consideration-buttons">
       <div class="button-set">
-        <button id="share">Share this!</button>
+        <button class="no">Nope</button>
+        <button class="yes">Okay, good point</button>
+      </div>
+    </section>
+
+    <section class="buttons again-buttons">
+      <div class="button-set">
+        <button class="share">Share this!</button>
         <a class="reset-button" href="#">Start over</a>
       </div>
     </section>
@@ -159,26 +180,44 @@
   <script src="js/problems.js"></script>
   <script src="js/solutions.js"></script>
   <script src="js/emotions.js"></script>
+  <script src="js/considerations.js"></script>
   <script src="js/main.js"></script>
 
   <script>
+
+    var count = [0];
 
     $(document).ready(function() {
       whatsMyProblem()
       $('.problem-buttons').delay(400).fadeIn();
     });
 
-    $('#no').click(function() {
-      $('.problem-statement-holder').fadeOut(function() {
-        whatsMyProblem();
-      });
+    $('.no').click(function() {
+      count++;
+      if (count == 5) {
+        considerations();
+      } else if (count == 20) {
+          console.log('we hit 20');
+      } else {
+        $('.problem-statement-holder').fadeOut(function() {
+          whatsMyProblem();
+        });
+      }
     });
 
-    $('#yes').click(function() {
-      $('.problem-buttons').fadeOut();
-      $('.problem-statement-holder').fadeOut(function() {
+    $('.yes').click(function() {
+      if ($('.problem-buttons').visible()) {
+        $('.problem-buttons').fadeOut();
+        $('.problem-statement-holder').fadeOut(function() {
         whatsMySolution();
-      });
+        });
+      } else if ($('.considerations-buttons').visible()) {
+        $('.consideration-buttons').fadeOut();
+        console.log("faded it");
+        $('.consideration-holder').fadeOut(function() {
+        whatsMySolution();
+        });
+      }
     });
 
     $('.reset-button').click(function() {

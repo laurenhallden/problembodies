@@ -181,22 +181,22 @@ function whatsMyProblem() {
   statementArr = statementArr.filter(function(n){ return n != "" });
   var firstSpan = statementArr[0];
   var capLetter = firstSpan.charAt(0).toUpperCase();
-  if (capLetter != '"') {
+  if (capLetter != '“') {
     var capLetter = capLetter;
     var rest = firstSpan.substring(1);
     var quote = ""
   } else {
     var capLetter = firstSpan.charAt(1).toUpperCase();
     var rest = firstSpan.substring(2);
-    var quote = '"'
+    var quote = '“'
   }
   var rest = firstSpan.substring(1);
   var span;
-    $('.problem-statment.selected span:not(.hidden)').each(function(){
-      if($(this).html() == firstSpan){
-        span = $(this);
-      }
-    });
+  $('.problem-statement.selected span:not(.hidden)').each(function(){
+    if($(this).html() == firstSpan){
+      span = $(this);
+    }
+  });
   $(span).html(quote + capLetter + rest);
 
   $('.problem-statement-holder').fadeIn();
@@ -267,4 +267,23 @@ function whatsMySolution() {
     $('.again-buttons').fadeIn();
   });
 
+}
+
+
+
+// *****************************
+//         CONSIDERATIONS
+// *****************************
+
+function considerations() {
+    $('.problem-statement-holder').fadeOut(function() {
+      pickConsiderations();
+    });
+    $('.problem-buttons').hide();
+}
+
+function pickConsiderations() {
+    $('.consideration-holder').fadeIn();
+    $('.evidence-card').addClass('animate');
+    $('.consideration-buttons').delay(400).fadeIn();
 }
