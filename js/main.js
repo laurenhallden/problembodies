@@ -20,7 +20,6 @@ function pickFromArray(array) {
   return randomValue;
 }
 
-
 // *****************************
 //         PROBLEMS
 // *****************************
