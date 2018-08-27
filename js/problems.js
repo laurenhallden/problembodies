@@ -3,7 +3,7 @@
 
 var problems = {
  shape: ["square", "triangular", "oblong", "pointy", "sharp", "long", "knobby"],
- position: ["high", "low", "droopy", "loose", "dangly"],
+ position: ["droopy", "loose", "dangly"],
  big: ["prominent", "bulbous", "bulging", "fat", "hefty", "bulky", "big", "emormous", "pudgy", "puffy", "plump", "large", "chubby", "flabby", "paunchy", "meaty"],
  small: ["shrimpy", "puny", "small", "thin", "weak", "timid", "shy", "tiny", "meek", "bashful", "pitiful", "pitiable", "inadequate", "insufficient", "meager", "paltry"],
  age: ["old", "haggard", "worn down", "used up", "exhausted", "shabby", "worn out", "weary", "ruined", "grungy", "ashy", "dull", "dingy", "sad", "tired"],

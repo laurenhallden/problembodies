@@ -35,7 +35,7 @@ function whatsMyProblem() {
   // Pick a random body part
   var randomPart = pickFromArray(bodyparts);
 
-  // {ick whether we want it to be plural
+  // Pick whether we want it to be plural
   var plural = pickANumber(2);
 
   // If we do want it to be (or if it HAS to be)
@@ -56,6 +56,7 @@ function whatsMyProblem() {
     chosenPart.plural = false;
   }
   chosenPart.singular = (randomPart.singular);
+  chosenPart.pluralpart = (randomPart.plural);
 
   // Pick a class of problems
   function randomProblem(problems) {
@@ -251,7 +252,6 @@ function whatsMySolution() {
 
   // Set the solution span
   $('.the-solution-noun').html(theSolution);
-  $('.the-problem-part-singular').html(chosenPart.singular);
   $('.the-solution-adjective-two').html(theSolutionAdjective);
 
   // Capitalize the first letter of our solution
@@ -299,11 +299,17 @@ function considerations() {
 
 function pickConsiderations() {
 
+  // Fill in the sciencey-label
+  $('.caption-label').html(pickFromArray(labels));
+  // Fill in the part for Evidence B
+  $('.the-problem-part-plural').html(chosenPart.pluralpart);
+
+  $('.the-considerations').html(pickFromArray(considerations));
   // Decide which consideration statement to show
-  var whichConsideration = pickANumber(2);
+  var whichConsideration = pickANumber(4);
   console.log(whichConsideration);
   $('.evidence-span').addClass('hidden');
-  if (whichConsideration == 0) {
+  if (whichConsideration < 1) {
     $('.evidence-a-detail').html(pickFromArray(evidenceA));
     $('.evidence-a').removeClass('hidden');
   } else {
