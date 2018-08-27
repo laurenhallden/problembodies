@@ -161,9 +161,16 @@
         <div class="evidence-card">
           <p class="the-evidence">
             According to one study,<span class="superscript">*</span>
-            <strong><span class="percent">8</span>%</strong>
-            of people say that on a first date, the first thing they notice is their partner's
-            <span class="the-problem-part reset"></span>.
+
+            <span class="evidence-span evidence-a">
+              <strong><span class="percent">8</span>%</strong>
+              of people say that when talking to someone <span class="evidence-a-detail">on a first date</span>, one of the <strong>first things</strong> they notice is that person's 
+              <span class="the-problem-part reset"></span>.
+            </span>
+
+            <span class="evidence-span evidence-b">
+              people with <span class="the-problem"></span> <span class="the-problem-part reset"></span> are <span class="percent">8</span>% <span class="evidence-b-detail">less likely to be offered jobs</span> than people without.</span>
+            </p>
           </p>
         </div>
         <p class="fine-print">*not peer reviewed.</p>
@@ -251,10 +258,10 @@
       // how many times has the user hit nope?
       count++;
 
-      if (count == 5) {
+      if (count % 5 === 0 ) {
         // hit 'em with some guilt
         considerations();
-      } else if (count == 20) {
+      } else if (count == 31) {
           console.log('we hit 20');
       } else {
         if ($('.problem-buttons').is(':visible')) {

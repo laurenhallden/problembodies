@@ -31,10 +31,9 @@ var justEmphasis = [
 // these can't
 var emphasis = [
     "particularly",
-    "unusually",
     "weirdly",
-    "freakishly",
-    "noticeably"
+    "noticeably",
+    "pretty"
 ]
 
 var intro = [
@@ -55,6 +54,7 @@ var results = [
     "making it hard to date",
     "making life hard",
     "causing you some serious grief",
-    "causing you distress"
+    "causing you distress",
+    "keeping you from getting that promotion"
 ];
 

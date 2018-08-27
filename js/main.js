@@ -126,18 +126,16 @@ function whatsMyProblem() {
 
   // Pump it up with some emphasis or not
   var emphasisVisiblity = pickANumber(4);
-  console.log("emphasis visibility is" + emphasisVisiblity);
   if (emphasisVisiblity != 0 && emphasisVisiblity < 2) {
     // these can be further pumped up with "just"
     $('.the-emphasis').html(pickFromArray(justEmphasis));
     $('.the-emphasis').removeClass('hidden');
     just();
-  } if (emphasisVisiblity > 1) {
+  } else if (emphasisVisiblity > 1) {
     // these can't
     $('.the-emphasis').html(pickFromArray(emphasis));
     $('.the-emphasis').removeClass('hidden');
     $('.the-emphasis-a').addClass('hidden');
-    console.log('we hid just');
   } else {
     $('.the-emphasis').addClass('hidden');
   }
@@ -145,7 +143,6 @@ function whatsMyProblem() {
   // Pump it up some more with "just"
   function just() {
     var justVisibility = pickANumber(2);
-    console.log('we called for just, then picked' + justVisibility);
     if (justVisibility != 0) {
       $('.the-emphasis-a').addClass('hidden');
     }
@@ -301,7 +298,20 @@ function considerations() {
 }
 
 function pickConsiderations() {
-    $('.consideration-holder').fadeIn();
-    $('.evidence-card').addClass('animate');
-    $('.consideration-buttons').delay(400).fadeIn();
+
+  // Decide which consideration statement to show
+  var whichConsideration = pickANumber(2);
+  console.log(whichConsideration);
+  $('.evidence-span').addClass('hidden');
+  if (whichConsideration == 0) {
+    $('.evidence-a-detail').html(pickFromArray(evidenceA));
+    $('.evidence-a').removeClass('hidden');
+  } else {
+    $('.evidence-b-detail').html(pickFromArray(evidenceB));
+    $('.evidence-b').removeClass('hidden');
+  }
+  $('.percent').html(pickFromArray(percent));
+  $('.consideration-holder').fadeIn();
+  $('.evidence-card').addClass('animate');
+  $('.consideration-buttons').delay(400).fadeIn();
 }
