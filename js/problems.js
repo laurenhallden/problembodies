@@ -3,15 +3,39 @@
 
 var problems = {
  shape: ["square", "triangular", "oblong", "pointy", "sharp", "long", "knobby"],
- position: ["high", "low", "droopy"],
- big: ["visibile", "prominent", "fat", "hefty", "bulky", "big", "emormous", "pudgy", "puffy"],
- small: ["shrimpy", "puny", "small", "thin", "weak", "timid", "shy", "tiny", "meek", "bashful"],
- age: ["old", "worn down", "grungy", "ashy", "dull", "dingy", "sad", "tired"],
+ position: ["high", "low", "droopy", "loose", "dangly"],
+ big: ["prominent", "bulbous", "bulging", "fat", "hefty", "bulky", "big", "emormous", "pudgy", "puffy", "plump", "large", "chubby", "flabby", "paunchy", "meaty"],
+ small: ["shrimpy", "puny", "small", "thin", "weak", "timid", "shy", "tiny", "meek", "bashful", "pitiful", "pitiable", "inadequate", "insufficient", "meager", "paltry"],
+ age: ["old", "haggard", "worn down", "used up", "exhausted", "shabby", "worn out", "weary", "ruined", "grungy", "ashy", "dull", "dingy", "sad", "tired"],
  texture: ["ashy", "rough", "scaly", "dry", "hairy", "frizzy", "gnarled", "uneven"],
  surface: ["wrinkled", "dented", "pitted", "scarred", "dimpled", "uneven"],
  attitude: ["angry", "unruly", "rowdy", "unmanageable", "out of control", "grumpy", "noisy"],
  smell: ["stinky", "smelly", "pungent", "disgusting"]
 };
+
+var suggestions = [
+    'tired of',
+    'are people talking about',
+    'sick of'
+]
+
+// these can be pumped up with "just..."
+var justEmphasis = [
+    "too",
+    "really",
+    "kinda...",
+    "super",
+    "crazy"
+]
+
+// these can't
+var emphasis = [
+    "particularly",
+    "unusually",
+    "weirdly",
+    "freakishly",
+    "noticeably"
+]
 
 var intro = [
     "Look in the mirror—be honest.",

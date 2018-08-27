@@ -84,8 +84,8 @@
         Tired of your gross part? -->
         <div class="problem-statement type-b">
           <p class="h1">
-            <span class="the-suggestion">Tired of</span> 
-            <span class="the-possessive-optional">your</span>
+            <span class="the-suggestion"></span> 
+            <span class="the-possessive-a"></span>
             <span class="the-adjective-one reset"></span>
             <span class="the-problem reset"></span>
             <span class="the-adjective-direction reset"></span>
@@ -250,7 +250,6 @@
     $('.no').click(function() {
       // how many times has the user hit nope?
       count++;
-      console.log(count);
 
       if (count == 5) {
         // hit 'em with some guilt
@@ -260,7 +259,6 @@
       } else {
         if ($('.problem-buttons').is(':visible')) {
           $('.problem-statement-holder').fadeOut(function() {
-            console.log("fading");
             whatsMyProblem();
           });
         }

@@ -96,32 +96,45 @@ function whatsMyProblem() {
     }
   };
 
-  // Show the verb or not
+  // Show the verb or not, show suggestions or not
   var verbVisiblity = pickANumber(2);
+  console.log("verb visibility" + verbVisiblity);
   if (verbVisiblity != 0) {
+    $('.the-verb-optional').removeClass('hidden');
+    $('.the-possessive-optional').removeClass('hidden');
+    $('.the-possessive-optional').css('text-trandform', 'lowercase');
+  } else {
     $('.the-verb-optional').addClass('hidden');
-    $('.the-suggestion').addClass('hidden');
     $('.the-possessive-optional').addClass('hidden');
     $('.the-emotions').html(pickFromArray(emotions));
   };
 
+  // Pick a suggestion 
+  $('.the-suggestion').html(pickFromArray(suggestions));
+
+  // For type B, pick a possessive
+  var possessiveType = pickANumber(2);
+  if (possessiveType != 0) {
+    if (chosenPart.plural == true) {
+      $('.the-possessive-a').html("those");
+    } else {
+      $('.the-possessive-a').html("that");
+    }
+  }
+  else {
+    $('.the-possessive-a').html("your");
+  }
+
   // Pump it up with some emphasis or not
-  var emphasisVisiblity = pickANumber(5);
-  if (emphasisVisiblity != 0) {
-    if (emphasisVisiblity == 1) {
-      $('.the-emphasis').html("really");
-      just();
-    }
-    else if (emphasisVisiblity == 2) {
-      $('.the-emphasis').html("too");
-      just();
-    }
-    else if (emphasisVisiblity == 3) {
-      $('.the-emphasis').html("kinda...");
-    }
-    else if (emphasisVisiblity == 4) {
-      $('.the-emphasis').html("crazy");
-    }
+  var emphasisVisiblity = pickANumber(4);
+  console.log(emphasisVisiblity);
+  if (emphasisVisiblity != 0 && emphasisVisiblity < 2) {
+    $('.the-emphasis').html(pickFromArray(justEmphasis));
+    $('.the-emphasis').removeClass('hidden');
+    just();
+  } if (emphasisVisiblity > 1) {
+    $('.the-emphasis').html(pickFromArray(emphasis));
+    $('.the-emphasis').removeClass('hidden');
   } else {
     $('.the-emphasis').addClass('hidden');
     $('.the-emphasis-a').addClass('hidden');
@@ -132,6 +145,9 @@ function whatsMyProblem() {
     var justVisibility = pickANumber(2);
     if (justVisibility != 0) {
       $('.the-emphasis-a').addClass('hidden');
+    }
+    else {
+      $('.the-emphasis-a').removeClass('hidden');
     }
   }
 
@@ -171,6 +187,7 @@ function whatsMyProblem() {
     $('.type-e').addClass("selected");
   }
 
+
   // Capitalize the first letter of whatever's left:
   var statementArr = [];
   $(".problem-statement.selected span:not(.hidden)").each(function(){
@@ -209,7 +226,6 @@ function whatsMyProblem() {
 
 function whatsMySolution() {  
 
-  console.log("it's called");
   // pick a random solution that matches our problem class
   var solutionClass = solutions[chosenProblem.class];
   var solutionNouns = solutionClass.filter(function (filter) {
