@@ -32,15 +32,15 @@ function whatsMyProblem() {
   // and remove the selected class from any old selected problems
   $('.problem-statement').removeClass('selected');
 
-  // pick a random body part
+  // Pick a random body part
   var randomPart = pickFromArray(bodyparts);
 
-  // pick whether we want it to be plural
+  // {ick whether we want it to be plural
   var plural = pickANumber(2);
 
-  // if we do want it to be (or if it HAS to be)
+  // If we do want it to be (or if it HAS to be)
   if ((plural > 0) || (randomPart.count > 10)) {
-    // check to make sure it's possible
+    // Check to make sure it's possible
     if ('plural' in randomPart) {
       chosenPart.part = (randomPart.plural);
       chosenPart.plural = true;
@@ -50,28 +50,27 @@ function whatsMyProblem() {
       chosenPart.plural = false;
     }
   }
-  // if not, it's singular
+  // If not, it's singular
   else  {
     chosenPart.part = (randomPart.singular);
     chosenPart.plural = false;
   }
   chosenPart.singular = (randomPart.singular);
 
-  // pick a class of problems
+  // Pick a class of problems
   function randomProblem(problems) {
     var keys = Object.keys(problems);
     var theProblemClass = pickFromArray(keys);
  
-    // pick a problem from the class
+    // Pick a problem from the class
     var theProblem = pickFromArray(problems[theProblemClass]);
 
-    // put the problem and its class in our object
+    // Put the problem and its class in our object
     chosenProblem.problem = theProblem;
     chosenProblem.class = theProblemClass;
   };
 
   randomProblem(problems);
-
 
   // Set the part span
   $('.the-problem-part').html(chosenPart.part);
@@ -84,7 +83,7 @@ function whatsMyProblem() {
     // and decide if we're picking a one of them (left/right)
     var randomPartSelection = pickANumber(3);
 
-    //unless there's only ever one of this thing
+    // unless there's only ever one of this thing
     if (randomPart.count != 1) {
       if (randomPartSelection == 0) {
         $('.the-adjective-one').html("one");
@@ -96,9 +95,9 @@ function whatsMyProblem() {
     }
   };
 
-  // Show the verb or not, show suggestions or not
+  // Now let's set the other options in our possible statements
+  // Show the verb or not
   var verbVisiblity = pickANumber(2);
-  console.log("verb visibility" + verbVisiblity);
   if (verbVisiblity != 0) {
     $('.the-verb-optional').removeClass('hidden');
     $('.the-possessive-optional').removeClass('hidden');
@@ -112,7 +111,7 @@ function whatsMyProblem() {
   // Pick a suggestion 
   $('.the-suggestion').html(pickFromArray(suggestions));
 
-  // For type B, pick a possessive
+  // For problem statement type B, pick a possessive
   var possessiveType = pickANumber(2);
   if (possessiveType != 0) {
     if (chosenPart.plural == true) {
@@ -127,22 +126,26 @@ function whatsMyProblem() {
 
   // Pump it up with some emphasis or not
   var emphasisVisiblity = pickANumber(4);
-  console.log(emphasisVisiblity);
+  console.log("emphasis visibility is" + emphasisVisiblity);
   if (emphasisVisiblity != 0 && emphasisVisiblity < 2) {
+    // these can be further pumped up with "just"
     $('.the-emphasis').html(pickFromArray(justEmphasis));
     $('.the-emphasis').removeClass('hidden');
     just();
   } if (emphasisVisiblity > 1) {
+    // these can't
     $('.the-emphasis').html(pickFromArray(emphasis));
     $('.the-emphasis').removeClass('hidden');
+    $('.the-emphasis-a').addClass('hidden');
+    console.log('we hid just');
   } else {
     $('.the-emphasis').addClass('hidden');
-    $('.the-emphasis-a').addClass('hidden');
   }
 
   // Pump it up some more with "just"
   function just() {
     var justVisibility = pickANumber(2);
+    console.log('we called for just, then picked' + justVisibility);
     if (justVisibility != 0) {
       $('.the-emphasis-a').addClass('hidden');
     }
