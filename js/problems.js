@@ -6,17 +6,21 @@ var problems = {
  position: ["droopy", "loose", "dangly", "misaligned"],
  big: ["prominent", "bulbous", "bulgy", "fat", "hefty", "bulky", "big", "emormous", "pudgy", "puffy", "plump", "large", "chubby", "flabby", "paunchy", "meaty"],
  small: ["shrimpy", "puny", "small", "thin", "weak", "tiny", "meek", "pitiful", "pitiable", "inadequate", "insufficient", "meager", "paltry", "deflated"],
- age: ["old", "haggard", "worn down", "used up", "exhausted", "shabby", "worn out", "weary", "ruined", "grungy", "ashy", "dull", "dingy", "sad", "tired"],
+ age: ["old", "haggard", "worn down", "used up", "exhausted", "shabby", "worn out", "weary", "ruined", "grungy", "ashy", "dull", "dingy", "sad", "tired", "depleted"],
  texture: ["ashy", "rough", "scaly", "dry", "hairy", "frizzy", "gnarled", "uneven", "calloused"],
  surface: ["wrinkled", "dented", "pitted", "scarred", "dimpled", "uneven"],
- attitude: ["angry", "unruly", "rowdy", "unmanageable", "out of control", "grumpy", "noisy", "irritated"],
- smell: ["stinky", "smelly", "pungent", "disgusting"]
+ attitude: ["unruly", "rowdy", "unmanageable", "out of control", "grumpy", "noisy", "irritated", "offensive"],
+ smell: ["stinky", "smelly", "pungent", "disgusting", "offensive"],
+ cleanliness: ["dirty", "greasy", "shiny", "waxy", "oily"]
 };
 
 var suggestions = [
     'tired of',
     'are people talking about',
-    'sick of'
+    'sick of',
+    'self-conscious about',
+    'worried about',
+    'concerned about'
 ]
 
 // these can be pumped up with "just..."
@@ -42,11 +46,11 @@ var emphasis = [
 
 var intro = [
     "Look in the mirror—be honest.",
-    "Maybe it's time to face reality.",
+    "Maybe it&rsquo;s time to face reality.",
     "Think about it.",
-    "Let's face it.",
+    "Let&rsquo;s face it.",
     "Time for some hard truths.",
-    "This is going to be akward, but..."
+    "This is going to be awkward, but..."
 ];
 
 var results = [
@@ -54,11 +58,11 @@ var results = [
     "getting in the way",
     "attracting the wrong kind of attention",
     "bringing you down",
-    "ruining your day",
+    "ruining your mood",
     "making it hard to date",
-    "making life hard",
-    "causing you some serious grief",
+    "making you self-conscius",
+    "causing you serious grief",
     "causing you distress",
-    "keeping you from getting that promotion"
+    "keeping you up at night"
 ];
 

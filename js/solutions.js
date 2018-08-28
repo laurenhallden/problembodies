@@ -42,6 +42,7 @@ var solutions = {
  	{adjective: "rejuventating", noun: "rejuvenator", plural: "rejuvenators"},
  	{adjective: "defying", noun: "defier"},
  	{adjective: "reviving", noun: "reviver", plural: "revivers"},
+ 	{adjective: "restoring"},
  	{adjective: "revitalizing", noun: "revitalizer", plural: "retivalizers"},
  	{adjective: "regenerating", noun: "regenerator", plural: "regenerators"},
  	{adjective: "re-energizing", noun: "re-energizer", plural: "re-energizers"},
@@ -56,9 +57,13 @@ var solutions = {
     {adjective: "polishing", noun: "polish"},
     {adjective: "silky"},
     {adjective: "conditioning", noun: "conditioner"},
+    {adjective: "exfoliating", noun: "exfoliator", plural: "exfoliators"},
+    {adjective: "resurfacing", noun: "resurfacer"},
     {adjective: "Himalayan"},
     {adjective: "chemical"},
     {adjective: "retexturizing"},
+    {noun: "cream oil"}
+    {noun: "oil"}
  ],
  surface: [
     {adjective: "smoothing", noun: "smoother", plural: "smoothers"},
@@ -68,6 +73,7 @@ var solutions = {
  attitude: [
     {adjective: "calming", noun: "calmer"},
  	{adjective: "soothing", noun: "soother"},
+ 	{adjective: "cooling"},
  	{adjective: "straightening", noun: "straightener", plural: "straighteners"},
     {adjective: "controling", noun: "controler", plural: "controlers"}
  ],
@@ -80,7 +86,21 @@ var solutions = {
  	{adjective: "mineral"},
  	{noun: "wipes", plural: "wipes"},
  	{noun: "towels", plural: "towels"},
- 	{noun: "towelettes", plural: "towelettes"}
+ 	{noun: "towelettes", plural: "towelettes"},
+ 	{noun: "soap"}
+ ],
+ cleanliness: [
+ 	{adjective: "cleansing", noun: "cleanser", plural: "cleansers"},
+ 	{adjective: "sterilizing", noun: "sterlizer", plural: "sterlilizers"},
+ 	{adjective: "mineral"},
+ 	{adjective: "coconut milk"},
+ 	{adjective: "foaming"},
+ 	{adjective: "dermatologist-recomended"},
+ 	{noun: "wipes", plural: "wipes"},
+ 	{noun: "towels", plural: "towels"},
+ 	{noun: "towelettes", plural: "towelettes"},
+ 	{noun: "soap"},
+ 	{noun: "beauty bar"}
  ]
 };
 
@@ -92,7 +112,7 @@ var solutions = {
 
 var products = {
  head: ["head wrap"],
- face: ["mask", "serum", "bath salt", "face wrap", "makeup"],
+ face: ["mask", "serum", "bath salt", "face wrap", "makeup", "milk"],
  neck: ["collar", "brace"],
  arms: ["sleeves", "shirt"],
  hands: ["gloves"],
@@ -126,19 +146,19 @@ var followup = [
 "<span class='social-service'></span>",
 //"Use the hashtag/coupon code x to save <span class='to-thirty'></span>%.",
 //"Your unfortunate <span class='part-again'></span> will thank you.",
-//"Last time these sold out in just <span class='to-thirty'></span> days, so don't wait!",
-//"Refer <span class='to-thirty'></span> friends and we'll give you an extra one free!",
+//"Refer <span class='to-thirty'></span> friends and get access to special reward points!",
 //"Bye bye, problem <span class='part-again'></span>!",
-//"It'll change your life. Trust us.",
+//"It&rsquo;ll change your life. Trust us.",
+//"Take your self-care routine to the next level. You deserve it.",
 //"Made from recycled milk containers, because we care about the environment."
 
 ]
 
 var social = [
-"Check out our <a class='social-link' target='_blank'>Kickstarter!</a>",
-"Check out the results on Instagram! <a class='social-link' target='_blank'><span class='social-account'></span></a>",
+"Get yours before your friends by donating to our <a class='social-link' target='_blank'>Kickstarter</a>!",
+"See the resuts for yourself on Instagram: <a class='social-link' target='_blank'><span class='social-account'></span></a>",
 "Don't forget to <a class='social-link' target='_blank'>friend us on Facebook</a>!",
 "Share your results on our new <a class='social-link' target='_blank'>Facebook community</a>!",
-"See what people are saying about 'em on Twitter! <a class='social-link' target='_blank'><span class='social-account'></span></a>",
+"See what people are saying about &rsquo;em on Twitter! <a class='social-link' target='_blank'><span class='social-account'></span></a>",
 "Check us out in the <a class='social-link' target='_blank'>New York Times!</a>"
 ]
