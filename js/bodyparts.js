@@ -59,5 +59,6 @@ var bodyparts = [
  {singular: "toenail", plural: "toenails", count: 10, products: "feet"},
  {singular: "toe", plural: "toes", count: 10, products: "feet"},
  {singular: "tummy", plural: "tummies", count: 1, products: "torso"},
- {singular: "vagina", plural: "vaginas", count: 1, products: "downthere"}
+ {singular: "vagina", plural: "vaginas", count: 1, products: "downthere"},
+ {singular: "vulva", plural: "vulvas", count: 1, products: "downthere"}
 ];

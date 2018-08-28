@@ -8,7 +8,8 @@ var solutions = {
 	{adjective: "molding", noun: "mold", plural: "molds"},
 	{adjective: "forming", noun: "form", plural: "forms"},
 	{adjective: "sculpting", noun: "sculptor", plural: "sculptors"},
-	{adjective: "morphing", noun: "morpher", plural: "morphers"}
+	{adjective: "morphing", noun: "morpher", plural: "morphers"},
+	{adjective: "disciplining", noun: "discipliner", plural: "discipliners"}
  ],
  position: [
  	{adjective: "guiding", noun: "guide", plural: "guides"},
@@ -22,7 +23,9 @@ var solutions = {
 	{adjective: "concealing", noun: "concealer", plural: "concealers"},
 	{adjective: "disguising", noun: "disguiser", plural: "disguisers"},
 	{noun: "camoflauge"},
-	{adjective: "shrinking"}
+	{adjective: "shrinking", noun: "shrinker", plural: "shinkers"},
+	{adjective: "compressing"},
+	{adjective: "contolling"}
  ],
  small: [
   	{adjective: "volumizing", noun: "volumizer", plural: "volumizers"},
@@ -32,7 +35,7 @@ var solutions = {
  	{adjective: "enhancing", noun: "enhancer", plural: "enhancers"},
  	{adjective: "maximizing", noun: "maximizer", plural: "maximizers"},
  	{adjective: "defining", noun: "definer"},
- 	{noun: "pad", plural: "pads"}
+ 	{noun: "pads", plural: "pads"}
  ],
  age: [
    	{adjective: "brightening", noun: "brightener", plural: "brighteners"},
@@ -54,6 +57,7 @@ var solutions = {
     {adjective: "silky"},
     {adjective: "conditioning", noun: "conditioner"},
     {adjective: "Himalayan"},
+    {adjective: "chemical"},
     {adjective: "retexturizing"},
  ],
  surface: [
@@ -97,7 +101,7 @@ var products = {
  downthere: ["underwear", "underpants", "thong", "panties", "shorts"],
  legs: ["pants"],
  feet: ["socks", "shoes"],
- all: ["cream", "night cream", "day cream", "serum"]
+ all: ["cream", "night cream", "day cream", "serum", "corrector"]
 };
 
 var exciting_adjectives = [
@@ -108,15 +112,14 @@ var exciting_adjectives = [
 	"one-of-a-kind",
 	"ultra",
 	"super",
-	"mega",
-	"freeing",
 	"fabulous",
 	"special",
 	"powerful",
 	"natural",
 	"organic",
 	"fair-trade",
-	"innovative"
+	"innovative",
+	"maximum power"
 ];
 
 var followup = [
