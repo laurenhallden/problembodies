@@ -41,7 +41,7 @@ function whatsMyProblem() {
   // If we do want it to be (or if it HAS to be)
   if ((plural > 0) || (randomPart.count > 10)) {
     // Check to make sure it's possible
-    if ('plural' in randomPart) {
+    if (randomPart.count > 1) {
       chosenPart.part = (randomPart.plural);
       chosenPart.plural = true;
     }
@@ -57,6 +57,7 @@ function whatsMyProblem() {
   }
   chosenPart.singular = (randomPart.singular);
   chosenPart.pluralpart = (randomPart.plural);
+  chosenPart.count = (randomPart.count);
 
   // Pick a class of problems
   function randomProblem(problems) {
@@ -85,7 +86,7 @@ function whatsMyProblem() {
     var randomPartSelection = pickANumber(3);
 
     // unless there's only ever one of this thing
-    if (randomPart.count != 1) {
+    if (chosenPart.count != 1) {
       if (randomPartSelection == 0) {
         $('.the-adjective-one').html("one");
       } else if (randomPartSelection == 1) {
@@ -99,13 +100,13 @@ function whatsMyProblem() {
   // Now let's set the other options in our possible statements
   // Show the verb or not
   var verbVisiblity = pickANumber(2);
-  if (verbVisiblity != 0) {
+  if (verbVisiblity != 0 || count == 0) {
     $('.the-verb-optional').removeClass('hidden');
     $('.the-possessive-optional').removeClass('hidden');
     $('.the-possessive-optional').css('text-trandform', 'lowercase');
   } else {
     $('.the-verb-optional').addClass('hidden');
-    $('.the-possessive-optional').addClass('hidden');
+    $('.the-possessive-optional').addClass  ('hidden');
     $('.the-emotions').html(pickFromArray(emotions));
   };
 
@@ -126,19 +127,20 @@ function whatsMyProblem() {
   }
 
   // Pump it up with some emphasis or not
-  var emphasisVisiblity = pickANumber(4);
-  if (emphasisVisiblity != 0 && emphasisVisiblity < 2) {
+  var emphasisVisiblity = pickANumber(2);
+  if (emphasisVisiblity == 1) {
     // these can be further pumped up with "just"
     $('.the-emphasis').html(pickFromArray(justEmphasis));
     $('.the-emphasis').removeClass('hidden');
     just();
-  } else if (emphasisVisiblity > 1) {
+  } else if (emphasisVisiblity == 2) {
     // these can't
     $('.the-emphasis').html(pickFromArray(emphasis));
     $('.the-emphasis').removeClass('hidden');
     $('.the-emphasis-a').addClass('hidden');
   } else {
     $('.the-emphasis').addClass('hidden');
+    $('.the-emphasis-a').addClass('hidden');
   }
 
   // Pump it up some more with "just"
@@ -169,9 +171,12 @@ function whatsMyProblem() {
   $('.the-problem').html(chosenProblem.problem);
 
   // Decide which problem statement to show
-  var whichStatement = pickANumber(5);
+  var whichStatement = pickANumber(4);
   $('.problem-statement').addClass('hidden');
-  if (whichStatement == 0) {
+  if (count == 0) {
+    $('.type-a').removeClass('hidden');
+    $('.type-a').addClass("selected");
+  } else if (whichStatement == 0) {
     $('.type-a').removeClass('hidden');
     $('.type-a').addClass("selected");
   } else if (whichStatement == 1) {
@@ -253,6 +258,7 @@ function whatsMySolution() {
   // Set the solution span
   $('.the-solution-noun').html(theSolution);
   $('.the-solution-adjective-two').html(theSolutionAdjective);
+  $('.the-problem-part-singular').html(chosenPart.singular);
 
   // Capitalize the first letter of our solution
   var solutionArr = [];
@@ -268,8 +274,25 @@ function whatsMySolution() {
   $('.the-follow-up').html(followUpStatement);
 
   // fill in a bunch of follow-up offer options
+  // If there's a social link...
   if((followUpStatement).indexOf('social') != -1) {
-      $('.social-service').html(pickFromArray(social));
+
+    // pick which social account
+    var theSocialService = pickFromArray(social);
+    //console.log(theSocialService);
+      $('.social-service').html(theSocialService);
+      // Let's make a fake social account
+      var socialAccount = ("#lovemy" + chosenPart.singular + theSolution);
+
+      // Let's make some fake links
+      if ((theSocialService).indexOf('Twitter') != -1) {
+        var socialLink = ("https://twitter.com/search?q=" + chosenPart.singular + "%20" + theSolution);
+      } else if ((theSocialService).indexOf('Facebook') != -1) {
+        var socialLink = ("https://www.facebook.com/search/top/?q=" + chosenPart.singular + "%20" + theSolution);
+      }
+              console.log(socialLink);
+      $('.social-link').attr('href', socialLink);
+      $('.social-account').html(socialAccount);
     }
   else if((followUpStatement).indexOf('part-again') != -1)   {
     $('.part-again').html(chosenPart.part);
@@ -301,13 +324,20 @@ function pickConsiderations() {
 
   // Fill in the sciencey-label
   $('.caption-label').html(pickFromArray(labels));
-  // Fill in the part for Evidence B
-  $('.the-problem-part-plural').html(chosenPart.pluralpart);
 
-  $('.the-considerations').html(pickFromArray(considerations));
+  // Fill in the extra spans for Evidence B
+  if (chosenPart.count > 1) {
+    $('.the-problem-part-evidence-a').html(chosenPart.pluralpart);
+  } else {
+    $('.the-problem-part-evidence-a').html(chosenPart.singular);
+  }
+
+  $('.the-problem-part-plural').html(chosenPart.pluralpart);
+  $('.the-evidence-adjective').html(pickFromArray(evidenceAdjectives));
+
+  $('.the-considerations').html(pickFromArray(cons));
   // Decide which consideration statement to show
   var whichConsideration = pickANumber(4);
-  console.log(whichConsideration);
   $('.evidence-span').addClass('hidden');
   if (whichConsideration < 1) {
     $('.evidence-a-detail').html(pickFromArray(evidenceA));

@@ -200,13 +200,20 @@ CONSIDERATION-SPECIFIC STUFF
 	font-size: 22px;
 	font-weight: 400;
 	margin-bottom: 20px;
+
+	strong {
+		font-family: sans-serif;
+		font-weight: 700;
+		color: #009cf8;
+		font-size: 20px;
+	}
 }
 
 .evidence-card {
 	background: white;
 	padding: 20px;
 	max-width: 500px;
-	margin: 0 auto;
+	margin: 10px auto 0;
 	border-radius: 8px;
 	box-shadow: 0 1px 3px 1px rgba(60,64,67,.2), 0 2px 8px 4px rgba(60,64,67,.1);
 
@@ -230,4 +237,8 @@ CONSIDERATION-SPECIFIC STUFF
 	font-style: italic;
 	display: block;
 	margin-top: 100px;
+
+	a {
+		color: white;
+	}
 }

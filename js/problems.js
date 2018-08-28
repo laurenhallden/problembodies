@@ -4,7 +4,7 @@
 var problems = {
  shape: ["square", "triangular", "oblong", "pointy", "sharp", "long", "knobby"],
  position: ["droopy", "loose", "dangly"],
- big: ["prominent", "bulbous", "bulging", "fat", "hefty", "bulky", "big", "emormous", "pudgy", "puffy", "plump", "large", "chubby", "flabby", "paunchy", "meaty"],
+ big: ["prominent", "bulbous", "bulgy", "fat", "hefty", "bulky", "big", "emormous", "pudgy", "puffy", "plump", "large", "chubby", "flabby", "paunchy", "meaty"],
  small: ["shrimpy", "puny", "small", "thin", "weak", "timid", "shy", "tiny", "meek", "bashful", "pitiful", "pitiable", "inadequate", "insufficient", "meager", "paltry"],
  age: ["old", "haggard", "worn down", "used up", "exhausted", "shabby", "worn out", "weary", "ruined", "grungy", "ashy", "dull", "dingy", "sad", "tired"],
  texture: ["ashy", "rough", "scaly", "dry", "hairy", "frizzy", "gnarled", "uneven"],
@@ -22,6 +22,9 @@ var suggestions = [
 // these can be pumped up with "just..."
 var justEmphasis = [
     "too",
+    "too",
+    "too",
+    "too",
     "really",
     "kinda...",
     "super",
@@ -33,7 +36,8 @@ var emphasis = [
     "particularly",
     "weirdly",
     "noticeably",
-    "pretty"
+    "pretty",
+    "extra"
 ]
 
 var intro = [

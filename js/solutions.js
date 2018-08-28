@@ -110,24 +110,24 @@ var exciting_adjectives = [
 ];
 
 var followup = [
-"Don't forget to <span class='social-service'></span>.",
-"Use the hashtag/coupon code x to save <span class='to-thirty'></span>%.",
-"Your unfortunate <span class='part-again'></span> will thank you.",
-"Last time these sold out in <span class='to-thirty'></span> days, so don't wait!",
-"Refer <span class='to-thirty'></span> friends and we'll give you an extra one free!",
-"Bye bye, problem <span class='part-again'></span>!",
-"It'll change your life, trust us.",
-"Made from recycled milk containers, because we care about the environment."
+"<span class='social-service'></span>",
+//"Use the hashtag/coupon code x to save <span class='to-thirty'></span>%.",
+//"Your unfortunate <span class='part-again'></span> will thank you.",
+//"Last time these sold out in just <span class='to-thirty'></span> days, so don't wait!",
+//"Refer <span class='to-thirty'></span> friends and we'll give you an extra one free!",
+//"Bye bye, problem <span class='part-again'></span>!",
+//"It'll change your life. Trust us.",
+//"Made from recycled milk containers, because we care about the environment."
 
 ]
 
 var social = [
-"check out our Kickstarter",
-"check out our Instagram",
-"check out our lastest Instagram story",
-"friend us on Facebook",
-"check out our new Facebook community",
-"give us a follow on Twitter",
-"check us out on the latest season of Shark Tank",
-"check out our New York Times article"
+//"Check out our <a class='social-link'>Kickstarter</a>",
+//"Check out our Instagram: <a class='social-link'><span class='social-account'></span></a>",
+//"Check out our lastest Instagram story at <a class='social-link'><span class='social-account'></span></a>",
+"Don't forget to <a class='social-link'>friend us on Facebook</a>!",
+//"Share your results on our new <a class='social-link'>Facebook community</a>",
+//"See what people are saying about 'em on Twitter! <a class='social-link' target='_blank'><span class='social-account'></span></a>",
+//"check us out on the latest season of <a class='social-link'>Shark Tank</a>",
+//"check us out in the <a class='social-link'>New York Times</a>"
 ]
