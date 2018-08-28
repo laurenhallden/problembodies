@@ -6,7 +6,7 @@ var problems = {
  position: ["droopy", "loose", "dangly", "misaligned"],
  big: ["prominent", "bulbous", "bulgy", "fat", "hefty", "bulky", "big", "emormous", "pudgy", "puffy", "plump", "large", "chubby", "flabby", "paunchy", "meaty"],
  small: ["shrimpy", "puny", "small", "thin", "weak", "tiny", "meek", "pitiful", "pitiable", "inadequate", "insufficient", "meager", "paltry", "deflated"],
- age: ["old", "haggard", "worn down", "used up", "exhausted", "shabby", "worn out", "weary", "ruined", "grungy", "ashy", "dull", "dingy", "sad", "tired", "depleted"],
+ age: ["old", "haggard", "worn down", "used up", "exhausted", "shabby", "worn out", "weary", "ruined", "grungy", "ashy", "dull", "dingy", "sad", "tired", "depleted", "numb"],
  texture: ["ashy", "rough", "scaly", "dry", "hairy", "frizzy", "gnarled", "uneven", "calloused"],
  surface: ["wrinkled", "dented", "pitted", "scarred", "dimpled", "uneven"],
  attitude: ["unruly", "rowdy", "unmanageable", "out of control", "grumpy", "noisy", "irritated", "offensive"],

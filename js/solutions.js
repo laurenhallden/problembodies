@@ -3,29 +3,29 @@
 var solutions = {
  shape: [
 	{adjective: "shaping", noun: "shaper", plural: "shapers"},
-	{noun: "harness"},
 	{adjective: "aligning", noun: "aligner", plural: "aligners"},
 	{adjective: "molding", noun: "mold", plural: "molds"},
 	{adjective: "forming", noun: "form", plural: "forms"},
 	{adjective: "sculpting", noun: "sculptor", plural: "sculptors"},
 	{adjective: "morphing", noun: "morpher", plural: "morphers"},
-	{adjective: "disciplining", noun: "discipliner", plural: "discipliners"}
+	{adjective: "disciplining", noun: "discipliner", plural: "discipliners"},
+	{noun: "harness"}
  ],
  position: [
  	{adjective: "guiding", noun: "guide", plural: "guides"},
  	{adjective: "aligning", noun: "aligner", plural: "aligners"},
- 	{noun: "harness"},
- 	{noun: "sling"},
-    {noun: "brace", plural: "braces"}
+    {noun: "brace", plural: "braces"},
+  	{noun: "harness"},
+ 	{noun: "sling"}
  ],
  big: [
 	{adjective: "minimizing", noun: "minimizer", plural: "minimizers"},
 	{adjective: "concealing", noun: "concealer", plural: "concealers"},
 	{adjective: "disguising", noun: "disguiser", plural: "disguisers"},
-	{noun: "camoflauge"},
 	{adjective: "shrinking", noun: "shrinker", plural: "shinkers"},
 	{adjective: "compressing"},
-	{adjective: "contolling"}
+	{adjective: "contolling"},
+	{noun: "camoflauge"}
  ],
  small: [
   	{adjective: "volumizing", noun: "volumizer", plural: "volumizers"},
@@ -40,42 +40,53 @@ var solutions = {
  age: [
    	{adjective: "brightening", noun: "brightener", plural: "brighteners"},
  	{adjective: "rejuventating", noun: "rejuvenator", plural: "rejuvenators"},
- 	{adjective: "defying", noun: "defier"},
  	{adjective: "reviving", noun: "reviver", plural: "revivers"},
- 	{adjective: "restoring"},
  	{adjective: "revitalizing", noun: "revitalizer", plural: "retivalizers"},
  	{adjective: "regenerating", noun: "regenerator", plural: "regenerators"},
  	{adjective: "re-energizing", noun: "re-energizer", plural: "re-energizers"},
  	{adjective: "reanimating", noun: "reanimator", plural: "reanimators"},
  	{adjective: "resusitating", noun: "resucitator", plural: "resucitators"},
  	{adjective: "refreshing", noun: "refresher", plural: "refreshers"},
- 	{adjective: "polishing", noun: "polisher", plural: "polishers"}
+ 	{adjective: "polishing", noun: "polisher", plural: "polishers"},
+ 	{adjective: "anxtioxidant", noun: "antioxidant"},
+ 	{adjective: "mircodelivery"},
+ 	{adjective: "restoring"},
+	{adjective: "age-defying"},
+ 	{noun: "peel"}
  ],
  texture: [
     {adjective: "smoothing", noun: "smoother", plural: "smoothers"},
     {adjective: "lubricating", noun: "lubricator", plural: "lubricators"},
-    {adjective: "polishing", noun: "polish"},
-    {adjective: "silky"},
-    {adjective: "conditioning", noun: "conditioner"},
     {adjective: "exfoliating", noun: "exfoliator", plural: "exfoliators"},
+    {adjective: "hydrating", noun: "hydrator", plural: "hydrators"},
+    {adjective: "polishing", noun: "polish"},
+    {adjective: "conditioning", noun: "conditioner"},
     {adjective: "resurfacing", noun: "resurfacer"},
+    {adjective: "silky"},
     {adjective: "Himalayan"},
     {adjective: "chemical"},
     {adjective: "retexturizing"},
-    {noun: "cream oil"}
-    {noun: "oil"}
+    {adjective: "refining"},
+    {adjective: "nourishing"},
+    {adjective: "daily"},
+    {noun: "oil"},
+    {noun: "gel"},
+    {noun: "cream"},
+    {noun: "peel"}
  ],
  surface: [
     {adjective: "smoothing", noun: "smoother", plural: "smoothers"},
+    {adjective: "resurfacing", noun: "resurfacer"},
+    {adjective: "firming", noun: "firmers", plural: "firmers"},
     {adjective: "filling", noun: "filler"},
-    {adjective: "resurfacing", noun: "resurfacer"}
+    {noun: "peel"}
  ],
  attitude: [
+ 	{adjective: "straightening", noun: "straightener", plural: "straighteners"},
+    {adjective: "controling", noun: "controler", plural: "controlers"},
     {adjective: "calming", noun: "calmer"},
  	{adjective: "soothing", noun: "soother"},
- 	{adjective: "cooling"},
- 	{adjective: "straightening", noun: "straightener", plural: "straighteners"},
-    {adjective: "controling", noun: "controler", plural: "controlers"}
+ 	{adjective: "cooling"}
  ],
  smell: [
  	{adjective: "refreshing", noun: "refresher", plural: "refreshers"},
@@ -84,23 +95,25 @@ var solutions = {
  	{adjective: "cleansing", noun: "cleanser", plural: "cleansers"},
  	{adjective: "sterilizing"},
  	{adjective: "mineral"},
+ 	{adjective: "daily"},
  	{noun: "wipes", plural: "wipes"},
  	{noun: "towels", plural: "towels"},
  	{noun: "towelettes", plural: "towelettes"},
- 	{noun: "soap"}
+ 	{noun: "perfume"}
  ],
  cleanliness: [
  	{adjective: "cleansing", noun: "cleanser", plural: "cleansers"},
  	{adjective: "sterilizing", noun: "sterlizer", plural: "sterlilizers"},
  	{adjective: "mineral"},
- 	{adjective: "coconut milk"},
  	{adjective: "foaming"},
+ 	{adjective: "daily"},
  	{adjective: "dermatologist-recomended"},
  	{noun: "wipes", plural: "wipes"},
  	{noun: "towels", plural: "towels"},
  	{noun: "towelettes", plural: "towelettes"},
- 	{noun: "soap"},
- 	{noun: "beauty bar"}
+ 	{noun: "beauty bar"},
+ 	{noun: "emulsion"},
+ 	{noun: "wash"}
  ]
 };
 
@@ -116,12 +129,12 @@ var products = {
  neck: ["collar", "brace"],
  arms: ["sleeves", "shirt"],
  hands: ["gloves"],
- torso: ["shirt", "undershirt"],
+ torso: ["shirt", "undershirt", "baselayer"],
  breasts: ["bra", "bralette"],
  downthere: ["underwear", "underpants", "thong", "panties", "shorts"],
  legs: ["pants"],
  feet: ["socks", "shoes"],
- all: ["cream", "night cream", "day cream", "serum", "corrector", "treatment"]
+ all: ["corrector", "treatment", "procedure"]
 };
 
 var exciting_adjectives = [
@@ -130,7 +143,7 @@ var exciting_adjectives = [
 	"best-selling",
 	"revolutionary",
 	"one-of-a-kind",
-	"ultra",
+	"ultimate",
 	"super",
 	"fabulous",
 	"special",
@@ -139,7 +152,9 @@ var exciting_adjectives = [
 	"organic",
 	"fair-trade",
 	"innovative",
-	"maximum power"
+	"maximum power",
+	"high-performance",
+	"miracle-working"
 ];
 
 var followup = [
