@@ -158,8 +158,7 @@ var exciting_adjectives = [
 ];
 
 var followup = [
-"<span class='social-service'></span>",
-//"Use the hashtag/coupon code x to save <span class='to-thirty'></span>%.",
+"Use the hashtag/coupon code x to save <span class='to-thirty'></span>%.",
 //"Your unfortunate <span class='part-again'></span> will thank you.",
 //"Refer <span class='to-thirty'></span> friends and get access to special reward points!",
 //"Bye bye, problem <span class='part-again'></span>!",

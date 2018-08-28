@@ -59,6 +59,12 @@ function whatsMyProblem() {
   chosenPart.pluralpart = (randomPart.plural);
   chosenPart.count = (randomPart.count);
 
+  if (randomPart.hasOwnProperty("products")) {
+    chosenPart.products = (randomPart.products);
+  } else {
+    chosenPart.products = "none";
+  }
+
   // Pick a class of problems
   function randomProblem(problems) {
     var keys = Object.keys(problems);
@@ -270,8 +276,15 @@ function whatsMySolution() {
  
 
   // Pick a followup statement
+  var whichSocial = (pickFromArray(1));
   var followUpStatement = pickFromArray(followup);
-  $('.the-follow-up').html(followUpStatement);
+
+  if ((whichSocial == 0) && (chosenPart.products =! "downthere")) {
+    $('.the-follow-up').html("<span class='social-service'></span>");
+  }
+   else {
+    $('.the-follow-up').html(followUpStatement);
+  }
 
   // fill in a bunch of follow-up offer options
   // If there's a social link...
