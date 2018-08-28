@@ -5,11 +5,11 @@ var problems = {
  shape: ["square", "triangular", "oblong", "pointy", "sharp", "long", "knobby"],
  position: ["droopy", "loose", "dangly", "misaligned"],
  big: ["prominent", "bulbous", "bulgy", "fat", "hefty", "bulky", "big", "emormous", "pudgy", "puffy", "plump", "large", "chubby", "flabby", "paunchy", "meaty"],
- small: ["shrimpy", "puny", "small", "thin", "weak", "timid", "shy", "tiny", "meek", "bashful", "pitiful", "pitiable", "inadequate", "insufficient", "meager", "paltry"],
+ small: ["shrimpy", "puny", "small", "thin", "weak", "tiny", "meek", "pitiful", "pitiable", "inadequate", "insufficient", "meager", "paltry", "deflated"],
  age: ["old", "haggard", "worn down", "used up", "exhausted", "shabby", "worn out", "weary", "ruined", "grungy", "ashy", "dull", "dingy", "sad", "tired"],
- texture: ["ashy", "rough", "scaly", "dry", "hairy", "frizzy", "gnarled", "uneven"],
+ texture: ["ashy", "rough", "scaly", "dry", "hairy", "frizzy", "gnarled", "uneven", "calloused"],
  surface: ["wrinkled", "dented", "pitted", "scarred", "dimpled", "uneven"],
- attitude: ["angry", "unruly", "rowdy", "unmanageable", "out of control", "grumpy", "noisy"],
+ attitude: ["angry", "unruly", "rowdy", "unmanageable", "out of control", "grumpy", "noisy", "irritated"],
  smell: ["stinky", "smelly", "pungent", "disgusting"]
 };
 

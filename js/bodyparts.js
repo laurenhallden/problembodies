@@ -36,6 +36,7 @@ var bodyparts = [
  {singular: "heel", plural: "heels", count: 2, products: "feet"},
  {singular: "hipbone", plural: "hipbones", count: 2},
  {singular: "hip", plural: "hips", count: 2},
+ {singular: "jaw", plural: "jaws", count: 1},
  {singular: "knee", plural: "knees", count: 2, products: "legs"},
  {singular: "knuckle", plural: "knuckles", count: 10, products: "hands"},
  {singular: "leg", plural: "legs", count: 2, products: "legs"},

@@ -101,7 +101,7 @@ var products = {
  downthere: ["underwear", "underpants", "thong", "panties", "shorts"],
  legs: ["pants"],
  feet: ["socks", "shoes"],
- all: ["cream", "night cream", "day cream", "serum", "corrector"]
+ all: ["cream", "night cream", "day cream", "serum", "corrector", "treatment"]
 };
 
 var exciting_adjectives = [
