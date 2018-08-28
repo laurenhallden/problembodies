@@ -14,17 +14,23 @@ var solutions = {
  	{adjective: "guiding", noun: "guide", plural: "guides"},
  	{adjective: "aligning", noun: "aligner", plural: "aligners"},
  	{noun: "harness"},
+ 	{noun: "sling"},
     {noun: "brace", plural: "braces"}
  ],
  big: [
 	{adjective: "minimizing", noun: "minimizer", plural: "minimizers"},
 	{adjective: "concealing", noun: "concealer", plural: "concealers"},
 	{adjective: "disguising", noun: "disguiser", plural: "disguisers"},
-	{noun: "camoflauge"}
+	{noun: "camoflauge"},
+	{adjective: "shrinking"}
  ],
  small: [
   	{adjective: "volumizing", noun: "volumizer", plural: "volumizers"},
  	{adjective: "plumping", noun: "plumper", plural: "plumpers"},
+ 	{adjective: "extending", noun: "extension", plural: "extensions"},
+ 	{adjective: "enlarging", noun: "enlarger", plural: "enlargers"},
+ 	{adjective: "enhancing", noun: "enhancer", plural: "enhancers"},
+ 	{adjective: "maximizing", noun: "maximizer", plural: "maximizers"},
  	{adjective: "defining", noun: "definer"},
  	{noun: "pad", plural: "pads"}
  ],
@@ -122,12 +128,10 @@ var followup = [
 ]
 
 var social = [
-//"Check out our <a class='social-link'>Kickstarter</a>",
-//"Check out our Instagram: <a class='social-link'><span class='social-account'></span></a>",
-//"Check out our lastest Instagram story at <a class='social-link'><span class='social-account'></span></a>",
-"Don't forget to <a class='social-link'>friend us on Facebook</a>!",
-//"Share your results on our new <a class='social-link'>Facebook community</a>",
-//"See what people are saying about 'em on Twitter! <a class='social-link' target='_blank'><span class='social-account'></span></a>",
-//"check us out on the latest season of <a class='social-link'>Shark Tank</a>",
-//"check us out in the <a class='social-link'>New York Times</a>"
+"Check out our <a class='social-link' target='_blank'>Kickstarter!</a>",
+"Check out the results on Instagram! <a class='social-link' target='_blank'><span class='social-account'></span></a>",
+"Don't forget to <a class='social-link' target='_blank'>friend us on Facebook</a>!",
+"Share your results on our new <a class='social-link' target='_blank'>Facebook community</a>!",
+"See what people are saying about 'em on Twitter! <a class='social-link' target='_blank'><span class='social-account'></span></a>",
+"Check us out in the <a class='social-link' target='_blank'>New York Times!</a>"
 ]

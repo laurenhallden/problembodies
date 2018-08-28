@@ -282,15 +282,24 @@ function whatsMySolution() {
     //console.log(theSocialService);
       $('.social-service').html(theSocialService);
       // Let's make a fake social account
-      var socialAccount = ("#lovemy" + chosenPart.singular + theSolution);
+
+      var nospaces = chosenPart.singular.replace(/\s/g, '');
 
       // Let's make some fake links
       if ((theSocialService).indexOf('Twitter') != -1) {
         var socialLink = ("https://twitter.com/search?q=" + chosenPart.singular + "%20" + theSolution);
+        var socialAccount = ("#lovemy" + nospaces + theSolution);
+      } else if ((theSocialService).indexOf('Instagram') != -1) {
+        var socialLink = ("https://www.instagram.com/explore/tags/" + chosenPart.singular + theSolution);
+        var socialAccount = ("#lovemy" + nospaces + theSolution);
       } else if ((theSocialService).indexOf('Facebook') != -1) {
         var socialLink = ("https://www.facebook.com/search/top/?q=" + chosenPart.singular + "%20" + theSolution);
+      } else if ((theSocialService).indexOf('Kickstarter') != -1) {
+        var socialLink = ("https://www.google.com/search?lr=&as_qdr=all&ei=P56EW_mpKqPv_QbE4arIAw&q=" + chosenPart.singular + "+" + theSolution + "+site%3Akickstarter.com");
+      } else if ((theSocialService).indexOf('York') != -1) {
+        var socialLink = ("https://www.nytimes.com/search?query=" + chosenPart.singular + "+" + theSolution);
       }
-              console.log(socialLink);
+      console.log(socialLink);
       $('.social-link').attr('href', socialLink);
       $('.social-account').html(socialAccount);
     }
