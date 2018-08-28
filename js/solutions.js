@@ -71,7 +71,9 @@ var solutions = {
  	{adjective: "refreshing", noun: "refresher", plural: "refreshers"},
  	{adjective: "freshening", noun: "freshener", plural: "fresheners"},
  	{adjective: "deoderizing", noun: "deoderant", plural: "deoderant"},
+ 	{adjective: "cleansing", noun: "cleanser", plural: "cleansers"},
  	{adjective: "sterilizing"},
+ 	{adjective: "mineral"},
  	{noun: "wipes", plural: "wipes"},
  	{noun: "towels", plural: "towels"},
  	{noun: "towelettes", plural: "towelettes"}
@@ -85,14 +87,14 @@ var solutions = {
 // TO DO - work these in
 
 var products = {
- head: ["helmet", "wrap"],
- face: ["mask", "serum"],
+ head: ["head wrap"],
+ face: ["mask", "serum", "bath salt", "face wrap", "makeup"],
  neck: ["collar", "brace"],
  arms: ["sleeves", "shirt"],
  hands: ["gloves"],
  torso: ["shirt", "undershirt"],
  breasts: ["bra", "bralette"],
- downthere: ["underwear", "underpants", "thong", "panties"],
+ downthere: ["underwear", "underpants", "thong", "panties", "shorts"],
  legs: ["pants"],
  feet: ["socks", "shoes"],
  all: ["cream", "night cream", "day cream", "serum"]
@@ -107,12 +109,14 @@ var exciting_adjectives = [
 	"ultra",
 	"super",
 	"mega",
-	"fantastic",
+	"freeing",
 	"fabulous",
 	"special",
+	"powerful",
 	"natural",
 	"organic",
-	"fair-trade"
+	"fair-trade",
+	"innovative"
 ];
 
 var followup = [
