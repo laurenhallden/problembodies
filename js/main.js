@@ -241,8 +241,6 @@ function whatsMyProblem() {
 
 function whatsMySolution() {
 
-  console.log("solution got called");
-
   // We now have 2 options:
   // 1. Pick a product based on the body part (pants!), OR
   // 2. Pick a product based on the problem class (minimizer!)
@@ -260,8 +258,7 @@ function whatsMySolution() {
   var mandatoryHype = false;
 
 
-  var whichProduct = pickANumber(1);
-  console.log("picked path one: " + whichProduct);
+  var whichProduct = pickANumber(4);
   if ((whichProduct == 0) && (chosenPart.products != "none")) {
     var productClass = chosenPart.products;
 
@@ -295,11 +292,14 @@ function whatsMySolution() {
   var hypeIt = pickANumber(2);
   if ((hypeIt != 0) || (mandatoryHype == true)) {
     $('.the-solution-adjective-one').html(pickFromArray(exciting_adjectives));
-  };
+    var hyphen = "";
+  } else {
+    var hyphen = pickFromArray(hyphen_adjectives);
+  }
 
   // Set the solution span
   $('.the-solution-noun').html(theSolution);
-  $('.the-solution-adjective-two').html(theSolutionAdjective);
+  $('.the-solution-adjective-two').html(hyphen + theSolutionAdjective);
   $('.the-problem-part-singular').html(chosenPart.singular);
 
   // Capitalize our solution product!
@@ -311,8 +311,6 @@ function whatsMySolution() {
   // Pick a followup statement
   var whichSocial = (pickANumber(2));
 
-  console.log(whichSocial);
-
   // But let's not accidentally send people pictures of genitals!
   if ((whichSocial == 0) && (chosenPart.products != "downthere")) {
     var followUpStatement = "<span class='social-service'></span>";
@@ -321,7 +319,6 @@ function whatsMySolution() {
   };
 
   var whichEmoji = pickANumber(2);
-  console.log
 
   if ((chosenPart.emoji == "") || (whichEmoji == 0)) {
     chosenPart.emoji = pickFromArray(goodemotions);

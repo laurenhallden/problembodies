@@ -13,11 +13,14 @@ var solutions = {
  ],
  position: [
  	{adjective: "guiding", noun: "guide", plural: "guides"},
- 	{adjective: "aligning", noun: "aligner", plural: "aligners"},
+ 	{adjective: "realigning", noun: "aligner", plural: "aligners"},
   	{adjective: "adjusting", noun: "adjuster", plural: "adjusters"},
+  	{adjective: "reforming", noun: "reformer", plural: "reformers"},
     {noun: "brace", plural: "braces"},
   	{noun: "harness"},
  	{noun: "sling"},
+ 	{noun: "tape"},
+ 	{noun: "corrector"},
  ],
  big: [
 	{adjective: "minimizing", noun: "minimizer", plural: "minimizers"},
@@ -65,7 +68,6 @@ var solutions = {
     {adjective: "resurfacing", noun: "resurfacer"},
     {adjective: "silky"},
     {adjective: "Himalayan"},
-    {adjective: "chemical"},
     {adjective: "retexturizing"},
     {adjective: "refining"},
     {adjective: "nourishing"},
@@ -169,6 +171,12 @@ var exciting_adjectives = [
 	"maximum power",
 	"high-performance",
 	"miracle-working"
+];
+
+var hyphen_adjectives = [
+	"mega-",
+	"ultra-",
+	"hyper-"
 ];
 
 var followup = [
