@@ -1,7 +1,8 @@
 var cons = [
     "Really?",
     "Are you sure?",
-    "Okay, but:"
+    "Okay, but:",
+    "Consider this:"
 ];
 
 var labels = [

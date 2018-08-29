@@ -187,15 +187,14 @@
       <div class="solution-element solution-statement-holder">
 
         <div class="solution-statement">
-          <p>
-            <span class="solution-intro">You need our</span>
-          </p>
+          <p class="solution-intro">You need our</p>
           <p class="h1">
             <span class="the-solution-adjective-one reset"></span>
             <span class="the-solution-adjective-two reset"></span>
             <span class="the-problem-part-singular reset"></span>
             <span class="the-solution-noun reset"></span>!
           </p>
+        </div>
 
         <div class="follow-up">
           <p>
@@ -226,7 +225,7 @@
 
       <div class="button-set solution-element again-buttons">
         <button class="share">Share this!</button>
-        <a class="reset-button" href="#">Start over</a>
+        <a class="reset-button" href="#">Get fixed again</a>
       </div>
 
     </section> <!-- buttons section-->
@@ -251,7 +250,7 @@
     var count = [0];
 
     $(document).ready(function() {
-      whatsMyProblem()
+      whatsMyProblem();
       $('.problem-buttons').delay(400).fadeIn();
     });
 
@@ -266,12 +265,14 @@
           console.log('we hit 20');
       } else {
         if ($('.problem-buttons').is(':visible')) {
-          $('.problem-statement-holder').fadeOut(function() {
+          // We use promise because multiple DOM elements have this class
+          // and it will fire twice otherwise
+          $('.problem-statement-holder').fadeOut().promise().done(function() {
             whatsMyProblem();
           });
         }
         else if ($('.consideration-buttons').is(':visible')) {
-          $('.consideration-element').fadeOut(function() {
+          $('.consideration-element').fadeOut().promise().done(function() {
             whatsMyProblem();
            $('.problem-buttons').delay(400).fadeIn();
           });
@@ -281,11 +282,11 @@
 
     $('.yes').click(function() {
       if ($('.problem-buttons').is(':visible')) {
-        $('.problem-element').fadeOut(function() {
+        $('.problem-element').fadeOut().promise().done(function() {
           whatsMySolution();
         });
       } else if ($('.consideration-buttons').is(':visible')) {
-        $('.consideration-element').fadeOut(function() {
+        $('.consideration-element').fadeOut().promise().done(function() {
           whatsMySolution();
         });
       }

@@ -3,7 +3,7 @@
 var solutions = {
  shape: [
 	{adjective: "shaping", noun: "shaper", plural: "shapers"},
-	{adjective: "aligning", noun: "aligner", plural: "aligners"},
+	{adjective: "realigning", noun: "aligner", plural: "aligners"},
 	{adjective: "molding", noun: "mold", plural: "molds"},
 	{adjective: "forming", noun: "form", plural: "forms"},
 	{adjective: "sculpting", noun: "sculptor", plural: "sculptors"},
@@ -14,9 +14,10 @@ var solutions = {
  position: [
  	{adjective: "guiding", noun: "guide", plural: "guides"},
  	{adjective: "aligning", noun: "aligner", plural: "aligners"},
+  	{adjective: "adjusting", noun: "adjuster", plural: "adjusters"},
     {noun: "brace", plural: "braces"},
   	{noun: "harness"},
- 	{noun: "sling"}
+ 	{noun: "sling"},
  ],
  big: [
 	{adjective: "minimizing", noun: "minimizer", plural: "minimizers"},
@@ -30,7 +31,7 @@ var solutions = {
  small: [
   	{adjective: "volumizing", noun: "volumizer", plural: "volumizers"},
  	{adjective: "plumping", noun: "plumper", plural: "plumpers"},
- 	{adjective: "extending", noun: "extension", plural: "extensions"},
+ 	{adjective: "extending", noun: "extender", plural: "extensions"},
  	{adjective: "enlarging", noun: "enlarger", plural: "enlargers"},
  	{adjective: "enhancing", noun: "enhancer", plural: "enhancers"},
  	{adjective: "maximizing", noun: "maximizer", plural: "maximizers"},
@@ -79,7 +80,9 @@ var solutions = {
     {adjective: "resurfacing", noun: "resurfacer"},
     {adjective: "firming", noun: "firmers", plural: "firmers"},
     {adjective: "filling", noun: "filler"},
-    {noun: "peel"}
+    {adjective: "silicone"},
+    {adjective: "laser"},
+    {noun: "injections"}
  ],
  attitude: [
  	{adjective: "straightening", noun: "straightener", plural: "straighteners"},
@@ -123,18 +126,30 @@ var solutions = {
 
 // TO DO - work these in
 
-var products = {
+var productsWith = {
+ head: ["wrap", "corrector", "treatment", "procedure"],
+ face: ["mask", "serum", "wrap", "makeup", "milk", "corrector", "treatment", "procedure"],
+ neck: ["collar", "brace", "band", "corrector", "treatment", "procedure"],
+ arms: ["sleeves", "bands", "corrector", "treatment", "procedure"],
+ hands: ["corrector", "bands", "treatment", "procedure"],
+ torso: ["band", "baselayer", "corrector", "treatment", "procedure"],
+ breasts: ["corrector", "treatment"],
+ downthere: ["corrector", "treatment", "procedure"],
+ legs: ["corrector", "bands", "treatment", "procedure"],
+ feet: ["socks", "corrector", "bands", "treatment", "procedure"],
+};
+
+var productsWithout = {
  head: ["head wrap"],
- face: ["mask", "serum", "bath salt", "face wrap", "makeup", "milk"],
- neck: ["collar", "brace"],
- arms: ["sleeves", "shirt"],
+ face: ["face mask"],
+ neck: ["collar"],
+ arms: ["shirt", "sweater"],
  hands: ["gloves"],
- torso: ["shirt", "undershirt", "baselayer"],
+ torso: ["shirt", "undershirt", "sweater"],
  breasts: ["bra", "bralette"],
  downthere: ["underwear", "underpants", "thong", "panties", "shorts"],
- legs: ["pants"],
- feet: ["socks", "shoes"],
- all: ["corrector", "treatment", "procedure"]
+ legs: ["pants", "stockings", "tights"],
+ feet: ["socks", "shoes"]
 };
 
 var exciting_adjectives = [
@@ -145,8 +160,10 @@ var exciting_adjectives = [
 	"one-of-a-kind",
 	"ultimate",
 	"super",
+	"unbelievable",
 	"fabulous",
 	"special",
+	"high-tech",
 	"powerful",
 	"natural",
 	"organic",
@@ -158,21 +175,20 @@ var exciting_adjectives = [
 ];
 
 var followup = [
-"Use the hashtag/coupon code x to save <span class='to-thirty'></span>%.",
-//"Your unfortunate <span class='part-again'></span> will thank you.",
-//"Refer <span class='to-thirty'></span> friends and get access to special reward points!",
-//"Bye bye, problem <span class='part-again'></span>!",
-//"It&rsquo;ll change your life. Trust us.",
-//"Take your self-care routine to the next level. You deserve it.",
-//"Made from recycled milk containers, because we care about the environment."
-
+"Use the coupon code <span class='coupon-code'></span> to save <span class='to-thirty'></span>%.",
+"Your unfortunate <span class='part-again'></span> will thank you.",
+"Refer <span class='to-thirty'></span> of your best friends to unlock special reward points!",
+"Bye bye, problem <span class='part-again'></span>!",
+"It&rsquo;ll change your life. Trust us.",
+"Take your self-care routine to the next level. You deserve it.",
+"Made from recycled milk containers, because we care about the environment."
 ]
 
 var social = [
 "Get yours before your friends by donating to our <a class='social-link' target='_blank'>Kickstarter</a>!",
 "See the resuts for yourself on Instagram: <a class='social-link' target='_blank'><span class='social-account'></span></a>",
 "Don't forget to <a class='social-link' target='_blank'>friend us on Facebook</a>!",
-"Share your results on our new <a class='social-link' target='_blank'>Facebook community</a>!",
+"Connect with people just like you <a class='social-link' target='_blank'>Facebook community</a>!",
 "See what people are saying about &rsquo;em on Twitter! <a class='social-link' target='_blank'><span class='social-account'></span></a>",
 "Check us out in the <a class='social-link' target='_blank'>New York Times!</a>"
 ]

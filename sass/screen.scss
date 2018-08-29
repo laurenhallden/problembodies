@@ -7,9 +7,9 @@ html, body {
 }
 
 body {
-	background: #fd746c;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #ff9068, #fd746c);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #fd6c6c;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #ff9068, #fd6c6c);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #ff9068, #fd6c6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* *************************
@@ -108,6 +108,7 @@ p {
 .wrapper {
 	max-width: 900px;
 	margin: 50px auto;
+	padding: 0 20px;
 	text-align: center;
 	margin-top: 100px;
 	position: relative;
@@ -141,7 +142,7 @@ p {
 	bottom: 80px;
 	margin: 0 auto;
 	text-align: center;
-	width: 100%;
+	width: calc(100% - 40px);
 }
 
 button, .button {
@@ -232,6 +233,17 @@ CONSIDERATION-SPECIFIC STUFF
   SOLUTIONS-SPECIFIC STUFF
 ************************* */
 
+.solution-statement {
+	p.h1 {
+		&:after {
+			content: '™';
+			vertical-align: super;
+			font-size: 20px;
+			font-weight: 400;
+		}
+	}
+}
+
 .the-follow-up {
 	font-size: 18px;
 	font-style: italic;
@@ -240,5 +252,20 @@ CONSIDERATION-SPECIFIC STUFF
 
 	a {
 		color: white;
+	}
+
+	.coupon-code strong,
+	span.social-account,
+	.to-thirty {
+		font-family: sans-serif;
+		font-weight: 700;
+		font-size: 18px;
+		font-style: initial;
+	}
+
+	.emoji {
+		font-style: initial;
+		vertical-align: middle;
+		font-size: 1.7rem;
 	}
 }

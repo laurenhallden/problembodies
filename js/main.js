@@ -1,6 +1,7 @@
-// placeholder object for the part we're about to choose
+// Placeholder objects for the part we're about to choose
 var chosenPart = {};
 var chosenProblem = {};
+var chosenSolution = {};
 
 
 // *****************************
@@ -13,12 +14,12 @@ var chosenProblem = {};
 function pickANumber(upperLimit) {
   var randomNumber = Math.floor(Math.random() * upperLimit);
   return randomNumber;
-}
+};
 
 function pickFromArray(array) {
   var randomValue = array[Math.floor(Math.random() * array.length)];
   return randomValue;
-}
+};
 
 // *****************************
 //         PROBLEMS
@@ -44,14 +45,12 @@ function whatsMyProblem() {
     if (randomPart.count > 1) {
       chosenPart.part = (randomPart.plural);
       chosenPart.plural = true;
-    }
-    else  {
+    } else  {
       chosenPart.part = (randomPart.singular);
       chosenPart.plural = false;
     }
-  }
-  // If not, it's singular
-  else  {
+  } else  {
+    // If not, it's singular
     chosenPart.part = (randomPart.singular);
     chosenPart.plural = false;
   }
@@ -63,7 +62,9 @@ function whatsMyProblem() {
     chosenPart.products = (randomPart.products);
   } else {
     chosenPart.products = "none";
-  }
+  };
+
+  chosenPart.emoji = randomPart.emoji;
 
   // Pick a class of problems
   function randomProblem(problems) {
@@ -93,7 +94,7 @@ function whatsMyProblem() {
 
     // unless there's only ever one of this thing
     if (chosenPart.count != 1) {
-      if (randomPartSelection == 0) {
+      if ((randomPartSelection == 0) || (chosenPart.count > 9)) {
         $('.the-adjective-one').html("one");
       } else if (randomPartSelection == 1) {
         $('.the-adjective-direction').html("left");
@@ -130,7 +131,7 @@ function whatsMyProblem() {
   }
   else {
     $('.the-possessive-a').html("your");
-  }
+  };
 
   // Pump it up with some emphasis or not
   var emphasisVisiblity = pickANumber(2);
@@ -147,7 +148,7 @@ function whatsMyProblem() {
   } else {
     $('.the-emphasis').addClass('hidden');
     $('.the-emphasis-a').addClass('hidden');
-  }
+  };
 
   // Pump it up some more with "just"
   function just() {
@@ -158,7 +159,7 @@ function whatsMyProblem() {
     else {
       $('.the-emphasis-a').removeClass('hidden');
     }
-  }
+  };
 
   // Is there a result we're in danger of?
   $('.the-result').html(pickFromArray(results));
@@ -171,7 +172,7 @@ function whatsMyProblem() {
     $('.could').html("Could");
     $('.be').html("be");
     $('.type-d .the-verb').addClass('hidden');
-  }
+  };
 
   // Set the problem span
   $('.the-problem').html(chosenProblem.problem);
@@ -197,7 +198,7 @@ function whatsMyProblem() {
   } else if (whichStatement == 4) {
     $('.type-e').removeClass('hidden');
     $('.type-e').addClass("selected");
-  }
+  };
 
 
   // Capitalize the first letter of whatever's left:
@@ -205,6 +206,7 @@ function whatsMyProblem() {
   $(".problem-statement.selected span:not(.hidden)").each(function(){
       statementArr.push($(this).text());
   });
+
   // we logged all the spans, now remove the empty ones
   statementArr = statementArr.filter(function(n){ return n != "" });
   var firstSpan = statementArr[0];
@@ -217,7 +219,8 @@ function whatsMyProblem() {
     var capLetter = firstSpan.charAt(1).toUpperCase();
     var rest = firstSpan.substring(2);
     var quote = '“'
-  }
+  };
+
   var rest = firstSpan.substring(1);
   var span;
   $('.problem-statement.selected span:not(.hidden)').each(function(){
@@ -225,26 +228,59 @@ function whatsMyProblem() {
       span = $(this);
     }
   });
+
   $(span).html(quote + capLetter + rest);
 
   $('.problem-statement-holder').fadeIn();
-
-}
+};
 
 
 // *****************************
 //         SOLUTIONS
 // *****************************
 
-function whatsMySolution() {  
+function whatsMySolution() {
 
-  // pick a random solution that matches our problem class
+  console.log("solution got called");
+
+  // We now have 2 options:
+  // 1. Pick a product based on the body part (pants!), OR
+  // 2. Pick a product based on the problem class (minimizer!)
+
+  // either way, let's match our problem class with its solution class
   var solutionClass = solutions[chosenProblem.class];
   var solutionNouns = solutionClass.filter(function (filter) {
     return filter.noun !== null &
           filter.noun !== undefined
   });
-  var theSolution = pickFromArray(solutionNouns).noun;
+
+  // Now, option 1 or 2?
+
+  // We need to use this later
+  var mandatoryHype = false;
+
+
+  var whichProduct = pickANumber(1);
+  console.log("picked path one: " + whichProduct);
+  if ((whichProduct == 0) && (chosenPart.products != "none")) {
+    var productClass = chosenPart.products;
+
+    // Since nobody says "boob bra", hide the body part sometimes
+    var productsWithAndWithout = pickANumber(4);
+    if (productsWithAndWithout > 2) {
+      var theSolution = pickFromArray(productsWith[productClass]);
+      $('.the-problem-part-singular').removeClass('hidden');
+    } else {
+      var theSolution = pickFromArray(productsWithout[productClass]);
+      $('.the-problem-part-singular').addClass('hidden');
+      mandatoryHype = true;
+    }
+  } else {
+    var theSolution = pickFromArray(solutionNouns).noun;
+  };
+
+  // Pass our chosen solution to its object so we can use it elsewhere
+  chosenSolution.solution = theSolution;
 
   // Let's grab a related adjective
   var problemAdjectives = solutionClass.filter(function (filter) {
@@ -257,7 +293,7 @@ function whatsMySolution() {
 
   // Pump it up with another adjective?
   var hypeIt = pickANumber(2);
-  if (hypeIt != 0) {
+  if ((hypeIt != 0) || (mandatoryHype == true)) {
     $('.the-solution-adjective-one').html(pickFromArray(exciting_adjectives));
   };
 
@@ -266,69 +302,78 @@ function whatsMySolution() {
   $('.the-solution-adjective-two').html(theSolutionAdjective);
   $('.the-problem-part-singular').html(chosenPart.singular);
 
-  // Capitalize the first letter of our solution
+  // Capitalize our solution product!
   var solutionArr = [];
-  $('.solution-statement.selected span:not(.hidden)').each(function(){
-      solutionArr.push($(this).text());
-  });
-  // we logged all the spans, now remove the empty ones
-  
- 
+  $('.solution-statement span:not(.hidden)').each(function(){
+      $(this).css('text-transform', 'Capitalize');
+  }); 
 
   // Pick a followup statement
-  var whichSocial = (pickFromArray(1));
-  var followUpStatement = pickFromArray(followup);
+  var whichSocial = (pickANumber(2));
 
-  if ((whichSocial == 0) && (chosenPart.products =! "downthere")) {
-    $('.the-follow-up').html("<span class='social-service'></span>");
-  }
-   else {
-    $('.the-follow-up').html(followUpStatement);
-  }
+  console.log(whichSocial);
 
-  // fill in a bunch of follow-up offer options
+  // But let's not accidentally send people pictures of genitals!
+  if ((whichSocial == 0) && (chosenPart.products != "downthere")) {
+    var followUpStatement = "<span class='social-service'></span>";
+  } else {
+    var followUpStatement = pickFromArray(followup);
+  };
+
+  var whichEmoji = pickANumber(2);
+  console.log
+
+  if ((chosenPart.emoji == "") || (whichEmoji == 0)) {
+    chosenPart.emoji = pickFromArray(goodemotions);
+  };
+
+  $('.the-follow-up').html(followUpStatement + "<span class='emoji'> " + chosenPart.emoji + "</span>");
+
+  // Now let's fill in a bunch of follow-up offer options
+  var nospacespart = chosenPart.singular.replace(/\s/g, '');
+  var nospacessolution = chosenSolution.solution.replace(/\s/g, '');
+
   // If there's a social link...
   if((followUpStatement).indexOf('social') != -1) {
 
     // pick which social account
     var theSocialService = pickFromArray(social);
-    //console.log(theSocialService);
-      $('.social-service').html(theSocialService);
-      // Let's make a fake social account
 
-      var nospaces = chosenPart.singular.replace(/\s/g, '');
+    $('.social-service').html(theSocialService);
+    // Let's make a fake social account
 
-      // Let's make some fake links
-      if ((theSocialService).indexOf('Twitter') != -1) {
-        var socialLink = ("https://twitter.com/search?q=" + chosenPart.singular + "%20" + theSolution);
-        var socialAccount = ("#lovemy" + nospaces + theSolution);
-      } else if ((theSocialService).indexOf('Instagram') != -1) {
-        var socialLink = ("https://www.instagram.com/explore/tags/" + chosenPart.singular + theSolution);
-        var socialAccount = ("#lovemy" + nospaces + theSolution);
-      } else if ((theSocialService).indexOf('Facebook') != -1) {
-        var socialLink = ("https://www.facebook.com/search/top/?q=" + chosenPart.singular + "%20" + theSolution);
-      } else if ((theSocialService).indexOf('Kickstarter') != -1) {
-        var socialLink = ("https://www.google.com/search?lr=&as_qdr=all&ei=P56EW_mpKqPv_QbE4arIAw&q=" + chosenPart.singular + "+" + theSolution + "+site%3Akickstarter.com");
-      } else if ((theSocialService).indexOf('York') != -1) {
-        var socialLink = ("https://www.nytimes.com/search?query=" + chosenPart.singular + "+" + theSolution);
-      }
-      console.log(socialLink);
-      $('.social-link').attr('href', socialLink);
-      $('.social-account').html(socialAccount);
+    // Let's make some fake links
+    if ((theSocialService).indexOf('Twitter') != -1) {
+      var socialLink = ("https://twitter.com/search?q=" + chosenPart.singular + "%20" + theSolution);
+      var socialAccount = ("#lovemy" + nospacespart + nospacessolution);
+    } else if ((theSocialService).indexOf('Instagram') != -1) {
+      var socialLink = ("https://www.instagram.com/explore/tags/" + nospacespart + nospacessolution);
+      var socialAccount = ("#lovemy" + nospacespart + nospacessolution);
+    } else if ((theSocialService).indexOf('Facebook') != -1) {
+      var socialLink = ("https://www.facebook.com/search/top/?q=" + chosenPart.singular + "%20" + theSolution);
+    } else if ((theSocialService).indexOf('Kickstarter') != -1) {
+      var socialLink = ("https://www.google.com/search?lr=&as_qdr=all&ei=P56EW_mpKqPv_QbE4arIAw&q=" + chosenPart.singular + "+" + theSolution + "+site%3Akickstarter.com");
+    } else if ((theSocialService).indexOf('York') != -1) {
+      var socialLink = ("https://www.nytimes.com/search?query=" + chosenPart.singular + "+" + theSolution);
     }
-  else if((followUpStatement).indexOf('part-again') != -1)   {
+    $('.social-link').attr('href', socialLink);
+    $('.social-account').html(socialAccount);
+  }
+  if((followUpStatement).indexOf('part-again') != -1)   {
     $('.part-again').html(chosenPart.part);
   }
-  else if((followUpStatement).indexOf('to-thirty') != -1)   {
+  if((followUpStatement).indexOf('to-thirty') != -1)   {
     $('.to-thirty').html(pickANumber(31));
+  }
+  if((followUpStatement).indexOf('coupon-code') != -1)   {
+    var couponCode = ("<strong>best" + nospacespart + "forward");
+    $('.coupon-code').html(couponCode);
   }
 
   $('.solution-statement-holder').fadeIn(function(){
     $('.again-buttons').fadeIn();
   });
-
-}
-
+};
 
 
 // *****************************
@@ -340,7 +385,7 @@ function considerations() {
       pickConsiderations();
     });
     $('.problem-buttons').hide();
-}
+};
 
 function pickConsiderations() {
 
@@ -372,4 +417,4 @@ function pickConsiderations() {
   $('.consideration-holder').fadeIn();
   $('.evidence-card').addClass('animate');
   $('.consideration-buttons').delay(400).fadeIn();
-}
+};
