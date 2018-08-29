@@ -62,7 +62,7 @@ var results = [
     "bringing you down",
     "ruining your mood",
     "making it hard to date",
-    "making you self-conscius",
+    "making you self-conscious",
     "causing you serious grief",
     "causing you distress",
     "keeping you up at night"

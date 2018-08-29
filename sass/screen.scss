@@ -68,11 +68,20 @@ p {
 	margin-bottom: 20px;
 }
 
-.intro,
-.solution-intro {
+.intro {
 	margin-top: -45px;
 	display: block;
 	margin-bottom: 20px;
+}
+
+.solution-intro {
+	display: block;
+	margin-bottom: 20px;
+	font-family: sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
 }
 
 .caption-label {
@@ -81,15 +90,15 @@ p {
 	display: block;
 	font-family: sans-serif;
 	font-size: 16px;
-	margin: 10px 0;
+	margin: 15px 0;
 	letter-spacing: 1px;
 	font-weight: 700;
 }
 
 .fine-print {
 	font-family: sans-serif;
-	font-size: 12px;
-	opacity: 0.4;
+	font-size: 13px;
+	opacity: 0.5;
 	display: block;
 	margin-top: 30px;
 }
@@ -147,14 +156,16 @@ p {
 
 button, .button {
 	display: inline-block;
-	font-size: 18px;
+	font-size: 17px;
 	line-height: 2.2;
-	padding: 0px 30px;
+	padding: 5px 30px;
 	border: 4px solid white;
-	margin: 0px 5px;
-	font-weight: 500;
+	margin: 0px 6px;
+	font-weight: 700;
 	cursor: pointer;
 	border-radius: 6px;
+	color: #9B2450;
+	text-transform: uppercase;
 
 	&:first-of-type {
 		border: 4px solid white;
@@ -212,7 +223,7 @@ CONSIDERATION-SPECIFIC STUFF
 
 .evidence-card {
 	background: white;
-	padding: 20px;
+	padding: 20px 20px 35px;
 	max-width: 500px;
 	margin: 10px auto 0;
 	border-radius: 8px;
@@ -244,11 +255,21 @@ CONSIDERATION-SPECIFIC STUFF
 	}
 }
 
+.solution-card {
+	border-radius: 8px;
+	box-shadow: 4px 6px 24px 10px rgba(60,64,67,.08), 0 2px 8px 4px rgba(60,64,67,.08);
+	margin: 0 auto;
+	max-width: 700px;
+	padding: 80px 50px 40px;
+	background: rgba(255,255,255,.1);
+	height: auto;
+}
+
 .the-follow-up {
 	font-size: 18px;
-	font-style: italic;
+	font-style: inherit;
 	display: block;
-	margin-top: 100px;
+	margin-top: 40px;
 
 	a {
 		color: white;

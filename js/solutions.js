@@ -171,7 +171,9 @@ var exciting_adjectives = [
 	"maximum power",
 	"high-performance",
 	"cutting-edge",
-	"miracle-working"
+	"miracle-working",
+	"luxurious",
+	"intensive"
 ];
 
 var hyphen_adjectives = [
