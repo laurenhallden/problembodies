@@ -170,13 +170,15 @@ var exciting_adjectives = [
 	"innovative",
 	"maximum power",
 	"high-performance",
+	"cutting-edge",
 	"miracle-working"
 ];
 
 var hyphen_adjectives = [
 	"mega-",
 	"ultra-",
-	"hyper-"
+	"hyper-",
+	"super-"
 ];
 
 var followup = [

@@ -13,8 +13,8 @@
 
   <meta charset="utf-8">
 
-  <title>SITE TITLE REPLACETHIS</title>
-  <meta name="description" content="SITE DESCRIPTION REPLACETHIS">
+  <title>Problem Bodies</title>
+  <meta name="description" content="A site that knows exactly what's wrong with your body, and how to fix it">
   <meta name="author" content="Lauren Hallden">
 
   <!--
@@ -28,20 +28,19 @@
 
   <meta name="viewport" content="width=device-width" initial-scale=1>
 
-  <!-- Metatags
-  <meta property="og:title" content="SITE TITLE REPLACETHIS" />
-  <meta property="og:url" content="http://laurenhallden.com/REPLACETHIS" />
+  <!-- Metatags -->
+  <meta property="og:title" content="Problem Bodies" />
+  <meta property="og:url" content="http://laurenhallden.com/problembodies" />
   <meta property="og:type" content="website" />
-  <meta property="og:description" content="SITE DESCRIPTION REPLACETHIS" />
-  <meta property="og:image" content="http://laurenhallden.com/REPLACETHIS.jpg" />
+  <meta property="og:description" content="A site that knows exactly what's wrong with your body, and how to fix it" />
+  <!--<meta property="og:image" content="http://laurenhallden.com/REPLACETHIS.jpg" />-->
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SITE TITLE REPLACETHIS" />
+  <meta name="twitter:title" content="Problem Bodies" />
   <meta name="tiwtter:creator" content="@phillylauren" />
-  <meta name="twitter:description" content="SITE DESCRIPTION REPLACETHIS" />
-  <meta name="twitter:url" content="http://laurenhallden.com/REPLACETHIS" />
+  <meta name="twitter:description" content="A site that knows exactly what's wrong with your body, and how to fix it" />
+  <meta name="twitter:url" content="http://laurenhallden.com/problembodies" />
   <meta name="twitter:image" content="http://laurenhallden.com/REPLACETHIS.jpg" />
-  -->
 
 
   <!-- CSS -->
@@ -152,7 +151,7 @@
                CONSIDERATIONS
       ****************************** -->
 
-      <!-- I will make you feel worse -->
+      <!-- I will now make you feel worse via "science" -->
       <div class="consideration-element consideration-holder">
         <p class="h1">
           <span class="the-considerations"></span>
@@ -254,12 +253,13 @@
       $('.problem-buttons').delay(400).fadeIn();
     });
 
+    // Oh you think you're perfect?
     $('.no').click(function() {
-      // how many times has the user hit nope?
+      // How many times has the user hit nope?
       count++;
 
       if (count % 5 === 0 ) {
-        // hit 'em with some guilt
+        // Hit 'em with some guilt
         considerations();
       } else if (count == 31) {
           console.log('we hit 20');
@@ -280,6 +280,7 @@
       }
     });
 
+    // Send us to the solutions
     $('.yes').click(function() {
       if ($('.problem-buttons').is(':visible')) {
         $('.problem-element').fadeOut().promise().done(function() {
