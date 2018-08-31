@@ -69,9 +69,10 @@ html, body {
   font-size: 15px;
   line-height: 1.4;
   color: white;
+  font-family: "utopia-std", "times new roman", serif;
 }
 
-/* line 9, ../sass/screen.scss */
+/* line 10, ../sass/screen.scss */
 body {
   background: #ff6b94;
   /* fallback for old browsers */
@@ -123,19 +124,20 @@ working from https://codepen.io/valhead/pen/ByRaBd
 /* *************************
         TYPOGRAPHY
 ************************* */
-/* line 54, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 h1, .h1 {
   font-size: 48px;
   line-height: 1.2;
   font-weight: 700;
+  font-family: "utopia-std", "times new roman", serif;
 }
 
-/* line 60, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 64, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 p {
   font-size: 22px;
   font-weight: 400;
@@ -143,14 +145,14 @@ p {
   margin-bottom: 20px;
 }
 
-/* line 71, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 .intro {
   margin-top: -45px;
   display: block;
   margin-bottom: 20px;
 }
 
-/* line 77, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 .solution-intro {
   display: block;
   margin-bottom: 20px;
@@ -161,7 +163,7 @@ p {
   letter-spacing: 1px;
 }
 
-/* line 87, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 .caption-label {
   text-transform: uppercase;
   color: #b1b1b1;
@@ -173,7 +175,7 @@ p {
   font-weight: 700;
 }
 
-/* line 98, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .fine-print {
   font-family: sans-serif;
   font-size: 13px;
@@ -182,7 +184,7 @@ p {
   margin-top: 30px;
 }
 
-/* line 106, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 .superscript {
   vertical-align: super;
   opacity: 0.4;
@@ -192,7 +194,7 @@ p {
 /* *************************
          CONTAINERS
 ************************* */
-/* line 117, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 .wrapper {
   max-width: 900px;
   margin: 50px auto;
@@ -203,7 +205,7 @@ p {
   height: 80vh;
 }
 
-/* line 127, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 .main-section {
   height: 50vh;
   max-height: 50vh;
@@ -212,12 +214,12 @@ p {
   border: 1px solid transparent;
 }
 
-/* line 135, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 .hidden {
   display: none;
 }
 
-/* line 139, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 .problem-statement-holder,
 .consideration-holder,
 .solution-statement-holder {
@@ -227,7 +229,7 @@ p {
 /* *************************
           BUTTONS
 ************************* */
-/* line 149, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 .buttons {
   position: absolute;
   bottom: 80px;
@@ -236,7 +238,7 @@ p {
   width: calc(100% - 40px);
 }
 
-/* line 157, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 button, .button {
   display: inline-block;
   font-size: 17px;
@@ -250,21 +252,21 @@ button, .button {
   color: #9B2450;
   text-transform: uppercase;
 }
-/* line 170, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 button:first-of-type, .button:first-of-type {
   border: 4px solid white;
   background-color: transparent;
   color: white;
 }
 
-/* line 177, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 .problem-buttons,
 .consideration-buttons,
 .again-buttons {
   display: none;
 }
 
-/* line 183, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 .reset-button {
   display: block;
   margin-top: 20px;
@@ -274,11 +276,11 @@ button:first-of-type, .button:first-of-type {
 /* *************************
    PROBLEM-SPECIFIC STUFF
 ************************* */
-/* line 194, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 .problem-statement {
   margin-top: 50px;
 }
-/* line 196, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 .problem-statement .the-emotions {
   display: block;
   margin-top: 20px;
@@ -287,18 +289,18 @@ button:first-of-type, .button:first-of-type {
 /* *************************
 CONSIDERATION-SPECIFIC STUFF
 ************************* */
-/* line 207, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 .the-considerations {
   margin-bottom: 20px;
 }
 
-/* line 211, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 .the-evidence {
   font-size: 22px;
   font-weight: 400;
   margin-bottom: 20px;
 }
-/* line 216, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 .the-evidence strong {
   font-family: sans-serif;
   font-weight: 700;
@@ -306,7 +308,7 @@ CONSIDERATION-SPECIFIC STUFF
   font-size: 20px;
 }
 
-/* line 224, ../sass/screen.scss */
+/* line 226, ../sass/screen.scss */
 .evidence-card {
   background: white;
   padding: 20px 20px 35px;
@@ -315,11 +317,11 @@ CONSIDERATION-SPECIFIC STUFF
   border-radius: 8px;
   box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.2), 0 2px 8px 4px rgba(60, 64, 67, 0.1);
 }
-/* line 232, ../sass/screen.scss */
+/* line 234, ../sass/screen.scss */
 .evidence-card p {
   color: #444444;
 }
-/* line 236, ../sass/screen.scss */
+/* line 238, ../sass/screen.scss */
 .evidence-card.animate {
   animation: slideIn 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.275) both, fadeIn 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
@@ -327,7 +329,7 @@ CONSIDERATION-SPECIFIC STUFF
 /* *************************
   SOLUTIONS-SPECIFIC STUFF
 ************************* */
-/* line 249, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 .solution-statement p.h1:after {
   content: '™';
   vertical-align: super;
@@ -335,7 +337,7 @@ CONSIDERATION-SPECIFIC STUFF
   font-weight: 400;
 }
 
-/* line 258, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 .solution-card {
   border-radius: 8px;
   box-shadow: 4px 6px 24px 10px rgba(60, 64, 67, 0.08), 0 2px 8px 4px rgba(60, 64, 67, 0.08);
@@ -346,18 +348,18 @@ CONSIDERATION-SPECIFIC STUFF
   height: auto;
 }
 
-/* line 268, ../sass/screen.scss */
+/* line 270, ../sass/screen.scss */
 .the-follow-up {
   font-size: 18px;
   font-style: inherit;
   display: block;
   margin-top: 40px;
 }
-/* line 274, ../sass/screen.scss */
+/* line 276, ../sass/screen.scss */
 .the-follow-up a {
   color: white;
 }
-/* line 278, ../sass/screen.scss */
+/* line 280, ../sass/screen.scss */
 .the-follow-up .coupon-code strong,
 .the-follow-up span.social-account,
 .the-follow-up .to-thirty {
@@ -366,7 +368,7 @@ CONSIDERATION-SPECIFIC STUFF
   font-size: 18px;
   font-style: initial;
 }
-/* line 287, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 .the-follow-up .emoji {
   font-style: initial;
   vertical-align: middle;
