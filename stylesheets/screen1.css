@@ -475,7 +475,7 @@ CONSIDERATION-SPECIFIC STUFF
 @media screen and (max-width: 320px) {
   /* line 373, ../sass/screen1.scss */
   .main-section {
-    min-height: 80vh;
+    min-height: 70vh;
   }
 
   /* line 376, ../sass/screen1.scss */
