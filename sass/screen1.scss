@@ -301,7 +301,7 @@ CONSIDERATION-SPECIFIC STUFF
 
 
 /* *************************
-  Molbile Styles
+  Mobile Styles
 ************************* */
 
 @media screen and (max-width: 667px) {
@@ -312,13 +312,13 @@ CONSIDERATION-SPECIFIC STUFF
 		margin-top: 0px;
 		max-height: inherit;
 		height: auto;
-		min-height: 75vh;
+		min-height: 60vh;
 		display: flex;
 		justify-content: center; /* align horizontal */
 		align-items: center; /* align vertical */
 	}
 	.problem-statement {
-		margin-top: 0;
+		margin-top: 10vh;
 	}
 	.buttons {
 		position: relative;
@@ -326,7 +326,7 @@ CONSIDERATION-SPECIFIC STUFF
 		bottom: 0;
 	}
 	.wrapper {
-		padding: 0 25px;
+		padding: 0 25px 20px;
 		padding-top: 1vh;
 		margin: 20px auto;
 	}
@@ -338,6 +338,7 @@ CONSIDERATION-SPECIFIC STUFF
 		font-size: 20px;
 	}
 	.solution-element {
+		margin-top: 5vh;
 		.emoji {
 			display: block;
 			margin-top: 10px;
@@ -364,7 +365,7 @@ CONSIDERATION-SPECIFIC STUFF
 	}
 }
 
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 320px) {
 	.main-section {
 		min-height: 80vh;
 	}
@@ -373,7 +374,7 @@ CONSIDERATION-SPECIFIC STUFF
 	}
 
 	.wrapper {
-		padding: 0 20px;
+		padding: 0 20px 25px;
 	}
 	.caption-label {
 		font-size: 15px;
