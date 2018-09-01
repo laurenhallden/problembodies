@@ -12,7 +12,7 @@ var problems = {
  attitude: ["unruly", "rowdy", "unmanageable", "out of control", "grumpy", "noisy", "irritated", "offensive"],
  smell: ["stinky", "smelly", "pungent", "disgusting", "offensive", "sweaty"],
  cleanliness: ["dirty", "greasy", "shiny", "waxy", "oily", "pimply"],
- hariness: ["hairy", "fuzzy", "shaggy", "frizzy"]
+ hariness: ["hairy", "fuzzy", "shaggy", "frizzy", "fuzzy"]
 };
 
 var suggestions = [
@@ -68,4 +68,3 @@ var results = [
     "causing you distress",
     "keeping you up at night"
 ];
-

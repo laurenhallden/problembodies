@@ -20,6 +20,7 @@ var solutions = {
   	{noun: "harness"},
  	{noun: "sling"},
  	{noun: "tape"},
+ 	{noun: "glue"},
  	{noun: "corrector"},
  ],
  big: [
@@ -119,11 +120,13 @@ var solutions = {
  ],
  hariness: [
  	{adjective: "waxing", noun: "wax", plural: "wax"},
+ 	{adjective: "tweezing", noun: "tweezer", plural: "tweezers"},
  	{adjective: "depilatory", noun: "depilatory", plural: "depilatory"},
+ 	{adjective: "shaving", noun: "shaver", plural: "shavers"},
  	{adjective: "dermatologist-recomended"},
- 	{noun: "shaver", plural: "shavers"},
+ 	{adjective: "chemical"},
  	{noun: "eplilator", plural: "epilators"},
- 	{noun: "threading"}
+ 	{noun: "threading", plural: "threader"}
  ]
 };
 
