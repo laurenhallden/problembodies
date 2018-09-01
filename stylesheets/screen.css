@@ -418,7 +418,7 @@ CONSIDERATION-SPECIFIC STUFF
 
   /* line 328, ../sass/screen.scss */
   .wrapper {
-    padding: 0 20px;
+    padding: 0 25px;
     padding-top: 1vh;
     margin: 20px auto;
   }
@@ -466,17 +466,43 @@ CONSIDERATION-SPECIFIC STUFF
 }
 @media screen and (max-width: 374px) {
   /* line 368, ../sass/screen.scss */
-  h1, .h1 {
-    font-size: 32px;
-    border: 1px solid red;
+  .main-section {
+    min-height: 80vh;
   }
 
-  /* line 373, ../sass/screen.scss */
+  /* line 371, ../sass/screen.scss */
+  h1, .h1 {
+    font-size: 32px;
+  }
+
+  /* line 375, ../sass/screen.scss */
   .wrapper {
     padding: 0 20px;
   }
 
-  /* line 377, ../sass/screen.scss */
+  /* line 378, ../sass/screen.scss */
+  .caption-label {
+    font-size: 15px;
+  }
+
+  /* line 381, ../sass/screen.scss */
+  .the-evidence {
+    font-size: 18px;
+  }
+
+  /* line 384, ../sass/screen.scss */
+  .solution-intro {
+    font-size: 14px;
+  }
+
+  /* line 388, ../sass/screen.scss */
+  .the-follow-up .coupon-code strong,
+  .the-follow-up span.social-account,
+  .the-follow-up .to-thirty {
+    font-size: 16px;
+  }
+
+  /* line 394, ../sass/screen.scss */
   button, .button {
     display: inline-block;
     font-size: 13px;

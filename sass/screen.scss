@@ -326,7 +326,7 @@ CONSIDERATION-SPECIFIC STUFF
 		bottom: 0;
 	}
 	.wrapper {
-		padding: 0 20px;
+		padding: 0 25px;
 		padding-top: 1vh;
 		margin: 20px auto;
 	}
@@ -365,15 +365,32 @@ CONSIDERATION-SPECIFIC STUFF
 }
 
 @media screen and (max-width: 374px) {
+	.main-section {
+		min-height: 80vh;
+	}
 	h1, .h1 {
 		font-size: 32px;
-		border: 1px solid red;
 	}
 
 	.wrapper {
 		padding: 0 20px;
 	}
-
+	.caption-label {
+		font-size: 15px;
+	}
+	.the-evidence {
+		font-size: 18px;
+	}
+	.solution-intro {
+		font-size: 14px;
+	}
+	.the-follow-up {
+		.coupon-code strong,
+		span.social-account,
+		.to-thirty {
+			font-size: 16px;
+		}
+	}
 	button, .button {
 		display: inline-block;
 		font-size: 13px;
