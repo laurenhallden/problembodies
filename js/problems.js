@@ -3,15 +3,16 @@
 
 var problems = {
  shape: ["square", "triangular", "oblong", "pointy", "sharp", "long", "knobby"],
- position: ["droopy", "dangly", "misaligned", "pendulous", "off-center", "askew", "lopsided", "twisted", "crooked"],
+ position: ["droopy", "dangly", "misaligned", "pendulous", "off-center", "askew", "lopsided", "twisted", "crooked", "saggy"],
  big: ["prominent", "bulbous", "bulgy", "fat", "hefty", "bulky", "big", "emormous", "pudgy", "puffy", "plump", "large", "chubby", "flabby", "paunchy", "meaty"],
  small: ["shrimpy", "puny", "small", "thin", "weak", "tiny", "meek", "pitiful", "pitiable", "inadequate", "insufficient", "meager", "paltry", "deflated"],
  age: ["old", "haggard", "worn down", "used up", "exhausted", "shabby", "worn out", "weary", "ruined", "grungy", "ashy", "dull", "dingy", "sad", "tired", "depleted", "numb"],
- texture: ["ashy", "rough", "scaly", "dry", "hairy", "frizzy", "gnarled", "uneven", "calloused", "flaky"],
+ texture: ["ashy", "rough", "scaly", "dry", "gnarled", "uneven", "calloused", "flaky"],
  surface: ["wrinkled", "dented", "pitted", "scarred", "dimpled", "uneven", "slack"],
  attitude: ["unruly", "rowdy", "unmanageable", "out of control", "grumpy", "noisy", "irritated", "offensive"],
- smell: ["stinky", "smelly", "pungent", "disgusting", "offensive"],
- cleanliness: ["dirty", "greasy", "shiny", "waxy", "oily", "pimply"]
+ smell: ["stinky", "smelly", "pungent", "disgusting", "offensive", "sweaty"],
+ cleanliness: ["dirty", "greasy", "shiny", "waxy", "oily", "pimply"],
+ hariness: ["hairy", "fuzzy", "shaggy", "frizzy"]
 };
 
 var suggestions = [

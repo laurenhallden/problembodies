@@ -79,7 +79,7 @@ p {
 .solution-intro {
 	display: block;
 	margin-bottom: 20px;
-	font-family: sans-serif;
+	font-family: "Hevetica Neue", helvetica, sans-serif;
 	font-size: 16px;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -90,7 +90,7 @@ p {
 	text-transform: uppercase;
 	color: #b1b1b1;
 	display: block;
-	font-family: sans-serif;
+	font-family: "Hevetica Neue", helvetica, sans-serif;
 	font-size: 16px;
 	margin: 15px 0;
 	letter-spacing: 1px;
@@ -98,7 +98,7 @@ p {
 }
 
 .fine-print {
-	font-family: sans-serif;
+	font-family: "Hevetica Neue", helvetica, sans-serif;
 	font-size: 13px;
 	opacity: 0.5;
 	display: block;
@@ -186,6 +186,7 @@ button, .button {
 	display: block;
 	margin-top: 20px;
 	color: white;
+	font-family: "Hevetica Neue", helvetica, sans-serif;
 }
 
 
@@ -216,7 +217,7 @@ CONSIDERATION-SPECIFIC STUFF
 	margin-bottom: 20px;
 
 	strong {
-		font-family: sans-serif;
+		font-family: "Hevetica Neue", helvetica, sans-serif;
 		font-weight: 700;
 		color: #009df8;
 		font-size: 20px;
@@ -250,8 +251,8 @@ CONSIDERATION-SPECIFIC STUFF
 	p.h1 {
 		&:after {
 			content: '™';
-			vertical-align: super;
-			font-size: 20px;
+			vertical-align: top;
+			font-size: 40px;
 			font-weight: 400;
 		}
 	}
@@ -280,7 +281,7 @@ CONSIDERATION-SPECIFIC STUFF
 	.coupon-code strong,
 	span.social-account,
 	.to-thirty {
-		font-family: sans-serif;
+		font-family: "Hevetica Neue", helvetica, sans-serif;
 		font-weight: 700;
 		font-size: 18px;
 		font-style: initial;

@@ -116,6 +116,14 @@ var solutions = {
  	{noun: "beauty bar"},
  	{noun: "emulsion"},
  	{noun: "wash"}
+ ],
+ hariness: [
+ 	{adjective: "waxing", noun: "wax", plural: "wax"},
+ 	{adjective: "depilatory", noun: "depilatory", plural: "depilatory"},
+ 	{adjective: "dermatologist-recomended"},
+ 	{noun: "shaver", plural: "shavers"},
+ 	{noun: "eplilator", plural: "epilators"},
+ 	{noun: "threading"}
  ]
 };
 
@@ -195,9 +203,9 @@ var followup = [
 
 var social = [
 "Get yours before your friends by donating to our <a class='social-link' target='_blank'>Kickstarter</a>!",
-"See the resuts for yourself on Instagram: <a class='social-link' target='_blank'><span class='social-account'></span></a>",
+"See the resuts for yourself on Instagram:&nbsp; <a class='social-link' target='_blank'><span class='social-account'></span></a>",
 "Don't forget to <a class='social-link' target='_blank'>friend us on Facebook</a>!",
 "Connect with people just like you <a class='social-link' target='_blank'>Facebook community</a>!",
-"See what people are saying about &rsquo;em on Twitter! <a class='social-link' target='_blank'><span class='social-account'></span></a>",
+"See what people are saying about &rsquo;em on Twitter!&nbsp; <a class='social-link' target='_blank'><span class='social-account'></span></a>",
 "Check us out in the <a class='social-link' target='_blank'>New York Times!</a>"
 ]

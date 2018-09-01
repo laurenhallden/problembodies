@@ -58,10 +58,18 @@ function whatsMyProblem() {
   chosenPart.pluralpart = (randomPart.plural);
   chosenPart.count = (randomPart.count);
 
+  // Are there specific products that are good for this part?
   if (randomPart.hasOwnProperty("products")) {
     chosenPart.products = (randomPart.products);
   } else {
     chosenPart.products = "none";
+  };
+
+  // If this part a vertical set? Just lips!
+  if (randomPart.hasOwnProperty("set")) {
+    chosenPart.set = "vertical";
+  } else {
+    chosenPart.set = "horizontal";
   };
 
   chosenPart.emoji = randomPart.emoji;
@@ -97,9 +105,17 @@ function whatsMyProblem() {
       if ((randomPartSelection == 0) || (chosenPart.count > 9)) {
         $('.the-adjective-one').html("one");
       } else if (randomPartSelection == 1) {
-        $('.the-adjective-direction').html("left");
+        if (chosenPart.set == "horizontal") {
+          $('.the-adjective-direction').html("left");
+        } else {
+          $('.the-adjective-direction').html("top");
+        }
       } else if (randomPartSelection == 2) {
-        $('.the-adjective-direction').html("right");
+        if (chosenPart.set == "horizontal") {
+          $('.the-adjective-direction').html("right");
+        } else {
+          $('.the-adjective-direction').html("bottom");
+        }
       }
     }
   };
