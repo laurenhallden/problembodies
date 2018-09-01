@@ -101,7 +101,7 @@ var solutions = {
  	{adjective: "sterilizing"},
  	{adjective: "mineral"},
  	{noun: "wipes", plural: "wipes"},
- 	{noun: "towels", plural: "towels"},
+ 	{noun: "towel", plural: "towels"},
  	{noun: "towelettes", plural: "towelettes"},
  	{noun: "perfume"}
  ],

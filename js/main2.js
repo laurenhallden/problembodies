@@ -304,6 +304,7 @@ function whatsMySolution() {
 
   var theSolutionAdjective = pickFromArray(problemAdjectives).adjective;
   chosenSolution.allAdjectives = theSolutionAdjective;
+  console.log(chosenSolution.allAdjectives);
 
   // Pump it up with another adjective?
   var hypeIt = pickANumber(2);
@@ -311,13 +312,12 @@ function whatsMySolution() {
     var anotherAdjective = pickFromArray(exciting_adjectives);
     $('.the-solution-adjective-one').html(anotherAdjective);
     var hyphen = "";
-    chosenSolution.allAdjectives = anotherAdjective + theSolutionAdjective;
+    chosenSolution.allAdjectives = anotherAdjective +  " " + theSolutionAdjective;
   } else {
-    var anotherAdjective = pickFromArray(hyphen_adjectives);
-    var hyphen = pickFromArray(anotherAdjective);
+    var hyphen = pickFromArray(hyphen_adjectives);
     chosenSolution.allAdjectives = hyphen + theSolutionAdjective;
-  }
-
+  };
+  console.log(chosenSolution.allAdjectives);
   // Set the solution span
   $('.the-solution-noun').html(theSolution);
   $('.the-solution-adjective-two').html(hyphen + theSolutionAdjective);
@@ -392,10 +392,11 @@ function whatsMySolution() {
   var addthis_share = {
     url: "https://laurenhallden.com/problembodies",
     title: "Problem Bodies",
-    description: "I'm fixing my " + chosenProblem.problem + chosenPart.part + "with " + chosenSolution.allAdjectives + theSolution + "!"
+    description: "I discovered how to fix my " + chosenProblem.problem + " " + chosenPart.part +  " "  + "with this " + chosenSolution.allAdjectives + " " + theSolution + "! Solve your #problembody here:"
   };
 
   $('.addthis_inline_share_toolbox_uo1i').data('title', addthis_share); 
+  console.log(addthis_share);
 
   $('.solution-statement-holder').fadeIn(function(){
     $('.again-buttons').fadeIn();
