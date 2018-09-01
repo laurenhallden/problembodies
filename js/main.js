@@ -395,6 +395,8 @@ function whatsMySolution() {
     description: "I'm fixing my " + chosenProblem.problem + chosenPart.part + "with " + chosenSolution.allAdjectives + theSolution + "!"
   };
 
+  $('.addthis_inline_share_toolbox_uo1i').data('title', addthis_share); 
+
   $('.solution-statement-holder').fadeIn(function(){
     $('.again-buttons').fadeIn();
   });
