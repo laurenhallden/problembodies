@@ -303,14 +303,19 @@ function whatsMySolution() {
   });
 
   var theSolutionAdjective = pickFromArray(problemAdjectives).adjective;
+  chosenSolution.allAdjectives = theSolutionAdjective;
 
   // Pump it up with another adjective?
   var hypeIt = pickANumber(2);
   if ((hypeIt != 0) || (mandatoryHype == true)) {
-    $('.the-solution-adjective-one').html(pickFromArray(exciting_adjectives));
+    var anotherAdjective = pickFromArray(exciting_adjectives);
+    $('.the-solution-adjective-one').html(anotherAdjective);
     var hyphen = "";
+    chosenSolution.allAdjectives = anotherAdjective + theSolutionAdjective;
   } else {
-    var hyphen = pickFromArray(hyphen_adjectives);
+    var anotherAdjective = pickFromArray(hyphen_adjectives);
+    var hyphen = pickFromArray(anotherAdjective);
+    chosenSolution.allAdjectives = hyphen + theSolutionAdjective;
   }
 
   // Set the solution span
@@ -381,7 +386,14 @@ function whatsMySolution() {
   if((followUpStatement).indexOf('coupon-code') != -1)   {
     var couponCode = ("<strong>best" + nospacespart + "forward");
     $('.coupon-code').html(couponCode);
-  }
+  };
+
+  // Dynamically populate addthis
+  var addthis_share = {
+    url: "https://laurenhallden.com/problembodies",
+    title: "Problem Bodies",
+    description: "I'm fixing my " + chosenProblem.problem + chosenPart.part + "with " + chosenSolution.allAdjectives + theSolution + "!"
+  };
 
   $('.solution-statement-holder').fadeIn(function(){
     $('.again-buttons').fadeIn();
