@@ -156,6 +156,10 @@ p {
 	margin: 0 auto;
 	text-align: center;
 	width: calc(100% - 50px);
+
+	p {
+		font-size: 16px;
+	}
 }
 
 button, .button {
@@ -190,6 +194,7 @@ button, .button {
 .reset-button {
 	display: block;
 	margin-top: 20px;
+	font-size: 17px;
 	color: white;
 	font-family: "Hevetica Neue", helvetica, sans-serif;
 }
@@ -378,6 +383,9 @@ CONSIDERATION-SPECIFIC STUFF
 		line-height: 2.2;
 		padding: 5px 25px;
 	}
+	.reset-button {
+		font-size: 16px;
+	}
 }
 
 @media screen and (max-width: 320px) {
@@ -412,5 +420,8 @@ CONSIDERATION-SPECIFIC STUFF
 		font-size: 13px;
 		line-height: 2.2;
 		padding: 4px 15px;
+	}
+	.reset-button {
+		font-size: 15px;
 	}
 }

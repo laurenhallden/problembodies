@@ -64,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 3, ../sass/screen13.scss */
+/* line 3, ../sass/screen14.scss */
 html, body {
   font-size: 15px;
   line-height: 1.4;
@@ -72,7 +72,7 @@ html, body {
   font-family: "utopia-std", "Times New Roman", serif;
 }
 
-/* line 10, ../sass/screen13.scss */
+/* line 10, ../sass/screen14.scss */
 body {
   background: #ff6b94;
   /* fallback for old browsers */
@@ -124,7 +124,7 @@ working from https://codepen.io/valhead/pen/ByRaBd
 /* *************************
         TYPOGRAPHY
 ************************* */
-/* line 55, ../sass/screen13.scss */
+/* line 55, ../sass/screen14.scss */
 h1, .h1 {
   font-size: 48px;
   line-height: 1.2;
@@ -134,12 +134,12 @@ h1, .h1 {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 64, ../sass/screen13.scss */
+/* line 64, ../sass/screen14.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 68, ../sass/screen13.scss */
+/* line 68, ../sass/screen14.scss */
 p {
   font-size: 22px;
   font-weight: 400;
@@ -147,14 +147,14 @@ p {
   margin-bottom: 20px;
 }
 
-/* line 75, ../sass/screen13.scss */
+/* line 75, ../sass/screen14.scss */
 .intro {
   margin-top: -45px;
   display: block;
   margin-bottom: 20px;
 }
 
-/* line 81, ../sass/screen13.scss */
+/* line 81, ../sass/screen14.scss */
 .solution-intro {
   display: block;
   margin-bottom: 20px;
@@ -165,7 +165,7 @@ p {
   letter-spacing: 1px;
 }
 
-/* line 91, ../sass/screen13.scss */
+/* line 91, ../sass/screen14.scss */
 .caption-label {
   text-transform: uppercase;
   color: #b1b1b1;
@@ -177,7 +177,7 @@ p {
   font-weight: 700;
 }
 
-/* line 102, ../sass/screen13.scss */
+/* line 102, ../sass/screen14.scss */
 .fine-print {
   font-family: "Hevetica Neue", helvetica, sans-serif;
   font-size: 13px;
@@ -186,7 +186,7 @@ p {
   margin-top: 30px;
 }
 
-/* line 110, ../sass/screen13.scss */
+/* line 110, ../sass/screen14.scss */
 .superscript {
   vertical-align: super;
   opacity: 0.4;
@@ -196,7 +196,7 @@ p {
 /* *************************
          CONTAINERS
 ************************* */
-/* line 121, ../sass/screen13.scss */
+/* line 121, ../sass/screen14.scss */
 .wrapper {
   max-width: 900px;
   margin: 50px auto;
@@ -207,7 +207,7 @@ p {
   height: 80vh;
 }
 
-/* line 131, ../sass/screen13.scss */
+/* line 131, ../sass/screen14.scss */
 .main-section {
   height: 50vh;
   max-height: 50vh;
@@ -216,12 +216,12 @@ p {
   border: 1px solid transparent;
 }
 
-/* line 139, ../sass/screen13.scss */
+/* line 139, ../sass/screen14.scss */
 .hidden {
   display: none;
 }
 
-/* line 143, ../sass/screen13.scss */
+/* line 143, ../sass/screen14.scss */
 .problem-statement-holder,
 .consideration-holder,
 .solution-statement-holder {
@@ -231,7 +231,7 @@ p {
 /* *************************
           BUTTONS
 ************************* */
-/* line 153, ../sass/screen13.scss */
+/* line 153, ../sass/screen14.scss */
 .buttons {
   position: absolute;
   bottom: 80px;
@@ -239,8 +239,12 @@ p {
   text-align: center;
   width: calc(100% - 50px);
 }
+/* line 160, ../sass/screen14.scss */
+.buttons p {
+  font-size: 16px;
+}
 
-/* line 161, ../sass/screen13.scss */
+/* line 165, ../sass/screen14.scss */
 button, .button {
   display: inline-block;
   font-size: 17px;
@@ -257,24 +261,25 @@ button, .button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 177, ../sass/screen13.scss */
+/* line 181, ../sass/screen14.scss */
 button:first-of-type, .button:first-of-type {
   border: 4px solid white;
   background-color: transparent;
   color: white;
 }
 
-/* line 184, ../sass/screen13.scss */
+/* line 188, ../sass/screen14.scss */
 .problem-buttons,
 .consideration-buttons,
 .again-buttons {
   display: none;
 }
 
-/* line 190, ../sass/screen13.scss */
+/* line 194, ../sass/screen14.scss */
 .reset-button {
   display: block;
   margin-top: 20px;
+  font-size: 17px;
   color: white;
   font-family: "Hevetica Neue", helvetica, sans-serif;
 }
@@ -282,11 +287,11 @@ button:first-of-type, .button:first-of-type {
 /* *************************
    PROBLEM-SPECIFIC STUFF
 ************************* */
-/* line 202, ../sass/screen13.scss */
+/* line 207, ../sass/screen14.scss */
 .problem-statement {
   margin-top: 50px;
 }
-/* line 204, ../sass/screen13.scss */
+/* line 209, ../sass/screen14.scss */
 .problem-statement .the-emotions {
   display: block;
   margin-top: 20px;
@@ -295,18 +300,18 @@ button:first-of-type, .button:first-of-type {
 /* *************************
 CONSIDERATION-SPECIFIC STUFF
 ************************* */
-/* line 215, ../sass/screen13.scss */
+/* line 220, ../sass/screen14.scss */
 .the-considerations {
   margin-bottom: 20px;
 }
 
-/* line 219, ../sass/screen13.scss */
+/* line 224, ../sass/screen14.scss */
 .the-evidence {
   font-size: 22px;
   font-weight: 400;
   margin-bottom: 20px;
 }
-/* line 224, ../sass/screen13.scss */
+/* line 229, ../sass/screen14.scss */
 .the-evidence strong {
   font-family: "Hevetica Neue", helvetica, sans-serif;
   font-weight: 700;
@@ -314,7 +319,7 @@ CONSIDERATION-SPECIFIC STUFF
   font-size: 20px;
 }
 
-/* line 232, ../sass/screen13.scss */
+/* line 237, ../sass/screen14.scss */
 .evidence-card {
   background: white;
   padding: 20px 20px 35px;
@@ -323,11 +328,11 @@ CONSIDERATION-SPECIFIC STUFF
   border-radius: 8px;
   box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.2), 0 2px 8px 4px rgba(60, 64, 67, 0.1);
 }
-/* line 240, ../sass/screen13.scss */
+/* line 245, ../sass/screen14.scss */
 .evidence-card p {
   color: #444444;
 }
-/* line 244, ../sass/screen13.scss */
+/* line 249, ../sass/screen14.scss */
 .evidence-card.animate {
   animation: slideIn 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.275) both, fadeIn 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
@@ -335,7 +340,7 @@ CONSIDERATION-SPECIFIC STUFF
 /* *************************
   SOLUTIONS-SPECIFIC STUFF
 ************************* */
-/* line 257, ../sass/screen13.scss */
+/* line 262, ../sass/screen14.scss */
 .solution-statement p.h1:after {
   content: '™';
   vertical-align: top;
@@ -343,7 +348,7 @@ CONSIDERATION-SPECIFIC STUFF
   font-weight: 400;
 }
 
-/* line 266, ../sass/screen13.scss */
+/* line 271, ../sass/screen14.scss */
 .solution-card {
   border-radius: 8px;
   box-shadow: 4px 6px 24px 10px rgba(60, 64, 67, 0.08), 0 2px 8px 4px rgba(60, 64, 67, 0.08);
@@ -354,18 +359,18 @@ CONSIDERATION-SPECIFIC STUFF
   height: auto;
 }
 
-/* line 276, ../sass/screen13.scss */
+/* line 281, ../sass/screen14.scss */
 .the-follow-up {
   font-size: 18px;
   font-style: inherit;
   display: block;
   margin-top: 40px;
 }
-/* line 282, ../sass/screen13.scss */
+/* line 287, ../sass/screen14.scss */
 .the-follow-up a {
   color: white;
 }
-/* line 286, ../sass/screen13.scss */
+/* line 291, ../sass/screen14.scss */
 .the-follow-up .coupon-code strong,
 .the-follow-up span.social-account,
 .the-follow-up .to-thirty {
@@ -374,14 +379,14 @@ CONSIDERATION-SPECIFIC STUFF
   font-size: 18px;
   font-style: initial;
 }
-/* line 295, ../sass/screen13.scss */
+/* line 300, ../sass/screen14.scss */
 .the-follow-up .emoji {
   font-style: initial;
   vertical-align: middle;
   font-size: 1.7rem;
 }
 
-/* line 302, ../sass/screen13.scss */
+/* line 307, ../sass/screen14.scss */
 .at-resp-share-element .at-share-btn {
   margin: 0 4px 5px;
 }
@@ -390,12 +395,12 @@ CONSIDERATION-SPECIFIC STUFF
   Mobile Styles
 ************************* */
 @media screen and (max-width: 667px) {
-  /* line 312, ../sass/screen13.scss */
+  /* line 317, ../sass/screen14.scss */
   h1, .h1 {
     font-size: 38px;
   }
 
-  /* line 315, ../sass/screen13.scss */
+  /* line 320, ../sass/screen14.scss */
   .main-section {
     margin-top: 0px;
     max-height: inherit;
@@ -408,131 +413,141 @@ CONSIDERATION-SPECIFIC STUFF
     /* align vertical */
   }
 
-  /* line 324, ../sass/screen13.scss */
+  /* line 329, ../sass/screen14.scss */
   .problem-statement {
     margin-top: 1vh;
   }
 
-  /* line 327, ../sass/screen13.scss */
+  /* line 332, ../sass/screen14.scss */
   .buttons {
     position: relative;
     width: 100%;
     bottom: 0;
   }
 
-  /* line 332, ../sass/screen13.scss */
+  /* line 337, ../sass/screen14.scss */
   .wrapper {
     padding: 0 25px 20px;
     padding-top: 1vh;
     margin: 20px auto;
   }
 
-  /* line 337, ../sass/screen13.scss */
+  /* line 342, ../sass/screen14.scss */
   .intro {
     font-size: 18px;
   }
 
-  /* line 340, ../sass/screen13.scss */
+  /* line 345, ../sass/screen14.scss */
   .consideration-element {
     margin-top: 2.5vh;
   }
 
-  /* line 343, ../sass/screen13.scss */
+  /* line 348, ../sass/screen14.scss */
   .the-evidence {
     font-size: 20px;
   }
 
-  /* line 346, ../sass/screen13.scss */
+  /* line 351, ../sass/screen14.scss */
   .solution-element {
     margin-top: 1vh;
   }
-  /* line 348, ../sass/screen13.scss */
+  /* line 353, ../sass/screen14.scss */
   .solution-element .emoji {
     display: block;
     margin-top: 10px;
   }
 
-  /* line 353, ../sass/screen13.scss */
+  /* line 358, ../sass/screen14.scss */
   .solution-card {
     padding: 40px 15px 15px;
   }
-  /* line 355, ../sass/screen13.scss */
+  /* line 360, ../sass/screen14.scss */
   .solution-card p {
     margin-bottom: 0;
   }
 
-  /* line 359, ../sass/screen13.scss */
+  /* line 364, ../sass/screen14.scss */
   .solution-intro {
     font-size: 15px;
   }
 
-  /* line 362, ../sass/screen13.scss */
+  /* line 367, ../sass/screen14.scss */
   .the-follow-up {
     font-size: 17px;
   }
-  /* line 365, ../sass/screen13.scss */
+  /* line 370, ../sass/screen14.scss */
   .the-follow-up .coupon-code strong,
   .the-follow-up span.social-account,
   .the-follow-up .to-thirty {
     font-size: 18px;
   }
 
-  /* line 371, ../sass/screen13.scss */
+  /* line 376, ../sass/screen14.scss */
   .solution-card {
     padding: 50px 20px 20px;
   }
 
-  /* line 375, ../sass/screen13.scss */
+  /* line 380, ../sass/screen14.scss */
   button, .button {
     display: inline-block;
     font-size: 14px;
     line-height: 2.2;
     padding: 5px 25px;
   }
+
+  /* line 386, ../sass/screen14.scss */
+  .reset-button {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 320px) {
-  /* line 384, ../sass/screen13.scss */
+  /* line 392, ../sass/screen14.scss */
   .main-section {
     min-height: 400px;
   }
 
-  /* line 387, ../sass/screen13.scss */
+  /* line 395, ../sass/screen14.scss */
   h1, .h1 {
     font-size: 32px;
   }
 
-  /* line 391, ../sass/screen13.scss */
+  /* line 399, ../sass/screen14.scss */
   .wrapper {
     padding: 0 20px 25px;
   }
 
-  /* line 394, ../sass/screen13.scss */
+  /* line 402, ../sass/screen14.scss */
   .caption-label {
     font-size: 15px;
   }
 
-  /* line 397, ../sass/screen13.scss */
+  /* line 405, ../sass/screen14.scss */
   .the-evidence {
     font-size: 18px;
   }
 
-  /* line 400, ../sass/screen13.scss */
+  /* line 408, ../sass/screen14.scss */
   .solution-intro {
     font-size: 14px;
   }
 
-  /* line 404, ../sass/screen13.scss */
+  /* line 412, ../sass/screen14.scss */
   .the-follow-up .coupon-code strong,
   .the-follow-up span.social-account,
   .the-follow-up .to-thirty {
     font-size: 16px;
   }
 
-  /* line 410, ../sass/screen13.scss */
+  /* line 418, ../sass/screen14.scss */
   button, .button {
     display: inline-block;
     font-size: 13px;
     line-height: 2.2;
     padding: 4px 15px;
+  }
+
+  /* line 424, ../sass/screen14.scss */
+  .reset-button {
+    font-size: 15px;
   }
 }

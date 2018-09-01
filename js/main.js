@@ -390,7 +390,7 @@ function whatsMySolution() {
 
   // Dynamically populate addthis
   newTitle.title = "I discovered how to fix my " + chosenProblem.problem + " " + chosenPart.part +  " "  + "with this " + chosenSolution.allAdjectives + " " + theSolution + "! Solve your #problembody here:";
-  socialShare();
+  updateSocial();
 
   $('.solution-statement-holder').fadeIn(function(){
     $('.again-buttons').fadeIn();
