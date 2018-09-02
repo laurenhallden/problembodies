@@ -2,13 +2,14 @@
 
 <html lang="en">
 <head>
-  <!-- Global Site Tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/REPLACETHIS"></script> -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37446208-6"></script>
   <script>
-    // window.dataLayer = window.dataLayer || [];
-    // function gtag(){dataLayer.push(considerations)};
-    // gtag('js', new Date());
-    // gtag('config', 'REPLACETHIS');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-37446208-6');
   </script>
 
   <meta charset="utf-8">
@@ -301,8 +302,8 @@
 
     // update the content that populates our social share buttons
     function updateSocial() {
-     // addthis.update('share', 'title', newTitle.title);
-    }
+      addthis.update('share', 'title', newTitle.title);
+    };
 
     $('.reset-button').click(function() {
       $('.again-element').hide();
