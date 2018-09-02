@@ -1,4 +1,4 @@
-// Here are our soulutions...
+// Here are our solutions...
 
 var solutions = {
  shape: [
@@ -29,8 +29,8 @@ var solutions = {
 	{adjective: "disguising", noun: "disguiser", plural: "disguisers"},
 	{adjective: "shrinking", noun: "shrinker", plural: "shinkers"},
 	{adjective: "compressing"},
-	{adjective: "contolling"},
-	{noun: "camoflauge"}
+	{adjective: "controlling"},
+	{noun: "camouflage"}
  ],
  small: [
   	{adjective: "volumizing", noun: "volumizer", plural: "volumizers"},
@@ -50,11 +50,11 @@ var solutions = {
  	{adjective: "regenerating", noun: "regenerator", plural: "regenerators"},
  	{adjective: "re-energizing", noun: "re-energizer", plural: "re-energizers"},
  	{adjective: "reanimating", noun: "reanimator", plural: "reanimators"},
- 	{adjective: "resusitating", noun: "resucitator", plural: "resucitators"},
+ 	{adjective: "resuscitating", noun: "resuscitator", plural: "resuscitators"},
  	{adjective: "refreshing", noun: "refresher", plural: "refreshers"},
  	{adjective: "polishing", noun: "polisher", plural: "polishers"},
- 	{adjective: "anxtioxidant", noun: "antioxidant"},
- 	{adjective: "mircodelivery"},
+ 	{adjective: "antioxidant", noun: "antioxidant"},
+ 	{adjective: "microdelivery"},
  	{adjective: "restoring"},
 	{adjective: "age-defying"},
  	{noun: "peel"}
@@ -88,7 +88,7 @@ var solutions = {
  ],
  attitude: [
  	{adjective: "straightening", noun: "straightener", plural: "straighteners"},
-    {adjective: "controling", noun: "controler", plural: "controlers"},
+    {adjective: "controlling", noun: "controller", plural: "controllers"},
     {adjective: "calming", noun: "calmer"},
  	{adjective: "soothing", noun: "soother"},
  	{adjective: "cooling"}
@@ -96,7 +96,7 @@ var solutions = {
  smell: [
  	{adjective: "refreshing", noun: "refresher", plural: "refreshers"},
  	{adjective: "freshening", noun: "freshener", plural: "fresheners"},
- 	{adjective: "deoderizing", noun: "deoderant", plural: "deoderant"},
+ 	{adjective: "deodorizing", noun: "deodorant", plural: "deodorant"},
  	{adjective: "cleansing", noun: "cleanser", plural: "cleansers"},
  	{adjective: "sterilizing"},
  	{adjective: "mineral"},
@@ -107,10 +107,10 @@ var solutions = {
  ],
  cleanliness: [
  	{adjective: "cleansing", noun: "cleanser", plural: "cleansers"},
- 	{adjective: "sterilizing", noun: "sterlizer", plural: "sterlilizers"},
+ 	{adjective: "sterilizing", noun: "sterilizer", plural: "sterilizers"},
  	{adjective: "mineral"},
  	{adjective: "foaming"},
- 	{adjective: "dermatologist-recomended"},
+ 	{adjective: "dermatologist-recommended"},
  	{noun: "wipes", plural: "wipes"},
  	{noun: "towels", plural: "towels"},
  	{noun: "towelettes", plural: "towelettes"},
@@ -123,9 +123,9 @@ var solutions = {
  	{adjective: "tweezing", noun: "tweezer", plural: "tweezers"},
  	{adjective: "depilatory", noun: "depilatory", plural: "depilatory"},
  	{adjective: "shaving", noun: "shaver", plural: "shavers"},
- 	{adjective: "dermatologist-recomended"},
+ 	{adjective: "dermatologist-recommended"},
  	{adjective: "chemical"},
- 	{noun: "eplilator", plural: "epilators"},
+ 	{noun: "epilator", plural: "epilators"},
  	{noun: "threading", plural: "threader"}
  ]
 };
@@ -206,7 +206,7 @@ var followup = [
 
 var social = [
 "Get yours before your friends by donating to our <a class='social-link' target='_blank'>Kickstarter</a>!",
-"See the resuts for yourself on Instagram:&nbsp; <a class='social-link' target='_blank'><span class='social-account'></span></a>",
+"See the results for yourself on Instagram:&nbsp; <a class='social-link' target='_blank'><span class='social-account'></span></a>",
 "Don't forget to <a class='social-link' target='_blank'>friend us on Facebook</a>!",
 "Connect with people just like you <a class='social-link' target='_blank'>Facebook community</a>!",
 "See what people are saying about &rsquo;em on Twitter!&nbsp; <a class='social-link' target='_blank'><span class='social-account'></span></a>",

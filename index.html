@@ -41,7 +41,7 @@
   <meta name="twitter:image" content="https://laurenhallden.com/problembodies/images/social_card.png" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="stylesheets/screen14.css" />
+  <link rel="stylesheet" href="stylesheets/screen19.css" />
   <link rel="stylesheet" href="https://use.typekit.net/aza3xeo.css">
 
   <!--[if lt IE 9]>
@@ -234,8 +234,8 @@
 
 	</div> <!-- end wrapper -->
 
-	<section class="footer">
-	</section>
+  <div class="tooltip"><img src="images/help.svg" /></div>
+  <div class="credits">Made as a joke&mdash;or really, a cirtique of the beauty industry&mdash;by <a href="/" title="Lauren Hallden, Designer">Lauren Hallden</a>. Don't let 'em create problems where none exist.</div>
 
 	<!-- LINKED JS -->
 	<script src="js/vendor/jquery.js"></script>
@@ -269,8 +269,6 @@
       if (count % 5 === 0 ) {
         // Hit 'em with some guilt
         considerations();
-      } else if (count == 31) {
-          console.log('we hit 20');
       } else {
         if ($('.problem-buttons').is(':visible')) {
           // We use promise because multiple DOM elements have this class
@@ -303,7 +301,7 @@
 
     // update the content that populates our social share buttons
     function updateSocial() {
-     // addthis.update('share', 'title', newTitle.title);
+      addthis.update('share', 'title', newTitle.title);
     }
 
     $('.reset-button').click(function() {
@@ -313,6 +311,13 @@
       whatsMyProblem();
     });
 
+    $('.tooltip').click(function() {
+      $('.credits').slideDown();
+    });
+
+    $('.credits').click(function() {
+      $('.credits').slideUp();
+    });
     
   </script>
 </body>

@@ -36,11 +36,11 @@ var evidenceB = [
     "more likely to be passed over for promotion",
     "less likely to achieve orgasm",
     "more likely to be dumped by their romantic partner",
-    "more likey to report sexual dissatisfaction",
+    "more likely to report sexual dissatisfaction",
     "more likely to suffer emotional distress",
     "less likely to achieve their life goals",
     "less likely to be top performers at work",
-    "less likey to get left-swiped on Tinder"
+    "less likely to get left-swiped on Tinder"
 ];
 
 var percent = [10, 15, 20, 25, 30, 35, 40, 45, 50]

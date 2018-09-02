@@ -238,7 +238,6 @@ function whatsMyProblem() {
     var quote = '“'
   };
 
-  var rest = firstSpan.substring(1);
   var span;
   $('.problem-statement.selected span:not(.hidden)').each(function(){
     if($(this).html() == firstSpan){

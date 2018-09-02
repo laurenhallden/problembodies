@@ -201,7 +201,7 @@ button, .button {
 }
 
 .reset-button {
-	display: block;
+	display: inline-block;
 	margin-top: 20px;
 	font-size: 17px;
 	color: white;
@@ -318,9 +318,45 @@ CONSIDERATION-SPECIFIC STUFF
 	margin: 0 4px 5px;
 }
 
+.tooltip {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	opacity: 0.4;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.credits {
+	width: calc(100% - 30px);
+	background: #ab2755;
+	bottom: 0;
+	color: rgba(255,255,255,0.5);
+	position: fixed;
+	left: 0;
+	padding: 20px 15px;
+	display: none;
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: 4px 6px 24px 10px rgba(60,64,67,.08), 0 2px 8px 4px rgba(60,64,67,.08);
+	font-family: sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 600;
+
+	a {
+		color: rgba(255,255,255,0.8);
+	}
+}
+
 
 /* *************************
-  Mobile Styles
+        Mobile Styles
 ************************* */
 
 @media screen and (max-width: 667px) {
@@ -331,7 +367,7 @@ CONSIDERATION-SPECIFIC STUFF
 		margin-top: 0px;
 		max-height: inherit;
 		height: auto;
-		min-height: 450px;
+		min-height: 430px;
 		display: flex;
 		justify-content: center; /* align horizontal */
 		align-items: center; /* align vertical */
@@ -348,6 +384,8 @@ CONSIDERATION-SPECIFIC STUFF
 		padding: 0 25px 20px;
 		padding-top: 0;
 		margin: 20px auto;
+		height: inherit;
+		min-height: 80vh;
 	}
 	.intro {
 		font-size: 18px;
@@ -402,6 +440,10 @@ CONSIDERATION-SPECIFIC STUFF
 	.reset-button {
 		font-size: 16px;
 	}
+	.tooltip {
+		bottom: 15px;
+		right: 15px;
+	}	
 }
 
 @media screen and (max-width: 320px) {

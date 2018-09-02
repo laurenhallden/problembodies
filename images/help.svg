@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Help</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icon/Help/Light_gray" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="1">
+        <path d="M10,20 C4.4771525,20 0,15.5228475 0,10 C0,4.4771525 4.4771525,0 10,0 C15.5228475,0 20,4.4771525 20,10 C20,15.5228475 15.5228475,20 10,20 Z M10.612,5.088 C9.226,5.088 8.218,5.634 7.42,6.558 L8.708,7.552 C9.226,6.95 9.814,6.67 10.416,6.67 C11.088,6.67 11.494,6.992 11.494,7.566 C11.494,8.798 9.226,8.616 9.226,11.024 L9.226,11.514 L11.06,11.514 L11.06,11.094 C11.06,9.456 13.58,9.652 13.58,7.384 C13.58,6.18 12.586,5.088 10.612,5.088 Z M10.164,12.83 C9.492,12.83 8.974,13.376 8.974,14.02 C8.974,14.678 9.492,15.224 10.164,15.224 C10.836,15.224 11.368,14.678 11.368,14.02 C11.368,13.376 10.836,12.83 10.164,12.83 Z" id="Icon-Help" fill="#FFFFFF"></path>
+    </g>
+</svg>
