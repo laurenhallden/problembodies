@@ -153,7 +153,8 @@ p {
 
 .buttons {
 	position: absolute;
-	bottom: 80px;
+	bottom: 0;
+	height: 160px;
 	margin: 0 auto;
 	text-align: center;
 	width: calc(100% - 50px);
@@ -435,6 +436,7 @@ CONSIDERATION-SPECIFIC STUFF
 		margin-top: 1vh;
 	}
 	.buttons {
+		height: auto;
 		position: relative;
 		width: 100%;
 		bottom: 0;
@@ -505,7 +507,7 @@ CONSIDERATION-SPECIFIC STUFF
 	}	
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
 	.main-section {
 		min-height: 400px;
 	}
