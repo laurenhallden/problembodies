@@ -159,6 +159,7 @@ p {
 
 	p {
 		font-size: 16px;
+		margin-top: 15px;
 	}
 }
 
@@ -185,6 +186,14 @@ button, .button {
 	}
 }
 
+:focus {
+	outline: #009df8 auto 3px;
+	outline-color: #009df8;
+	outline-style: none;
+	outline-width: 0px;
+	box-shadow: 0px 0px 7px #9B2450;;
+}
+
 .problem-buttons,
 .consideration-buttons,
 .again-buttons {
@@ -197,6 +206,7 @@ button, .button {
 	font-size: 17px;
 	color: white;
 	font-family: "Hevetica Neue", helvetica, sans-serif;
+	text-decoration: none;
 }
 
 
@@ -315,7 +325,7 @@ CONSIDERATION-SPECIFIC STUFF
 
 @media screen and (max-width: 667px) {
 	h1, .h1 {
-		font-size: 38px;
+		font-size: 36px;
 	}
 	.main-section {
 		margin-top: 0px;
@@ -336,7 +346,7 @@ CONSIDERATION-SPECIFIC STUFF
 	}
 	.wrapper {
 		padding: 0 25px 20px;
-		padding-top: 1vh;
+		padding-top: 0;
 		margin: 20px auto;
 	}
 	.intro {
@@ -345,15 +355,21 @@ CONSIDERATION-SPECIFIC STUFF
 	.consideration-element {
 		margin-top: 2.5vh;
 	}
+	.fine-print {
+		margin-top: 15px;
+	}
 	.the-evidence {
 		font-size: 20px;
 	}
 	.solution-element {
-		margin-top: 1vh;
+		margin-top: 0;
 		.emoji {
 			display: block;
 			margin-top: 10px;
 		}
+	}
+	.solution-statement .h1 {
+		font-size: 34px;
 	}
 	.solution-card {
 		padding: 40px 15px 15px;
@@ -406,13 +422,17 @@ CONSIDERATION-SPECIFIC STUFF
 		font-size: 18px;
 	}
 	.solution-intro {
-		font-size: 14px;
+		font-size: 13px;
+	}
+	.solution-statement .h1 {
+		font-size: 30px;
 	}
 	.the-follow-up {
+		font-size: 15px;
 		.coupon-code strong,
 		span.social-account,
 		.to-thirty {
-			font-size: 16px;
+			font-size: 15px;
 		}
 	}
 	button, .button {
