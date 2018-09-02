@@ -7,12 +7,12 @@ var problems = {
  big: ["prominent", "bulbous", "bulgy", "fat", "hefty", "bulky", "big", "enormous", "pudgy", "puffy", "plump", "large", "chubby", "flabby", "paunchy", "meaty"],
  small: ["shrimpy", "puny", "small", "thin", "weak", "tiny", "meek", "pitiful", "pitiable", "inadequate", "insufficient", "meager", "paltry", "deflated"],
  age: ["old", "haggard", "worn down", "used up", "exhausted", "shabby", "worn out", "weary", "ruined", "grungy", "ashy", "dull", "dingy", "sad", "tired", "depleted", "numb"],
- texture: ["ashy", "rough", "scaly", "dry", "gnarled", "uneven", "calloused", "flaky"],
+ texture: ["ashy", "rough", "scaly", "dry", "gnarled", "uneven", "calloused", "flaky", "parched"],
  surface: ["wrinkled", "dented", "pitted", "scarred", "dimpled", "uneven", "slack"],
  attitude: ["unruly", "rowdy", "unmanageable", "out of control", "grumpy", "noisy", "irritated", "offensive"],
  smell: ["stinky", "smelly", "pungent", "disgusting", "offensive", "sweaty"],
  cleanliness: ["dirty", "greasy", "shiny", "waxy", "oily", "pimply"],
- hariness: ["hairy", "fuzzy", "shaggy", "frizzy", "fuzzy"]
+ hariness: ["hairy", "fuzzy", "shaggy", "frizzy", "fuzzy", "bushy", "furry"]
 };
 
 var suggestions = [

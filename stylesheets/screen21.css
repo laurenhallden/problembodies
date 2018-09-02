@@ -64,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 3, ../sass/screen19.scss */
+/* line 3, ../sass/screen21.scss */
 html, body {
   font-size: 15px;
   line-height: 1.4;
@@ -72,7 +72,7 @@ html, body {
   font-family: "utopia-std", "Times New Roman", serif;
 }
 
-/* line 10, ../sass/screen19.scss */
+/* line 10, ../sass/screen21.scss */
 body {
   background: #ff6b94;
   /* fallback for old browsers */
@@ -124,7 +124,7 @@ working from https://codepen.io/valhead/pen/ByRaBd
 /* *************************
         TYPOGRAPHY
 ************************* */
-/* line 55, ../sass/screen19.scss */
+/* line 55, ../sass/screen21.scss */
 h1, .h1 {
   font-size: 48px;
   line-height: 1.2;
@@ -134,12 +134,12 @@ h1, .h1 {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 64, ../sass/screen19.scss */
+/* line 64, ../sass/screen21.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 68, ../sass/screen19.scss */
+/* line 68, ../sass/screen21.scss */
 p {
   font-size: 22px;
   font-weight: 400;
@@ -147,14 +147,14 @@ p {
   margin-bottom: 20px;
 }
 
-/* line 75, ../sass/screen19.scss */
+/* line 75, ../sass/screen21.scss */
 .intro {
   margin-top: -45px;
   display: block;
   margin-bottom: 20px;
 }
 
-/* line 81, ../sass/screen19.scss */
+/* line 81, ../sass/screen21.scss */
 .solution-intro {
   display: block;
   margin-bottom: 20px;
@@ -165,7 +165,7 @@ p {
   letter-spacing: 1px;
 }
 
-/* line 91, ../sass/screen19.scss */
+/* line 91, ../sass/screen21.scss */
 .caption-label {
   text-transform: uppercase;
   color: #b1b1b1;
@@ -177,7 +177,7 @@ p {
   font-weight: 700;
 }
 
-/* line 102, ../sass/screen19.scss */
+/* line 102, ../sass/screen21.scss */
 .fine-print {
   font-family: "Hevetica Neue", helvetica, sans-serif;
   font-size: 13px;
@@ -186,7 +186,7 @@ p {
   margin-top: 30px;
 }
 
-/* line 110, ../sass/screen19.scss */
+/* line 110, ../sass/screen21.scss */
 .superscript {
   vertical-align: super;
   opacity: 0.4;
@@ -196,7 +196,7 @@ p {
 /* *************************
          CONTAINERS
 ************************* */
-/* line 122, ../sass/screen19.scss */
+/* line 122, ../sass/screen21.scss */
 .wrapper {
   max-width: 900px;
   margin: 50px auto;
@@ -207,7 +207,7 @@ p {
   height: 80vh;
 }
 
-/* line 132, ../sass/screen19.scss */
+/* line 132, ../sass/screen21.scss */
 .main-section {
   height: 50vh;
   max-height: 50vh;
@@ -216,12 +216,12 @@ p {
   border: 1px solid transparent;
 }
 
-/* line 140, ../sass/screen19.scss */
+/* line 140, ../sass/screen21.scss */
 .hidden {
   display: none;
 }
 
-/* line 144, ../sass/screen19.scss */
+/* line 144, ../sass/screen21.scss */
 .problem-statement-holder,
 .consideration-holder,
 .solution-statement-holder {
@@ -231,7 +231,7 @@ p {
 /* *************************
           BUTTONS
 ************************* */
-/* line 154, ../sass/screen19.scss */
+/* line 154, ../sass/screen21.scss */
 .buttons {
   position: absolute;
   bottom: 0;
@@ -240,13 +240,13 @@ p {
   text-align: center;
   width: calc(100% - 50px);
 }
-/* line 162, ../sass/screen19.scss */
+/* line 162, ../sass/screen21.scss */
 .buttons p {
   font-size: 16px;
   margin-top: 15px;
 }
 
-/* line 168, ../sass/screen19.scss */
+/* line 168, ../sass/screen21.scss */
 button, .button {
   display: inline-block;
   font-size: 17px;
@@ -263,14 +263,14 @@ button, .button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 184, ../sass/screen19.scss */
+/* line 184, ../sass/screen21.scss */
 button:first-of-type, .button:first-of-type {
   border: 4px solid white;
   background-color: transparent;
   color: white;
 }
 
-/* line 191, ../sass/screen19.scss */
+/* line 191, ../sass/screen21.scss */
 :focus {
   outline: #009df8 auto 3px;
   outline-color: #009df8;
@@ -279,14 +279,14 @@ button:first-of-type, .button:first-of-type {
   box-shadow: 0px 0px 7px #9B2450;
 }
 
-/* line 199, ../sass/screen19.scss */
+/* line 199, ../sass/screen21.scss */
 .problem-buttons,
 .consideration-buttons,
 .again-buttons {
   display: none;
 }
 
-/* line 205, ../sass/screen19.scss */
+/* line 205, ../sass/screen21.scss */
 .reset-button {
   display: inline-block;
   margin-top: 20px;
@@ -299,7 +299,8 @@ button:first-of-type, .button:first-of-type {
 /* *************************
    		LOADER
 ************************* */
-/* line 221, ../sass/screen19.scss */
+/* This code is adapted from Stix at CodePen: https://codepen.io/stix/pen/yeGKrp */
+/* line 220, ../sass/screen21.scss */
 #loader-container {
   width: 200px;
   height: 200px;
@@ -316,7 +317,7 @@ button:first-of-type, .button:first-of-type {
   animation: borderScale 1s infinite ease-in-out;
 }
 
-/* line 237, ../sass/screen19.scss */
+/* line 236, ../sass/screen21.scss */
 #loadingText {
   font-family: sans-serif;
   font-weight: bold;
@@ -353,11 +354,11 @@ button:first-of-type, .button:first-of-type {
 /* *************************
    PROBLEM-SPECIFIC STUFF
 ************************* */
-/* line 277, ../sass/screen19.scss */
+/* line 276, ../sass/screen21.scss */
 .problem-statement {
   margin-top: 50px;
 }
-/* line 279, ../sass/screen19.scss */
+/* line 278, ../sass/screen21.scss */
 .problem-statement .the-emotions {
   display: block;
   margin-top: 20px;
@@ -366,18 +367,18 @@ button:first-of-type, .button:first-of-type {
 /* *************************
 CONSIDERATION-SPECIFIC STUFF
 ************************* */
-/* line 290, ../sass/screen19.scss */
+/* line 289, ../sass/screen21.scss */
 .the-considerations {
   margin-bottom: 20px;
 }
 
-/* line 294, ../sass/screen19.scss */
+/* line 293, ../sass/screen21.scss */
 .the-evidence {
   font-size: 22px;
   font-weight: 400;
   margin-bottom: 20px;
 }
-/* line 299, ../sass/screen19.scss */
+/* line 298, ../sass/screen21.scss */
 .the-evidence strong {
   font-family: "Hevetica Neue", helvetica, sans-serif;
   font-weight: 700;
@@ -385,7 +386,7 @@ CONSIDERATION-SPECIFIC STUFF
   font-size: 20px;
 }
 
-/* line 307, ../sass/screen19.scss */
+/* line 306, ../sass/screen21.scss */
 .evidence-card {
   background: white;
   padding: 20px 20px 35px;
@@ -394,11 +395,11 @@ CONSIDERATION-SPECIFIC STUFF
   border-radius: 8px;
   box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.2), 0 2px 8px 4px rgba(60, 64, 67, 0.1);
 }
-/* line 315, ../sass/screen19.scss */
+/* line 314, ../sass/screen21.scss */
 .evidence-card p {
   color: #444444;
 }
-/* line 319, ../sass/screen19.scss */
+/* line 318, ../sass/screen21.scss */
 .evidence-card.animate {
   animation: slideIn 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.275) both, fadeIn 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
@@ -406,7 +407,7 @@ CONSIDERATION-SPECIFIC STUFF
 /* *************************
   SOLUTIONS-SPECIFIC STUFF
 ************************* */
-/* line 332, ../sass/screen19.scss */
+/* line 331, ../sass/screen21.scss */
 .solution-statement p.h1:after {
   content: '™';
   vertical-align: top;
@@ -414,7 +415,7 @@ CONSIDERATION-SPECIFIC STUFF
   font-weight: 400;
 }
 
-/* line 341, ../sass/screen19.scss */
+/* line 340, ../sass/screen21.scss */
 .solution-card {
   border-radius: 8px;
   box-shadow: 4px 6px 24px 10px rgba(60, 64, 67, 0.08), 0 2px 8px 4px rgba(60, 64, 67, 0.08);
@@ -425,18 +426,18 @@ CONSIDERATION-SPECIFIC STUFF
   height: auto;
 }
 
-/* line 351, ../sass/screen19.scss */
+/* line 350, ../sass/screen21.scss */
 .the-follow-up {
   font-size: 18px;
   font-style: inherit;
   display: block;
   margin-top: 40px;
 }
-/* line 357, ../sass/screen19.scss */
+/* line 356, ../sass/screen21.scss */
 .the-follow-up a {
   color: white;
 }
-/* line 361, ../sass/screen19.scss */
+/* line 360, ../sass/screen21.scss */
 .the-follow-up .coupon-code strong,
 .the-follow-up span.social-account,
 .the-follow-up .to-thirty {
@@ -445,19 +446,19 @@ CONSIDERATION-SPECIFIC STUFF
   font-size: 18px;
   font-style: initial;
 }
-/* line 370, ../sass/screen19.scss */
+/* line 369, ../sass/screen21.scss */
 .the-follow-up .emoji {
   font-style: initial;
   vertical-align: middle;
   font-size: 1.7rem;
 }
 
-/* line 377, ../sass/screen19.scss */
+/* line 376, ../sass/screen21.scss */
 .at-resp-share-element .at-share-btn {
   margin: 0 4px 5px;
 }
 
-/* line 381, ../sass/screen19.scss */
+/* line 380, ../sass/screen21.scss */
 .tooltip {
   position: fixed;
   bottom: 20px;
@@ -467,12 +468,12 @@ CONSIDERATION-SPECIFIC STUFF
   width: 20px;
   height: 20px;
 }
-/* line 390, ../sass/screen19.scss */
+/* line 389, ../sass/screen21.scss */
 .tooltip:hover {
   opacity: 0.8;
 }
 
-/* line 395, ../sass/screen19.scss */
+/* line 394, ../sass/screen21.scss */
 .credits {
   width: calc(100% - 30px);
   background: #ab2755;
@@ -490,7 +491,7 @@ CONSIDERATION-SPECIFIC STUFF
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
 }
-/* line 412, ../sass/screen19.scss */
+/* line 411, ../sass/screen21.scss */
 .credits a {
   color: rgba(255, 255, 255, 0.8);
 }
@@ -499,12 +500,12 @@ CONSIDERATION-SPECIFIC STUFF
         Mobile Styles
 ************************* */
 @media screen and (max-width: 667px) {
-  /* line 423, ../sass/screen19.scss */
+  /* line 422, ../sass/screen21.scss */
   h1, .h1 {
     font-size: 36px;
   }
 
-  /* line 426, ../sass/screen19.scss */
+  /* line 425, ../sass/screen21.scss */
   .main-section {
     margin-top: 0px;
     max-height: inherit;
@@ -517,12 +518,12 @@ CONSIDERATION-SPECIFIC STUFF
     /* align vertical */
   }
 
-  /* line 435, ../sass/screen19.scss */
+  /* line 434, ../sass/screen21.scss */
   .problem-statement {
     margin-top: 1vh;
   }
 
-  /* line 438, ../sass/screen19.scss */
+  /* line 437, ../sass/screen21.scss */
   .buttons {
     height: auto;
     position: relative;
@@ -530,7 +531,7 @@ CONSIDERATION-SPECIFIC STUFF
     bottom: 0;
   }
 
-  /* line 444, ../sass/screen19.scss */
+  /* line 443, ../sass/screen21.scss */
   .wrapper {
     padding: 0 25px 20px;
     padding-top: 0;
@@ -539,72 +540,72 @@ CONSIDERATION-SPECIFIC STUFF
     min-height: 80vh;
   }
 
-  /* line 451, ../sass/screen19.scss */
+  /* line 450, ../sass/screen21.scss */
   .intro {
     font-size: 18px;
   }
 
-  /* line 454, ../sass/screen19.scss */
+  /* line 453, ../sass/screen21.scss */
   .consideration-element {
     margin-top: 2.5vh;
   }
 
-  /* line 457, ../sass/screen19.scss */
+  /* line 456, ../sass/screen21.scss */
   .fine-print {
     margin-top: 15px;
   }
 
-  /* line 460, ../sass/screen19.scss */
+  /* line 459, ../sass/screen21.scss */
   .the-evidence {
     font-size: 20px;
   }
 
-  /* line 463, ../sass/screen19.scss */
+  /* line 462, ../sass/screen21.scss */
   .solution-element {
     margin-top: 0;
   }
-  /* line 465, ../sass/screen19.scss */
+  /* line 464, ../sass/screen21.scss */
   .solution-element .emoji {
     display: block;
     margin-top: 10px;
   }
 
-  /* line 470, ../sass/screen19.scss */
+  /* line 469, ../sass/screen21.scss */
   .solution-statement .h1 {
     font-size: 34px;
   }
 
-  /* line 473, ../sass/screen19.scss */
+  /* line 472, ../sass/screen21.scss */
   .solution-card {
     padding: 40px 15px 15px;
   }
-  /* line 475, ../sass/screen19.scss */
+  /* line 474, ../sass/screen21.scss */
   .solution-card p {
     margin-bottom: 0;
   }
 
-  /* line 479, ../sass/screen19.scss */
+  /* line 478, ../sass/screen21.scss */
   .solution-intro {
     font-size: 15px;
   }
 
-  /* line 482, ../sass/screen19.scss */
+  /* line 481, ../sass/screen21.scss */
   .the-follow-up {
     font-size: 17px;
   }
-  /* line 485, ../sass/screen19.scss */
+  /* line 484, ../sass/screen21.scss */
   .the-follow-up .coupon-code strong,
   .the-follow-up span.social-account,
   .the-follow-up .to-thirty {
     font-size: 18px;
   }
 
-  /* line 491, ../sass/screen19.scss */
+  /* line 490, ../sass/screen21.scss */
   .solution-card {
     padding: 50px 20px 20px;
   }
 
-  /* line 495, ../sass/screen19.scss */
+  /* line 494, ../sass/screen21.scss */
   button, .button {
     display: inline-block;
     font-size: 14px;
@@ -612,65 +613,65 @@ CONSIDERATION-SPECIFIC STUFF
     padding: 5px 25px;
   }
 
-  /* line 501, ../sass/screen19.scss */
+  /* line 500, ../sass/screen21.scss */
   .reset-button {
     font-size: 16px;
   }
 
-  /* line 504, ../sass/screen19.scss */
+  /* line 503, ../sass/screen21.scss */
   .tooltip {
     bottom: 15px;
     right: 15px;
   }
 }
 @media screen and (max-width: 360px) {
-  /* line 511, ../sass/screen19.scss */
+  /* line 510, ../sass/screen21.scss */
   .main-section {
     min-height: 400px;
   }
 
-  /* line 514, ../sass/screen19.scss */
+  /* line 513, ../sass/screen21.scss */
   h1, .h1 {
     font-size: 32px;
   }
 
-  /* line 518, ../sass/screen19.scss */
+  /* line 517, ../sass/screen21.scss */
   .wrapper {
     padding: 0 20px 25px;
   }
 
-  /* line 521, ../sass/screen19.scss */
+  /* line 520, ../sass/screen21.scss */
   .caption-label {
     font-size: 15px;
   }
 
-  /* line 524, ../sass/screen19.scss */
+  /* line 523, ../sass/screen21.scss */
   .the-evidence {
     font-size: 18px;
   }
 
-  /* line 527, ../sass/screen19.scss */
+  /* line 526, ../sass/screen21.scss */
   .solution-intro {
     font-size: 13px;
   }
 
-  /* line 530, ../sass/screen19.scss */
+  /* line 529, ../sass/screen21.scss */
   .solution-statement .h1 {
     font-size: 30px;
   }
 
-  /* line 533, ../sass/screen19.scss */
+  /* line 532, ../sass/screen21.scss */
   .the-follow-up {
     font-size: 15px;
   }
-  /* line 535, ../sass/screen19.scss */
+  /* line 534, ../sass/screen21.scss */
   .the-follow-up .coupon-code strong,
   .the-follow-up span.social-account,
   .the-follow-up .to-thirty {
     font-size: 15px;
   }
 
-  /* line 541, ../sass/screen19.scss */
+  /* line 540, ../sass/screen21.scss */
   button, .button {
     display: inline-block;
     font-size: 13px;
@@ -678,7 +679,7 @@ CONSIDERATION-SPECIFIC STUFF
     padding: 4px 15px;
   }
 
-  /* line 547, ../sass/screen19.scss */
+  /* line 546, ../sass/screen21.scss */
   .reset-button {
     font-size: 15px;
   }
