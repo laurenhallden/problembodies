@@ -235,6 +235,10 @@
 
 	</div> <!-- end wrapper -->
 
+  <p class="loading-element" id="loadingText">Analyzing...</p>
+  <div class="loading-element" id="loader-container">
+  </div>
+
   <div class="tooltip"><img src="images/help.svg" alt="help icon"/></div>
   <div class="credits">Made as a joke&mdash;or really, a cirtique of the beauty industry&mdash;by <a href="/" title="Lauren Hallden, Designer">Lauren Hallden</a>. Don't let 'em create problems where none exist.</div>
 
@@ -258,8 +262,12 @@
     var count = [0];
 
     $(document).ready(function() {
-      whatsMyProblem();
-      $('.problem-buttons').delay(400).fadeIn();
+      setTimeout(function(){
+        $('.loading-element').fadeOut(function() {
+          whatsMyProblem();
+          });
+      }, 3000);
+      $('.problem-buttons').delay(3600).fadeIn();
     });
 
     // Oh you think you're perfect?
@@ -302,14 +310,20 @@
 
     // update the content that populates our social share buttons
     function updateSocial() {
-      addthis.update('share', 'title', newTitle.title);
+      //addthis.update('share', 'title', newTitle.title);
     };
 
     $('.reset-button').click(function() {
       $('.again-element').hide();
-      $('.problem-element').show();
       $('.solution-element').hide();
-      whatsMyProblem();
+      $('.loading-element').show();
+
+      setTimeout(function(){
+        $('.loading-element').fadeOut(function() {
+          whatsMyProblem();
+          });
+      }, 3000);
+      $('.problem-buttons').delay(3600).fadeIn();
     });
 
     $('.tooltip').click(function() {

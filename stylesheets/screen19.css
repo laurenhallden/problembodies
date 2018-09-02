@@ -196,7 +196,7 @@ p {
 /* *************************
          CONTAINERS
 ************************* */
-/* line 121, ../sass/screen19.scss */
+/* line 122, ../sass/screen19.scss */
 .wrapper {
   max-width: 900px;
   margin: 50px auto;
@@ -207,7 +207,7 @@ p {
   height: 80vh;
 }
 
-/* line 131, ../sass/screen19.scss */
+/* line 132, ../sass/screen19.scss */
 .main-section {
   height: 50vh;
   max-height: 50vh;
@@ -216,12 +216,12 @@ p {
   border: 1px solid transparent;
 }
 
-/* line 139, ../sass/screen19.scss */
+/* line 140, ../sass/screen19.scss */
 .hidden {
   display: none;
 }
 
-/* line 143, ../sass/screen19.scss */
+/* line 144, ../sass/screen19.scss */
 .problem-statement-holder,
 .consideration-holder,
 .solution-statement-holder {
@@ -231,7 +231,7 @@ p {
 /* *************************
           BUTTONS
 ************************* */
-/* line 153, ../sass/screen19.scss */
+/* line 154, ../sass/screen19.scss */
 .buttons {
   position: absolute;
   bottom: 80px;
@@ -239,13 +239,13 @@ p {
   text-align: center;
   width: calc(100% - 50px);
 }
-/* line 160, ../sass/screen19.scss */
+/* line 161, ../sass/screen19.scss */
 .buttons p {
   font-size: 16px;
   margin-top: 15px;
 }
 
-/* line 166, ../sass/screen19.scss */
+/* line 167, ../sass/screen19.scss */
 button, .button {
   display: inline-block;
   font-size: 17px;
@@ -262,14 +262,14 @@ button, .button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 182, ../sass/screen19.scss */
+/* line 183, ../sass/screen19.scss */
 button:first-of-type, .button:first-of-type {
   border: 4px solid white;
   background-color: transparent;
   color: white;
 }
 
-/* line 189, ../sass/screen19.scss */
+/* line 190, ../sass/screen19.scss */
 :focus {
   outline: #009df8 auto 3px;
   outline-color: #009df8;
@@ -278,14 +278,14 @@ button:first-of-type, .button:first-of-type {
   box-shadow: 0px 0px 7px #9B2450;
 }
 
-/* line 197, ../sass/screen19.scss */
+/* line 198, ../sass/screen19.scss */
 .problem-buttons,
 .consideration-buttons,
 .again-buttons {
   display: none;
 }
 
-/* line 203, ../sass/screen19.scss */
+/* line 204, ../sass/screen19.scss */
 .reset-button {
   display: inline-block;
   margin-top: 20px;
@@ -296,13 +296,67 @@ button:first-of-type, .button:first-of-type {
 }
 
 /* *************************
+   		LOADER
+************************* */
+/* line 220, ../sass/screen19.scss */
+#loader-container {
+  width: 200px;
+  height: 200px;
+  color: white;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #3498db;
+  border-radius: 50%;
+  -webkit-animation: borderScale 1s infinite ease-in-out;
+  animation: borderScale 1s infinite ease-in-out;
+}
+
+/* line 236, ../sass/screen19.scss */
+#loadingText {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes borderScale {
+  0% {
+    border: 5px solid white;
+  }
+  50% {
+    border: 25px solid transparent;
+  }
+  100% {
+    border: 5px solid white;
+  }
+}
+@keyframes borderScale {
+  0% {
+    border: 5px solid white;
+  }
+  50% {
+    border: 25px solid transparent;
+  }
+  100% {
+    border: 5px solid white;
+  }
+}
+/* *************************
    PROBLEM-SPECIFIC STUFF
 ************************* */
-/* line 217, ../sass/screen19.scss */
+/* line 276, ../sass/screen19.scss */
 .problem-statement {
   margin-top: 50px;
 }
-/* line 219, ../sass/screen19.scss */
+/* line 278, ../sass/screen19.scss */
 .problem-statement .the-emotions {
   display: block;
   margin-top: 20px;
@@ -311,18 +365,18 @@ button:first-of-type, .button:first-of-type {
 /* *************************
 CONSIDERATION-SPECIFIC STUFF
 ************************* */
-/* line 230, ../sass/screen19.scss */
+/* line 289, ../sass/screen19.scss */
 .the-considerations {
   margin-bottom: 20px;
 }
 
-/* line 234, ../sass/screen19.scss */
+/* line 293, ../sass/screen19.scss */
 .the-evidence {
   font-size: 22px;
   font-weight: 400;
   margin-bottom: 20px;
 }
-/* line 239, ../sass/screen19.scss */
+/* line 298, ../sass/screen19.scss */
 .the-evidence strong {
   font-family: "Hevetica Neue", helvetica, sans-serif;
   font-weight: 700;
@@ -330,7 +384,7 @@ CONSIDERATION-SPECIFIC STUFF
   font-size: 20px;
 }
 
-/* line 247, ../sass/screen19.scss */
+/* line 306, ../sass/screen19.scss */
 .evidence-card {
   background: white;
   padding: 20px 20px 35px;
@@ -339,11 +393,11 @@ CONSIDERATION-SPECIFIC STUFF
   border-radius: 8px;
   box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.2), 0 2px 8px 4px rgba(60, 64, 67, 0.1);
 }
-/* line 255, ../sass/screen19.scss */
+/* line 314, ../sass/screen19.scss */
 .evidence-card p {
   color: #444444;
 }
-/* line 259, ../sass/screen19.scss */
+/* line 318, ../sass/screen19.scss */
 .evidence-card.animate {
   animation: slideIn 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.275) both, fadeIn 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
@@ -351,7 +405,7 @@ CONSIDERATION-SPECIFIC STUFF
 /* *************************
   SOLUTIONS-SPECIFIC STUFF
 ************************* */
-/* line 272, ../sass/screen19.scss */
+/* line 331, ../sass/screen19.scss */
 .solution-statement p.h1:after {
   content: '™';
   vertical-align: top;
@@ -359,7 +413,7 @@ CONSIDERATION-SPECIFIC STUFF
   font-weight: 400;
 }
 
-/* line 281, ../sass/screen19.scss */
+/* line 340, ../sass/screen19.scss */
 .solution-card {
   border-radius: 8px;
   box-shadow: 4px 6px 24px 10px rgba(60, 64, 67, 0.08), 0 2px 8px 4px rgba(60, 64, 67, 0.08);
@@ -370,18 +424,18 @@ CONSIDERATION-SPECIFIC STUFF
   height: auto;
 }
 
-/* line 291, ../sass/screen19.scss */
+/* line 350, ../sass/screen19.scss */
 .the-follow-up {
   font-size: 18px;
   font-style: inherit;
   display: block;
   margin-top: 40px;
 }
-/* line 297, ../sass/screen19.scss */
+/* line 356, ../sass/screen19.scss */
 .the-follow-up a {
   color: white;
 }
-/* line 301, ../sass/screen19.scss */
+/* line 360, ../sass/screen19.scss */
 .the-follow-up .coupon-code strong,
 .the-follow-up span.social-account,
 .the-follow-up .to-thirty {
@@ -390,19 +444,19 @@ CONSIDERATION-SPECIFIC STUFF
   font-size: 18px;
   font-style: initial;
 }
-/* line 310, ../sass/screen19.scss */
+/* line 369, ../sass/screen19.scss */
 .the-follow-up .emoji {
   font-style: initial;
   vertical-align: middle;
   font-size: 1.7rem;
 }
 
-/* line 317, ../sass/screen19.scss */
+/* line 376, ../sass/screen19.scss */
 .at-resp-share-element .at-share-btn {
   margin: 0 4px 5px;
 }
 
-/* line 321, ../sass/screen19.scss */
+/* line 380, ../sass/screen19.scss */
 .tooltip {
   position: fixed;
   bottom: 20px;
@@ -412,12 +466,12 @@ CONSIDERATION-SPECIFIC STUFF
   width: 20px;
   height: 20px;
 }
-/* line 330, ../sass/screen19.scss */
+/* line 389, ../sass/screen19.scss */
 .tooltip:hover {
   opacity: 0.8;
 }
 
-/* line 335, ../sass/screen19.scss */
+/* line 394, ../sass/screen19.scss */
 .credits {
   width: calc(100% - 30px);
   background: #ab2755;
@@ -435,7 +489,7 @@ CONSIDERATION-SPECIFIC STUFF
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
 }
-/* line 352, ../sass/screen19.scss */
+/* line 411, ../sass/screen19.scss */
 .credits a {
   color: rgba(255, 255, 255, 0.8);
 }
@@ -444,12 +498,12 @@ CONSIDERATION-SPECIFIC STUFF
         Mobile Styles
 ************************* */
 @media screen and (max-width: 667px) {
-  /* line 363, ../sass/screen19.scss */
+  /* line 422, ../sass/screen19.scss */
   h1, .h1 {
     font-size: 36px;
   }
 
-  /* line 366, ../sass/screen19.scss */
+  /* line 425, ../sass/screen19.scss */
   .main-section {
     margin-top: 0px;
     max-height: inherit;
@@ -462,19 +516,19 @@ CONSIDERATION-SPECIFIC STUFF
     /* align vertical */
   }
 
-  /* line 375, ../sass/screen19.scss */
+  /* line 434, ../sass/screen19.scss */
   .problem-statement {
     margin-top: 1vh;
   }
 
-  /* line 378, ../sass/screen19.scss */
+  /* line 437, ../sass/screen19.scss */
   .buttons {
     position: relative;
     width: 100%;
     bottom: 0;
   }
 
-  /* line 383, ../sass/screen19.scss */
+  /* line 442, ../sass/screen19.scss */
   .wrapper {
     padding: 0 25px 20px;
     padding-top: 0;
@@ -483,72 +537,72 @@ CONSIDERATION-SPECIFIC STUFF
     min-height: 80vh;
   }
 
-  /* line 390, ../sass/screen19.scss */
+  /* line 449, ../sass/screen19.scss */
   .intro {
     font-size: 18px;
   }
 
-  /* line 393, ../sass/screen19.scss */
+  /* line 452, ../sass/screen19.scss */
   .consideration-element {
     margin-top: 2.5vh;
   }
 
-  /* line 396, ../sass/screen19.scss */
+  /* line 455, ../sass/screen19.scss */
   .fine-print {
     margin-top: 15px;
   }
 
-  /* line 399, ../sass/screen19.scss */
+  /* line 458, ../sass/screen19.scss */
   .the-evidence {
     font-size: 20px;
   }
 
-  /* line 402, ../sass/screen19.scss */
+  /* line 461, ../sass/screen19.scss */
   .solution-element {
     margin-top: 0;
   }
-  /* line 404, ../sass/screen19.scss */
+  /* line 463, ../sass/screen19.scss */
   .solution-element .emoji {
     display: block;
     margin-top: 10px;
   }
 
-  /* line 409, ../sass/screen19.scss */
+  /* line 468, ../sass/screen19.scss */
   .solution-statement .h1 {
     font-size: 34px;
   }
 
-  /* line 412, ../sass/screen19.scss */
+  /* line 471, ../sass/screen19.scss */
   .solution-card {
     padding: 40px 15px 15px;
   }
-  /* line 414, ../sass/screen19.scss */
+  /* line 473, ../sass/screen19.scss */
   .solution-card p {
     margin-bottom: 0;
   }
 
-  /* line 418, ../sass/screen19.scss */
+  /* line 477, ../sass/screen19.scss */
   .solution-intro {
     font-size: 15px;
   }
 
-  /* line 421, ../sass/screen19.scss */
+  /* line 480, ../sass/screen19.scss */
   .the-follow-up {
     font-size: 17px;
   }
-  /* line 424, ../sass/screen19.scss */
+  /* line 483, ../sass/screen19.scss */
   .the-follow-up .coupon-code strong,
   .the-follow-up span.social-account,
   .the-follow-up .to-thirty {
     font-size: 18px;
   }
 
-  /* line 430, ../sass/screen19.scss */
+  /* line 489, ../sass/screen19.scss */
   .solution-card {
     padding: 50px 20px 20px;
   }
 
-  /* line 434, ../sass/screen19.scss */
+  /* line 493, ../sass/screen19.scss */
   button, .button {
     display: inline-block;
     font-size: 14px;
@@ -556,65 +610,65 @@ CONSIDERATION-SPECIFIC STUFF
     padding: 5px 25px;
   }
 
-  /* line 440, ../sass/screen19.scss */
+  /* line 499, ../sass/screen19.scss */
   .reset-button {
     font-size: 16px;
   }
 
-  /* line 443, ../sass/screen19.scss */
+  /* line 502, ../sass/screen19.scss */
   .tooltip {
     bottom: 15px;
     right: 15px;
   }
 }
 @media screen and (max-width: 320px) {
-  /* line 450, ../sass/screen19.scss */
+  /* line 509, ../sass/screen19.scss */
   .main-section {
     min-height: 400px;
   }
 
-  /* line 453, ../sass/screen19.scss */
+  /* line 512, ../sass/screen19.scss */
   h1, .h1 {
     font-size: 32px;
   }
 
-  /* line 457, ../sass/screen19.scss */
+  /* line 516, ../sass/screen19.scss */
   .wrapper {
     padding: 0 20px 25px;
   }
 
-  /* line 460, ../sass/screen19.scss */
+  /* line 519, ../sass/screen19.scss */
   .caption-label {
     font-size: 15px;
   }
 
-  /* line 463, ../sass/screen19.scss */
+  /* line 522, ../sass/screen19.scss */
   .the-evidence {
     font-size: 18px;
   }
 
-  /* line 466, ../sass/screen19.scss */
+  /* line 525, ../sass/screen19.scss */
   .solution-intro {
     font-size: 13px;
   }
 
-  /* line 469, ../sass/screen19.scss */
+  /* line 528, ../sass/screen19.scss */
   .solution-statement .h1 {
     font-size: 30px;
   }
 
-  /* line 472, ../sass/screen19.scss */
+  /* line 531, ../sass/screen19.scss */
   .the-follow-up {
     font-size: 15px;
   }
-  /* line 474, ../sass/screen19.scss */
+  /* line 533, ../sass/screen19.scss */
   .the-follow-up .coupon-code strong,
   .the-follow-up span.social-account,
   .the-follow-up .to-thirty {
     font-size: 15px;
   }
 
-  /* line 480, ../sass/screen19.scss */
+  /* line 539, ../sass/screen19.scss */
   button, .button {
     display: inline-block;
     font-size: 13px;
@@ -622,7 +676,7 @@ CONSIDERATION-SPECIFIC STUFF
     padding: 4px 15px;
   }
 
-  /* line 486, ../sass/screen19.scss */
+  /* line 545, ../sass/screen19.scss */
   .reset-button {
     font-size: 15px;
   }
