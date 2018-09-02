@@ -289,7 +289,18 @@ function whatsMySolution() {
       mandatoryHype = true;
     }
   } else {
-    var theSolution = pickFromArray(solutionNouns).noun;
+    // now, sometimes make the solution plural
+    var pluralSolution = pickANumber(2);
+    if (pluralSolution == 0) {
+      // Filter the solutions class for plural options
+      var solutionsPlural = solutionClass.filter(function (filter) {
+        return filter.plural !== null &
+              filter.plural !== undefined
+      });
+      theSolution = pickFromArray(solutionsPlural).plural;
+    } else {
+      var theSolution = pickFromArray(solutionNouns).noun;
+    }
   };
 
   // Pass our chosen solution to its object so we can use it elsewhere
@@ -388,7 +399,7 @@ function whatsMySolution() {
   };
 
   // Dynamically populate addthis
-  newTitle.title = "I discovered how to fix my " + chosenProblem.problem + " " + chosenPart.part +  " "  + "with this " + chosenSolution.allAdjectives + " " + theSolution + "! Solve your #problembody here:";
+  newTitle.title = "I discovered how to fix my " + chosenProblem.problem + " " + chosenPart.part +  "! Excited about my new " + chosenSolution.allAdjectives + " " + theSolution + "! Solve your #problembody here:";
   updateSocial();
 
   $('.solution-statement-holder').fadeIn(function(){
