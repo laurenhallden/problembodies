@@ -400,7 +400,7 @@ function whatsMySolution() {
   };
 
   // Dynamically populate addthis
-  newTitle.title = "Excited to try my new " + chosenSolution.allAdjectives + " " + chosenPart.part +  " " + theSolution + "! Solve your #problembody here:";
+  newTitle.title = "Excited to try my new " + chosenSolution.allAdjectives + " " + chosenPart.part +  " " + theSolution + "! No more " + chosenProblem.problem + " " + chosendPart.part + " for me. Solve your #problembody here:";
   updateSocial();
 
   $('.solution-statement-holder').fadeIn(function(){

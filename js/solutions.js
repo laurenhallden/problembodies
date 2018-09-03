@@ -46,7 +46,7 @@ var solutions = {
    	{adjective: "brightening", noun: "brightener", plural: "brighteners"},
  	{adjective: "rejuventating", noun: "rejuvenator", plural: "rejuvenators"},
  	{adjective: "reviving", noun: "reviver", plural: "revivers"},
- 	{adjective: "revitalizing", noun: "revitalizer", plural: "retivalizers"},
+ 	{adjective: "revitalizing", noun: "revitalizer", plural: "revitalizers"},
  	{adjective: "regenerating", noun: "regenerator", plural: "regenerators"},
  	{adjective: "re-energizing", noun: "re-energizer", plural: "re-energizers"},
  	{adjective: "reanimating", noun: "reanimator", plural: "reanimators"},
