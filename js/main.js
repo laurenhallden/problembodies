@@ -399,7 +399,7 @@ function whatsMySolution() {
   };
 
   // Dynamically populate addthis
-  newTitle.title = "I discovered how to fix my " + chosenProblem.problem + " " + chosenPart.part +  "! Excited about my new " + chosenSolution.allAdjectives + " " + theSolution + "! Solve your #problembody here:";
+  newTitle.title = "Excited to try my new " + chosenSolution.allAdjectives + " " + chosenPart.part +  " " + theSolution + "! Solve your #problembody here:";
   updateSocial();
 
   $('.solution-statement-holder').fadeIn(function(){
