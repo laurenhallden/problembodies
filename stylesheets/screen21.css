@@ -567,12 +567,12 @@ CONSIDERATION-SPECIFIC STUFF
   /* line 464, ../sass/screen21.scss */
   .solution-element .emoji {
     display: block;
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
   /* line 469, ../sass/screen21.scss */
   .solution-statement .h1 {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   /* line 472, ../sass/screen21.scss */
@@ -592,20 +592,21 @@ CONSIDERATION-SPECIFIC STUFF
   /* line 481, ../sass/screen21.scss */
   .the-follow-up {
     font-size: 17px;
+    margin-top: 25px;
   }
-  /* line 484, ../sass/screen21.scss */
+  /* line 485, ../sass/screen21.scss */
   .the-follow-up .coupon-code strong,
   .the-follow-up span.social-account,
   .the-follow-up .to-thirty {
     font-size: 18px;
   }
 
-  /* line 490, ../sass/screen21.scss */
+  /* line 491, ../sass/screen21.scss */
   .solution-card {
-    padding: 50px 20px 20px;
+    padding: 40px 20px 20px;
   }
 
-  /* line 494, ../sass/screen21.scss */
+  /* line 495, ../sass/screen21.scss */
   button, .button {
     display: inline-block;
     font-size: 14px;
@@ -613,65 +614,65 @@ CONSIDERATION-SPECIFIC STUFF
     padding: 5px 25px;
   }
 
-  /* line 500, ../sass/screen21.scss */
+  /* line 501, ../sass/screen21.scss */
   .reset-button {
     font-size: 16px;
   }
 
-  /* line 503, ../sass/screen21.scss */
+  /* line 504, ../sass/screen21.scss */
   .tooltip {
     bottom: 15px;
     right: 15px;
   }
 }
 @media screen and (max-width: 360px) {
-  /* line 510, ../sass/screen21.scss */
+  /* line 511, ../sass/screen21.scss */
   .main-section {
     min-height: 400px;
   }
 
-  /* line 513, ../sass/screen21.scss */
+  /* line 514, ../sass/screen21.scss */
   h1, .h1 {
     font-size: 32px;
   }
 
-  /* line 517, ../sass/screen21.scss */
+  /* line 518, ../sass/screen21.scss */
   .wrapper {
     padding: 0 20px 25px;
   }
 
-  /* line 520, ../sass/screen21.scss */
+  /* line 521, ../sass/screen21.scss */
   .caption-label {
     font-size: 15px;
   }
 
-  /* line 523, ../sass/screen21.scss */
+  /* line 524, ../sass/screen21.scss */
   .the-evidence {
     font-size: 18px;
   }
 
-  /* line 526, ../sass/screen21.scss */
+  /* line 527, ../sass/screen21.scss */
   .solution-intro {
     font-size: 13px;
   }
 
-  /* line 529, ../sass/screen21.scss */
+  /* line 530, ../sass/screen21.scss */
   .solution-statement .h1 {
     font-size: 30px;
   }
 
-  /* line 532, ../sass/screen21.scss */
+  /* line 533, ../sass/screen21.scss */
   .the-follow-up {
     font-size: 15px;
   }
-  /* line 534, ../sass/screen21.scss */
+  /* line 535, ../sass/screen21.scss */
   .the-follow-up .coupon-code strong,
   .the-follow-up span.social-account,
   .the-follow-up .to-thirty {
     font-size: 15px;
   }
 
-  /* line 540, ../sass/screen21.scss */
+  /* line 541, ../sass/screen21.scss */
   button, .button {
     display: inline-block;
     font-size: 13px;
@@ -679,7 +680,7 @@ CONSIDERATION-SPECIFIC STUFF
     padding: 4px 15px;
   }
 
-  /* line 546, ../sass/screen21.scss */
+  /* line 547, ../sass/screen21.scss */
   .reset-button {
     font-size: 15px;
   }

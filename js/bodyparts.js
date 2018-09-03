@@ -53,7 +53,7 @@ var bodyparts = [
  {singular: "rib", plural: "ribs", count: 10, products: "torso", emoji: ""},
  {singular: "shin", plural: "shins", count: 2, products: "legs", emoji: ""},
  {singular: "shoulder", plural: "shoulders", count: 2, products: "torso", emoji: ""},
- {singular: "shoulder blades", plural: "shoulder blades", count: 2, products: "torso", emoji: ""},
+ {singular: "shoulder blade", plural: "shoulder blades", count: 2, products: "torso", emoji: ""},
  {singular: "spine", count: 1, plural: "spines", products: "torso", emoji: ""},
  {singular: "stomach", count: 1, plural: "stomachs", products: "torso", emoji: ""},
  {singular: "tear duct", plural: "tear ducts", count: 2, emoji: "💦"},
