@@ -40,7 +40,7 @@ var evidenceB = [
     "more likely to suffer emotional distress",
     "less likely to achieve their life goals",
     "less likely to be top performers at work",
-    "less likely to get left-swiped on Tinder"
+    "less likely to get right-swiped on Tinder"
 ];
 
 var percent = [10, 15, 20, 25, 30, 35, 40, 45, 50]
