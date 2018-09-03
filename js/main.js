@@ -309,6 +309,7 @@ function whatsMySolution() {
   // Let's grab a related adjective
   var problemAdjectives = solutionClass.filter(function (filter) {
     return filter.noun != theSolution &
+          filter.plural != theSolution &
           filter.adjective !== null &
           filter.adjective !== undefined
   });
